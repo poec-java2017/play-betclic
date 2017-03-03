@@ -27,3 +27,4 @@ public class LogManager extends Controller {
     private void after() {
     }
 }
+

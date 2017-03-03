@@ -4,11 +4,11 @@ import play.data.validation.Required;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.Pattern;
+import javax.persistence.ManyToOne;
 import java.util.UUID;
 
-@Entity(name = "countries")
-public class Country extends Model {
+@Entity(name = "cities")
+public class City extends Model {
 
     public String uniq;
 
@@ -16,10 +16,10 @@ public class Country extends Model {
     public String name;
 
     @Required
-    @Pattern(regexp = "[0-9]{5}", message = "")
-    public String iso;
+    @ManyToOne
+    public Country country;
 
-    public Country() {
+    public City() {
         uniq = UUID.randomUUID().toString();
     }
 }

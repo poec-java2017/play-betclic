@@ -1,4 +1,186 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+
+<div class="container">
+    <section>
+        <div class="fake-img small"></div>
+        <div class="fake-img"></div>
+
+        <!-- Bet-list -->
+        <ul class="betlist-menu">
+            <li class="active">Le TOP des paris sportifs</li>
+            <li>Les paris de dernière minute</li>
+        </ul>
+        <div class="betline title row">
+            <div class="countdown"></div>
+            <div class="info"></div>
+            <div class="win-host">1</div>
+            <div class="tie-game">Nul</div>
+            <div class="win-guest">2</div>
+            <!--<div class="bet-types"></div>-->
+            <div class="bet-stats"></div>
+        </div>
+        <div class="betline row">
+            <div class="countdown">11 h</div>
+            <div class="info">
+                <div class="competition">Football, Ligue 2</div>
+                <div class="display">Brest - Red Star 93</div>
+            </div>
+            <div class="win-host">1,55</div>
+            <div class="tie-game">3,60</div>
+            <div class="win-guest">5,50</div>
+            <!--<div class="bet-types">+59</div>-->
+            <div class="bet-stats">
+                <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+                <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+            </div>
+        </div>
+        <div class="betline row">
+            <div class="countdown">11 h</div>
+            <div class="info">
+                <div class="competition">Football, Ligue 2</div>
+                <div class="display">Brest - Red Star 93</div>
+            </div>
+            <div class="win-host">1,55</div>
+            <div class="tie-game">3,60</div>
+            <div class="win-guest">5,50</div>
+            <!--<div class="bet-types">+59</div>-->
+            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
+        </div>
+        <div class="betline row">
+            <div class="countdown">11 h</div>
+            <div class="info">
+                <div class="competition">Football, Ligue 2</div>
+                <div class="display">Brest - Red Star 93</div>
+            </div>
+            <div class="win-host">1,55</div>
+            <div class="tie-game">3,60</div>
+            <div class="win-guest">5,50</div>
+            <!--<div class="bet-types">+59</div>-->
+            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
+        </div>
+        <div class="betline row">
+            <div class="countdown">11 h</div>
+            <div class="info">
+                <div class="competition">Football, Ligue 2</div>
+                <div class="display">Brest - Red Star 93</div>
+            </div>
+            <div class="win-host">1,55</div>
+            <div class="tie-game">3,60</div>
+            <div class="win-guest">5,50</div>
+            <!--<div class="bet-types">+59</div>-->
+            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
+        </div>
+        <div class="betline row">
+            <div class="countdown">11 h</div>
+            <div class="info">
+                <div class="competition">Football, Ligue 2</div>
+                <div class="display">Brest - Red Star 93</div>
+            </div>
+            <div class="win-host">1,55</div>
+            <div class="tie-game">3,60</div>
+            <div class="win-guest">5,50</div>
+            <!--<div class="bet-types">+59</div>-->
+            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
+        </div>
+        <!-- On going -->
+        <h1>En ce moment sud Betclic</h1>
+        <div id="on-going" class="row">
+            <img class="star" src="@{'/public/images/star1.jpg'}" alt="On going 1" />
+            <img class="star" src="@{'/public/images/star2.jpg'}" alt="On going 2" />
+        </div>
+    </section>
+
+    <!-- Dismissable content -->
+    <aside>
+        <!-- Search -->
+        <h2>Rechercher un pari sportif :</h2>
+        <form id="search" name="search">
+            <div class="global-input">
+                <input type="text" name="search" placeholder="Indiquer votre requête" />
+                <button class="material-icons">search</button>
+            </div>
+        </form>
+
+        <!-- Combined Bets -->
+        <h2 class="row">
+            Top 5 des paris combinés :
+            <a href="#" class="material-icons">help</a>
+        </h2>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/goldCup.png'}" alt="Médaille d'or" title="Médaille d'or" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Zeljko S.</a>
+                    <span class="profit">26290 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 10 €</div>
+                    <div class="quotation">Cote : 1753,01</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/silverCup.png'}" alt="Médaille d'argent" title="Médaille d'argent" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Yassin D.</a>
+                    <span class="profit">9081 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 50 €</div>
+                    <div class="quotation">Cote : 173,01</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/copperCup.png'}" alt="Médaille de bronze" title="Médaille de bronze" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Dimitri P.</a>
+                    <span class="profit">8508 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 20 €</div>
+                    <div class="quotation">Cote : 293,70</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/basicCup.png'}" alt="Médaille basique" title="Médaille basique" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Vadivelen M.</a>
+                    <span class="profit">7378 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 25 €</div>
+                    <div class="quotation">Cote : 285,88</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/basicCup.png'}" alt="Médaille basique" title="Médaille basique" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Frédéric A.</a>
+                    <span class="profit">7338 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 120 €</div>
+                    <div class="quotation">Cote : 55,68</div>
+                </div>
+            </div>
+        </div>
+        <div class="advertising">
+            <img src="@{'/public/images/colonne_big.jpg'}" alt="Publicité" />
+        </div>
+
+        <h2>Parier avec Betclic !</h2>
+        <div class="bet-wit-me">
+            Retrouvez le meilleur des paris sportifs à tout moment sur Betclic
+            <a href="#">En savoir plus sur les paris en ligne !</a>
+        </div>
+    </aside>
+</div>

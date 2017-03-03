@@ -2,6 +2,7 @@ package models;
 
 
 import play.data.validation.Email;
+import play.data.validation.Min;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
@@ -24,6 +25,10 @@ public class User extends Model {
     @Required
     @Email
     public String email;
+
+    @Required
+    @Min(8)
+    public String password;
 
     @Required
     public Date birthday;

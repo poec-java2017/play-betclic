@@ -1,0 +1,440 @@
+#########
+#Country#
+#########
+
+Country(France) :
+  name : France
+  iso : fr_FR
+
+Country(Belgique) :
+  name : Belgique
+  iso : fr_BE
+
+Country(Espagne) :
+  name : Espagne
+  iso : es_ES
+
+Country(Allemagne) :
+  name : Allemagne
+  iso : de_DE
+
+######
+#City#
+######
+
+#City France#
+
+City(Paris):
+  name : Paris
+  country : France
+
+City(Marseille):
+  name : Marseille
+  country : France
+
+City(Lyon) :
+  name : Lyon
+  country : France
+
+#City Belgique#
+
+City(Bruges):
+  name : Bruges
+  country : Belgique
+
+City(Namur):
+  name : Namur
+  country : Belgique
+
+City(Gand) :
+  name : Gand
+  country : Belgique
+
+#City Espagne
+
+City(barcelone):
+  name : Barcelone
+  country : Espagne
+
+City(madrid):
+  name : Madrid
+  country : Espagne
+
+City(valence) :
+  name : Valence
+  country : Espagne
+
+#City Allemagne
+
+City(berlin):
+  name : Berlin
+  country : Allemagne
+
+City(hambourg):
+  name : Hambourg
+  country : Allemagne
+
+City(munich) :
+  name : Munich
+  country : Allemagne
+
+#########
+#Address#
+#########
+
+#Address France
+
+Address(addressUserFR1) :
+  street : 14 rue monge
+  postCode : 75005
+  city : Paris
+
+Address(addressUserFR2) :
+  street : 17 rue vivienne
+  postCode : 75002
+  city : Paris
+
+Address(addressUserFR3) :
+  street : 221 avenue Pédo Ricard
+  postCode : 13008
+  city : Marseille
+
+Address(addressUserFR4) :
+  street : 12 rue Marcel Pignole
+  postCode : 13001
+  city : Marseille
+
+Address(addressUserFR5) :
+  street : 1 rue Perrache
+  postCode : 69007
+  city : Lyon
+
+Address(addressUserFR6) :
+  street : 3 place Pardieu
+  postCode : 69002
+  city : Lyon
+
+#Address Belgique
+
+Address(addressUserBG1) :
+  street : 14 rue de la martinière
+  postCode : 8000
+  city : Bruges
+
+Address(addressUserBG2) :
+  street : 16 rue de la martinière
+  postCode : 8
+  city : Bruges
+
+Address(addressUserBG3) :
+  street : 14 rue de la martinière
+  postCode : 5000
+  city : Namur
+
+Address(addressUserBG4) :
+  street : 18 rue de la martinière
+  postCode : 5000
+  city : Namur
+
+Address(addressUserBG5) :
+  street : 14 rue de la martinière
+  postCode : 7540
+  city : Gand
+
+Address(addressUserBG6) :
+  street : 14 rue de la martinière
+  postCode : 7540
+  city : Gand
+
+#Address Espagne
+
+Address(addressUserSP1) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : madrid
+
+Address(addressUserSP2) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : madrid
+
+Address(addressUserSP3) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : valence
+
+Address(addressUserSP4) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : valence
+
+Address(addressUserSP5) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : barcelone
+
+Address(addressUserSP6) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : barcelone
+
+#Address Allemagne
+
+Address(addressUserGR1) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : berlin
+
+Address(addressUserGR2) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : berlin
+
+Address(addressUserGR3) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : munich
+
+Address(addressUserGR4) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : munich
+
+Address(addressUserGR5) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : hambourg
+
+Address(addressUserGR6) :
+  street : 14 rue de la martinière
+  postCode : 75090
+  city : hambourg
+
+######
+#User#
+######
+# Default password id [password]
+
+#User France
+
+User(UserFR1) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR1
+
+User(UserFR2) :
+  lastName : Jean-Baptiste
+  firstName : Soyez
+  email : jb@soyez.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR2
+
+User(UserFR3) :
+  lastName : Christophe
+  firstName : Pamart
+  email : cricri@pamart.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR3
+
+User(UserFR4) :
+  lastName : Florian
+  firstName : Fleuret
+  email : flo@fleuret.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR4
+
+User(UserFR5) :
+  lastName : Anthony
+  firstName : Periquet
+  email : anthony@periquet.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR5
+
+User(UserFR6) :
+  lastName : Jérôme
+  firstName : Delaunay
+  email : geromino@delaunay.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR6
+
+#User Belgique
+
+User(UserBG1) :
+  lastName : Marc
+  firstName : Dutrou
+  email : georges@dutrou.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG1
+
+User(UserBG2) :
+  lastName : Jean-Philippe
+  firstName : Smet
+  email : johnny@halliday.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG2
+
+User(UserBG3) :
+  lastName : Benoit
+  firstName : Poolvoerde
+  email : benoit@poolvoerde.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG3
+
+User(UserBG4) :
+  lastName : Jacques
+  firstName : Brel
+  email : jasques@brel.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG4
+
+User(UserBG5) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG5
+
+User(UserBG6) :
+  lastName : Roi
+  firstName : Baudoin
+  email : roi@belgique.be
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG6
+
+#User Espagne
+
+User(UserSP1) :
+  lastName : Salvador
+  firstName : Dali
+  email : salvador@dali.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP1
+
+User(UserSP2) :
+  lastName : Pablo
+  firstName : Picasso
+  email : pablo@picasso.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP2
+
+User(UserSP3) :
+  lastName : Francisco
+  firstName : Franco
+  email : fransisco@franco.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP3
+
+User(UserSP4) :
+  lastName : Don
+  firstName : Quijotte
+  email : don@quijotte.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP4
+
+User(UserSP5) :
+  lastName : Hernàn
+  firstName : Cortez
+  email : hernan@cortez.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP5
+
+User(UserSP6) :
+  lastName : Con
+  firstName : Quistador
+  email : con@quistador.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP6
+
+#User Allemagne
+
+User(UserGR1) :
+  lastName : Adolf
+  firstName : Hitler
+  email : furher@deutchland.de
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR1
+
+User(UserGR2) :
+  lastName : Angela
+  firstName : Merkel
+  email : angela@deuchland.de
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR2
+
+User(UserGR3) :
+  lastName : Ermann
+  firstName : Meir
+  email : ermann@meir.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR3
+
+User(UserGR4) :
+  lastName : Wurt
+  firstName : Wonderbar
+  email : wurt@wonderbar.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR4
+
+User(UserGR5) :
+  lastName : Sebastian
+  firstName : Bach
+  email : sebastian@bach.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR5
+
+User(UserGR6) :
+  lastName : Mickaël
+  firstName : Schumacher
+  email : mickael@schumacher.com
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR6

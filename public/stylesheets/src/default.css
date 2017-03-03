@@ -316,7 +316,7 @@ ul.betlist-menu li.active {
     justify-content:flex-start;
 }
 .betline:not(.title) .info .competition {
-    background:url(../../static/image/icons/sprite-sports.png) 0 0 no-repeat;
+    background:url(/public/images/icons/sprite-sports.png) 0 0 no-repeat;
     color:#999;
     padding-left:25px;
 }
@@ -443,7 +443,7 @@ aside .advertising {
 }
 
 aside .bet-wit-me {
-    background:url(../../static/image/marcel.png) no-repeat;
+    background:url(/public/images/marcel.png) no-repeat;
     border-bottom:solid 1px #CCC;
     color:#666;
     display:flex;

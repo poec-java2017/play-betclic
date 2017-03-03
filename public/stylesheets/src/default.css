@@ -317,6 +317,7 @@ ul.betlist-menu li.active {
 }
 .betline:not(.title) .info .competition {
     background:url(/public/images/icons/sprite-sports.png) 0 0 no-repeat;
+
     color:#999;
     padding-left:25px;
 }
@@ -444,6 +445,7 @@ aside .advertising {
 
 aside .bet-wit-me {
     background:url(/public/images/marcel.png) no-repeat;
+
     border-bottom:solid 1px #CCC;
     color:#666;
     display:flex;

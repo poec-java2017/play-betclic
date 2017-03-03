@@ -1,0 +1,335 @@
+######
+#Team#
+######
+
+#Team France
+
+Team(teamFR1) :
+  name : Paris FC
+  active : true
+
+Team(teamFR2) :
+  name : Lyon FC
+  active : true
+
+Team(teamFR3) :
+  name : Moulinot les bains FC
+  active : false
+
+#Team Belgique
+
+Team(teamBG1) :
+  name : Anver FC
+  active : true
+
+Team(teamBG2) :
+  name : Bruxelle FC
+  active : true
+
+Team(teamBG3) :
+  name : Moulinot les Van de Velde FC
+  active : false
+
+#Team Espagne
+
+Team(teamSP1) :
+  name : Madrid FC
+  active : true
+
+Team(teamSP2) :
+  name : Valence FC
+  active : true
+
+Team(teamSP3) :
+  name : Moulino los Bagnos FC
+  active : false
+
+#Team Allemagne
+
+Team(teamGR1) :
+  name : Hambourg FC
+  active : true
+
+Team(teamGR2) :
+  name : Munich FC
+  active : true
+
+Team(teamGR3) :
+  name : Mulinberg FC
+  active : false
+
+#############
+#Competition#
+#############
+
+Competition(competition1) :
+  name : ligue 1
+  active : true
+  teams : [teamFR1, teamBG1, teamSP1, teamGR1, teamFR3]
+
+Competition(competition2) :
+  name : ligue 2
+  active : true
+  teams : [teamFR2, teamBG2, teamSP2, teamGR2, teamBG3]
+
+Competition(competition3) :
+  name : ligue 3
+  active : true
+  teams : [teamFR1, teamBG2, teamSP1, teamGR2, teamSP3]
+
+Competition(competition4) :
+  name : ligue bis
+  active : false
+  teams : [teamFR2, teamBG1, teamSP2, teamGR1, teamGR3]
+
+#######
+#Event#
+#######
+
+#Event Competition 1
+
+Event(event11) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition1
+  teamHost : teamFR1
+  teamGuest : teamBG1
+
+Event(event12) :
+  date : 2016-09-05
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition1
+  teamHost : teamSP1
+  teamGuest : teamBG1
+
+Event(event13) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition1
+  teamHost : teamSP1
+  teamGuest : teamGR1
+
+Event(event14) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition1
+  teamHost : teamFR3
+  teamGuest : teamBG1
+
+Event(event15) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition1
+  teamHost : teamFR1
+  teamGuest : teamSP1
+
+Event(event16) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition1
+  teamHost : teamFR1
+  teamGuest : teamFR3
+
+#Event Competition 2
+
+Event(event21) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition2
+  teamHost : teamFR2
+  teamGuest : teamBG2
+
+Event(event22) :
+  date : 2016-09-05
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition2
+  teamHost : teamSP2
+  teamGuest : teamBG2
+
+Event(event23) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition2
+  teamHost : teamSP2
+  teamGuest : teamGR2
+
+Event(event24) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition2
+  teamHost : teamBG3
+  teamGuest : teamBG2
+
+Event(event25) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition2
+  teamHost : teamFR2
+  teamGuest : teamSP2
+
+Event(event26) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition2
+  teamHost : teamFR2
+  teamGuest : teamBG3
+
+#Event Competition 3
+
+Event(event31) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition3
+  teamHost : teamFR1
+  teamGuest : teamBG2
+
+Event(event32) :
+  date : 2016-09-05
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition3
+  teamHost : teamSP1
+  teamGuest : teamBG2
+
+Event(event33) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition3
+  teamHost : teamSP1
+  teamGuest : teamGR2
+
+Event(event34) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition3
+  teamHost : teamSP3
+  teamGuest : teamBG2
+
+Event(event35) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition3
+  teamHost : teamFR1
+  teamGuest : teamSP1
+
+Event(event36) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition3
+  teamHost : teamFR1
+  teamGuest : teamSP3
+
+#Event Competition 4
+
+Event(event41) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition4
+  teamHost : teamFR2
+  teamGuest : teamBG1
+
+Event(event42) :
+  date : 2016-09-05
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition4
+  teamHost : teamSP2
+  teamGuest : teamBG1
+
+Event(event43) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition4
+  teamHost : teamSP2
+  teamGuest : teamGR1
+
+Event(event44) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition4
+  teamHost : teamGR3
+  teamGuest : teamBG1
+
+Event(event45) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition4
+  teamHost : teamFR2
+  teamGuest : teamSP2
+
+Event(event46) :
+  date : 2016-09-09
+  coteHost : 1
+  coteTie : 1
+  coteGuest : 1
+  result : 1
+  competition : competition4
+  teamHost : teamFR2
+  teamGuest : teamGR3

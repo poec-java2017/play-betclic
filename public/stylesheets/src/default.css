@@ -1,0 +1,612 @@
+header,
+footer,
+main {
+    display:flex;
+    flex:0 auto;
+}
+header#info {
+    background:#000000;
+}
+@media only screen and (max-width:720px) {
+    header#info { display:none; }
+}
+header .container {
+    justify-content:space-between;
+    margin:5px auto;
+
+}
+.container #date,
+.container #parental-advisory {
+    color:#666;
+    flex-shrink:0;
+    font-weight:bold;
+}
+.container #help {
+    align-items:center;
+    color:#DDD;
+    font-size:1.2em;
+    font-weight:bold;
+    line-height:1.4em;
+    text-align:center;
+    text-transform:uppercase;
+    width:75%;
+}
+.container #parental-advisory {
+    display:flex;
+    flex-direction:row;
+    flex:0 200px;
+    height:30px;
+    margin:auto 0;
+}
+.container #parental-advisory div {
+    align-self:flex-end;
+    align-items:center;
+    display:flex;
+    font-weight:bold;
+    margin:auto 0;
+}
+.container #parental-advisory .circle {
+    border:solid 2px #666;
+    border-radius:20px;
+    flex-shrink:0;
+    padding:5px 3px;
+}
+.container #parental-advisory :last-child {
+    font-size:0.8em;
+    padding-left:5px;
+    text-transform:uppercase;
+}
+
+header#global .container {
+    margin-top:10px;
+}
+header#global .container > * {
+    display:flex;
+    align-self:flex-start;
+}
+
+header#global .container > :first-child { display:none; }
+@media only screen and (max-width:450px) {
+    header#global .container > :first-child {
+        color:#666;
+        display:flex;
+        font-size:4em;
+    }
+}
+header#global .container #top-links {
+    align-items:center;
+    color:#666;
+    font-weight:bold;
+    justify-content:center;
+    list-style:none;
+}
+header#global .container #top-links li {
+    padding:0 2px;
+}
+header#global .container #top-links li:not([data-icon]) a {
+    background:#CCC;
+    border-radius:15px;
+    color:#666;
+    font-size:1em;
+    padding:5px;
+}
+header#global .container #top-links [data-icon] img {
+    margin-top:4px;
+    width:24px;
+}
+header#global .container #top-links li:nth-child(5):before,
+header#global .container #top-links li:nth-child(8):before {
+    content:"|";
+    margin:5px;
+}
+@media only screen and (max-width:800px) {
+    .volatile { display:none; }
+    header#global .container #top-links li:nth-child(5):before,
+    header#global .container #top-links li:nth-child(8):before {
+        content:"";
+        margin:auto;
+    }
+}
+@media only screen and (max-width:450px) {
+    header#global .container #top-links {
+        display:none;
+    }
+}
+
+/****************************
+* Credentials
+****************************/
+header#global .container #avatarBox{
+    align-items: center;
+}
+header#global .container #avatarBox > a {
+    color:#900;
+    font-size:4em;
+}
+header#global .container #avatarBox > div {
+    text-align: right;
+}
+header#global .container #avatarBox > div a:first-child{
+    color: #666;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+header#global .container #avatarBox > div a:last-child{
+    color: #555;
+}
+
+header#global .container #log-me-in {
+    display:none;
+}
+header#global .container #credentials {
+    display:flex;
+    flex-direction:column;
+    width:220px;
+}
+.global-input {
+    border:solid #CCC 1px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:2px;
+    margin-bottom:5px;
+}
+#credentials input {
+    background:none;
+    border:none;
+    font-size:0.9em;
+    outline:none;
+}
+header#global .container #credentials .global-input a {
+    align-self:center;
+    color:#666;
+    font-style:italic;
+    white-space:nowrap;
+}
+header#global .container #credentials input[type=submit] {
+    background:#333;
+    border-radius:2px;
+    color:#FFF;
+    font-weight:bold;
+    padding:0 10px;
+    height:1.9em;
+}
+.global-input button {
+    background:#FFF;
+    color:#666;
+}
+header#global .container #credentials #register {
+    align-self:flex-end;
+    color:#666;
+    font-weight:bold;
+}
+header#global .container #credentials #register a {
+    color:#99000F;
+}
+
+
+
+@media only screen and (max-width:720px) {
+    header#global .container #avatarBox {
+        display: none;
+    }
+    header#global .container #log-me-in {
+        color:#900;
+        display:flex;
+        font-size:4em;
+        margin:auto 0;
+    }
+    header#global .container #credentials {
+        display:none;
+    }
+}
+
+#top-menu {
+    background:#EEE;
+    display:flex;
+    flex:0 auto;
+    margin-bottom:10px;
+}
+#top-menu ul {
+    padding:0;
+}
+#top-menu ul li {
+    align-items:center;
+    color:#333;
+    border-right:1px solid #AAA;
+    display:flex;
+    flex:0 60px;
+    font-style:italic;
+    font-weight:bold;
+    height:20px;
+    justify-content:center;
+    list-style:none;
+    margin:5px 0;
+    text-transform:uppercase;
+}
+#top-menu ul li.active {
+    color:#EEE;
+    background:#666;
+    margin:0;
+    height:100%;
+}
+@media only screen and (max-width:960px) {
+    #top-menu { display:none; }
+    #content .container { margin-top:20px; }
+}
+
+.container section,
+.container aside {
+    display:flex;
+    flex:1 auto;
+    flex-direction:column;
+}
+.container aside {
+    flex:0 240px;
+    padding-left:10px;
+}
+@media only screen and (max-width:960px) {
+    #content .container aside { display:none; }
+}
+
+.fake-img {
+    background:#CCC;
+    border:solid 1px #AAAAAA;
+    border-radius:5px;
+    height:235px;
+    margin-bottom:10px;
+}
+.fake-img.small {
+    height:150px;
+}
+@media only screen and (max-width:960px) {
+    .fake-img.small { display:none; }
+}
+
+/****************************
+* Betlist
+****************************/
+ul.betlist-menu {
+    border-bottom:2px solid #666;
+    display:flex;
+    justify-content:flex-start;
+    list-style:none;
+    padding:0;
+}
+ul.betlist-menu li {
+    border:1px solid #CCC;
+    color:#666;
+    font-size:1.2em;
+    margin-right:2px;
+    padding:5px 10px;
+}
+ul.betlist-menu li.active {
+    background:#666;
+    border:1px solid #666;
+    color:#FFF;
+    font-weight:bold;
+}
+@media only screen and (max-width:960px) {
+    ul.betlist-menu { display:none; }
+}
+.betline {
+    border-bottom:solid 1px #CCC;
+    padding:10px 5px;
+}
+.betline > * {
+    display:flex;
+}
+.betline.title {
+    color:#333;
+    font-weight:bold;
+}
+.betline .countdown {
+    flex:0 50px;
+}
+.betline:not(.title) .countdown {
+    align-items:center;
+    border:solid 1px #666;
+    height:24px;
+    justify-content:center;
+}
+.betline .info {
+    display:flex;
+    flex:0 300px;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+.betline:not(.title) .info .competition {
+    background:url(../../static/image/icons/sprite-sports.png) 0 0 no-repeat;
+    color:#999;
+    padding-left:25px;
+}
+.betline:not(.title) .info .display {
+    color:#555;
+    font-size:1.1em;
+    font-weight:bold;
+}
+.betline .win-host,
+.betline .tie-game,
+.betline .win-guest {
+    flex:0 50px;
+    justify-content:center;
+}
+.betline:not(.title) .win-host,
+.betline:not(.title) .tie-game,
+.betline:not(.title) .win-guest {
+    align-items:center;
+    background:linear-gradient(to bottom right, #EEE, #CCC);
+    border-radius:2px;
+    box-shadow:2px 2px 2px #AAA;
+    color:#900;
+    font-weight:bold;
+    height:24px;
+}
+.betline .bet-types {
+    flex:0 30px;
+}
+.betline:not(.title) .bet-types {
+    align-items:center;
+    background:#333;
+    border-radius:2px;
+    color:#FFF;
+    font-weight:bold;
+    height:18px;
+    margin:auto 0;
+    padding:0 5px;
+}
+.betline .bet-stats {
+    flex:0 75px;
+    justify-content:flex-start;
+    margin:auto 0;
+}
+.betline .bet-stats > img {
+    height:20px;
+    margin:auto 1px;
+}
+@media only screen and (max-width:650px) {
+    .betline.title { display:none; }
+    .betline {
+        flex-wrap: wrap;
+        max-width:320px;
+        margin-left:auto;
+        margin-right:auto;
+        width:100%;
+    }
+    .betline .info {
+        align-items:center;
+        flex:1 260px;
+    }
+    .betline .bet-stats { display:none; }
+}
+
+@media only screen and (max-width:960px) {
+    section #on-going { justify-content:space-around; }
+}
+@media only screen and (max-width:720px) {
+    section #on-going {
+        flex-direction:column;
+        margin:auto;
+    }
+    section #on-going > :last-child { margin-top:10px; }
+}
+
+aside h2 {
+    font-size:1.3em;
+}
+aside .global-input {
+    align-items:center;
+    padding:5px;
+}
+aside .global-input input,
+aside .global-input button {
+    font-size:1.1em;
+    height:100%;
+    padding:5px auto;
+}
+aside .global-input button {
+    font-size:1.5em;
+}
+aside .combined-list {
+    border-top:solid 1px #CCC;
+    padding-top:3px;
+    margin-top:3px;
+}
+aside .combined-list > img {
+    display:flex;
+    flex:0 auto;
+}
+aside .combined-list > div {
+    flex:1 auto;
+}
+aside .combined-list > div > :first-child {
+    border-bottom:solid 1px #DDD;
+    font-size:1.1em;
+    font-weight:bold;
+    padding-bottom:3px;
+    margin-bottom:3px;
+}
+aside .combined-list > div > :last-child {
+    color:#555;
+}
+aside .combined-list > div .name {
+    color:#1E4A7B;
+}
+aside .combined-list > div .profit {
+    color:#900;
+    font-weight:bold;
+}
+
+aside .advertising {
+    align-self:center;
+    margin:20px 0 0 0;
+}
+
+aside .bet-wit-me {
+    background:url(../../static/image/marcel.png) no-repeat;
+    border-bottom:solid 1px #CCC;
+    color:#666;
+    display:flex;
+    flex-direction:column;
+    font-size:1.3em;
+    font-weight:bold;
+    padding-left:50%;
+    text-align:right;
+}
+aside .bet-wit-me a {
+    color:#900;
+    font-size:0.8em;
+    margin:10px auto;
+}
+
+footer {
+    background:#222;
+    margin-top:10px;
+}
+footer .container {
+    flex-direction:column;
+}
+footer .links {
+    border-bottom:solid 1px #000;
+    color:#DDD;
+    display:flex;
+    flex-wrap:wrap;
+    font-size:1.1em;
+    font-weight:bold;
+    justify-content:center;
+    list-style:none;
+    padding-bottom:15px;
+}
+footer .links li:not(:last-child):after {
+    content:"|";
+    margin:0 5px;
+}
+footer .links li a {
+    color:#DDD;
+    font-weight:bold;
+}
+footer .title {
+    color:#DDD;
+    display:flex;
+    font-size:2em;
+    font-weight:bold;
+    justify-content: space-between;
+    margin-bottom:15px;
+    width:100%;
+}
+footer .title > span {
+    align-self:center;
+    color:#DDD;
+    cursor:pointer;
+    display:none;
+}
+footer .legal {
+    color:#DDD;
+    font-size:0.9em;
+    text-align:justify;
+}
+@media only screen and (max-width:450px) {
+    footer .title > span { display:block; }
+    footer .legal { display:none; }
+}
+
+/****************************
+ * Generic Table
+****************************/
+.row.table {
+    border:solid 1px #333;
+    border-bottom:none;
+}
+.row.table:first-child {
+    border-radius:5px 5px 0 0;
+}
+.row.table:nth-child(n+3) {
+    border-top:solid 1px #999;
+}
+.row.table.header,
+.row.table.sum {
+    background:#DDD;
+    font-weight:bold;
+}
+.row.table:last-child,
+.row.table.sum {
+    border-bottom:solid 1px #333;
+    border-radius:0 0 5px 5px;
+}
+.row.table > div {
+    border-right:solid 1px #999;
+    display:flex;
+    padding:2px 5px;
+}
+.table > div:last-child {
+    border:none;
+}
+
+.row.table.sum {
+    border-top:solid 1px #333;
+}
+.table .total {
+    align-self:flex-end;
+    flex:0 1 100px;
+    justify-content:flex-end;
+    margin-left:auto;
+}
+
+/****************************
+* Account tab menu
+****************************/
+#toggle-overview:checked + label.tab,
+#toggle-account:checked + label.tab,
+#toggle-actions:checked + label.tab {
+    background:#999;
+    color:#EEE;
+}
+
+#toggle-overview:checked ~ .tabs #account-overview,
+#toggle-account:checked ~ .tabs #account-settings,
+#toggle-actions:checked ~ .tabs #account-actions {
+    display:flex;
+}
+
+/****************************
+* Hidden form
+****************************/
+#toggle-account-infos:checked ~ #account-form,
+#toggle-account-password:checked ~ #password-form {
+    height:auto;
+    opacity:1;
+}
+
+/****************************
+* Operation column definition
+****************************/
+.table .operation-date {
+    flex:0 0 75px;
+}
+.table .operation-type {
+    flex:1 1 300px;
+    font-style:italic;
+}
+.table:not(.header) .operation-type {
+    color:#333;
+    font-weight:bold;
+}
+.table .operation-input,
+.table .operation-output {
+    flex:0 1 100px;
+    justify-content:flex-end;
+}
+
+.row.account-operations {
+    margin:10px 20%;
+}
+.row.account-operations a {
+    border:none;
+    border-radius:3px;
+    background:#2AB27B;
+    color:#FFF;
+    font-weight:bold;
+    margin:0 2px;
+    padding:5px;
+    text-align:center;
+}

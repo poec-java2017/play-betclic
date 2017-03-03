@@ -9,7 +9,7 @@ public class UserManager extends LogManager {
 
     //TODO : read user
 
-    
+
 
     //TODO : delete user
 }

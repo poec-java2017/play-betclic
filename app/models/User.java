@@ -30,6 +30,8 @@ public class User extends Model {
 
     public String telephone;
 
+    public Float acount;
+
     @ManyToOne
     public Address address;
 

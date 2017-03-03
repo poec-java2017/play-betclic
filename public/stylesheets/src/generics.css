@@ -1,0 +1,327 @@
+* {
+    box-sizing:border-box;
+}
+a {
+    text-decoration:none;
+}
+body {
+    margin:0;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+}
+
+/****************************
+* Global table orientation
+****************************/
+.row {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.row.wrap {
+    flex-wrap:wrap;
+}
+.col {
+    display:flex;
+    flex-direction:column;
+}
+
+/****************************
+* Page global container
+****************************/
+.container {
+    display:flex;
+    flex-direction:row;
+    margin:0 auto;
+    max-width:960px;
+    width:100%;
+}
+/* Page structure          */
+.container section,
+.container aside {
+    display:flex;
+    flex:1 auto;
+    flex-direction:column;
+}
+.container aside {
+    flex:0 240px;
+    padding-left:10px;
+}
+
+/****************************
+* Titles
+****************************/
+h1, h2 {
+    border-bottom:solid 3px #555;
+    border-image: linear-gradient(to right, #555, #FFF) 20 stretch;
+    color:#555;
+    font-style:italic;
+}
+h2 a.material-icons {
+    align-self:center;
+    color:#555;
+    font-size:1em;
+}
+
+/****************************
+* Form input decorator
+* -> fake input with adjacent text
+****************************/
+.global-input {
+    border:solid #CCC 1px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:2px;
+    margin-bottom:5px;
+}
+.global-input input,
+.global-input button {
+    background:none;
+    border:none;
+    font-size:0.9em;
+    outline:none;
+}
+.global-input button {
+    background:#FFF;
+    color:#666;
+}
+
+/****************************
+ * Generic Data Table
+****************************/
+.row.table {
+    border:solid 1px #333;
+    border-bottom:none;
+}
+.row.table:first-child {
+    border-radius:5px 5px 0 0;
+}
+.row.table:nth-child(n+3) {
+    border-top:solid 1px #999;
+}
+.row.table.header,
+.row.table.sum {
+    background:#DDD;
+    font-weight:bold;
+}
+.row.table:last-child,
+.row.table.sum {
+    border-bottom:solid 1px #333;
+    border-radius:0 0 5px 5px;
+}
+.row.table > div {
+    border-right:solid 1px #999;
+    display:flex;
+    padding:2px 5px;
+}
+.table > div:last-child {
+    border:none;
+}
+
+.row.table.sum {
+    border-top:solid 1px #333;
+}
+.table .total {
+    align-self:flex-end;
+    flex:0 1 100px;
+    justify-content:flex-end;
+    margin-left:auto;
+}
+/****************************
+* Tab Menu
+****************************/
+.flex-tabs {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+input[id^=toggle-] {
+    appearance:none;
+    left:-100%;
+    position:absolute;
+    top:-100%;
+}
+input[id^=toggle-] + label.tab {
+    border:solid 1px #999;
+    border-bottom:none;
+    border-radius:5px 5px 0 0;
+    color:#666;
+    cursor:pointer;
+    display:flex;
+    font-weight:bold;
+    margin:0 1px;
+    padding:2px 10px;
+}
+.flex-tabs .tabs {
+    border:solid 1px #999;
+    min-width:100%;
+    padding:10px;
+}
+.flex-tabs .tabs .tab {
+    display:none;
+}
+
+/****************************
+* Tab Menu
+****************************/
+.hidden-form {
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.hidden-form:not(:last-child) {
+    border-bottom:solid 1px #CCC;
+    padding-bottom:15px;
+}
+/* Form title              */
+.hidden-form h2 {
+    border:none;
+    display:flex;
+    flex:1 auto;
+    font-size:1.2em;
+    font-style:normal;
+    justify-content:space-between;
+}
+/* Form expand button      */
+.hidden-form label {
+    align-self:center;
+    border:solid 1px #999;
+    border-radius:3px;
+    color:#AAA;
+    font-weight:bold;
+    height:auto;
+    padding:2px 5px;
+}
+
+/* Hidden form             */
+.hidden-form form {
+     color:#333;
+     display:flex;
+     flex:0 100%;
+     font-size:1.1em;
+     font-weight:bold;
+     height:0;
+     opacity:0;
+     overflow:hidden;
+     transition:all 500ms ease;
+ }
+.hidden-form form input {
+    border:solid 1px #999;
+    border-radius:3px;
+    margin:3px 0;
+    padding:5px;
+}
+.hidden-form form input[type=submit] {
+    border:none;
+    background:#2AB27B;
+    color:#FFF;
+    font-weight:bold;
+}
+
+/****************************
+* Modal
+****************************/
+.overlay {
+    background:#000;
+    bottom:0;
+    display:none;
+    height:100%;
+    left:0;
+    opacity:0;
+    position:fixed;
+    right:0;
+    top:0;
+    transition:opacity 100ms, z-index 1s;
+    width:100%;
+    z-index:0;
+}
+
+.modalWindow {
+    background:#FFF;
+    border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    font-family: arial;
+    font-size:80%;
+    /*font-size:1.1em;*/
+    left:50%;
+    max-height:100%;
+    max-width:100%;
+    opacity:0;
+    padding:10px;
+    pointer-events:none;
+    position:fixed;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+    transition:opacity 400ms ease-in;
+    z-index:0;
+}
+.modalWindow:target + .overlay {
+    display:block;
+    opacity:0.75;
+    z-index:1;
+}
+.modalWindow:target {
+    opacity:1;
+    pointer-events:auto;
+    z-index:2;
+}
+.modalWindow > .close {
+    background: url(../image/icons/close.png) no-repeat center center;
+    border:solid 2px #FFF;
+    border-radius: 15px;
+    height: 20px;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 20px;
+}
+
+.modalHeader h2 {
+    border-bottom:2px groove #efefef;
+    color:#555;
+}
+.modalFooter {
+    align-items:center;
+    border-top:1px solid #999;
+    box-shadow:inset 0 13px 30px -15px #999;
+    display:flex;
+    justify-content:flex-end;
+    margin-top:5px;
+    padding:2px 0;
+}
+.modalWindow .cancel,
+.modalWindow .submit {
+    border:none;
+    border-radius:2px;
+    box-shadow:1px 1px 3px #000;
+    color:#FFFFFF;
+    font-weight:bold;
+    font-size:1em;
+    line-height:25px;
+    margin:0 5px;
+    padding:0 5px;
+    text-align:center;
+    text-decoration:none;
+}
+.modalWindow .modalContent {
+    min-width:450px;
+}
+.modalWindow .cancel {
+    background:#D9534F;
+}
+.modalWindow .cancel:hover {
+    background:#C9302C;
+}
+.modalWindow .submit {
+    background:#5BC0DE;
+}
+.modalWindow .submit:hover {
+    background:#46B8DA;
+}
+@media only screen and (max-width:450px) {
+    .modalWindow .modalContent {
+        min-width:300px;
+        width:100%;
+    }
+}

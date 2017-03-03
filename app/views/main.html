@@ -1,17 +1,101 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/default.min.css'}" />
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/modal.min.css'}" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
     </head>
     <body>
-        #{doLayout /}
-        
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <header id="info">
+            <div class="container">
+                <div id="date">
+                    Lun 23 Jan 2017<br />
+                    09:21
+                </div>
+                <div id="help">
+                    Famille, vie sociale, santé financière. Etes-vous prêt à tout miser ?<br />
+                    Pour être aidé, appeler les 09-74-75-13-13<small>(appel non surtaxé)</small>
+                </div>
+                <div id="parental-advisory">
+                    <div class="circle">18+</div>
+                    <div>Les jeux d'argent et de hasard sont interdits aux mineurs</div>
+                </div>
+            </div>
+        </header>
+        <header id="global">
+            <div class="container">
+                <a href="#" class="material-icons">menu</a>
+                <a href="index.html"><img src="@{'/public/images/betclic-logo.png'}" alt="Betclic" /></a>
+                <ul id="top-links" class="row">
+                    <li class="volatile">Contactez-nous</li>
+                    <li><a href="#" class="material-icons">email</a></li>
+                    <li><a href="#" class="material-icons">chat_bubble</a></li>
+                    <li><a href="#" class="material-icons">phone</a></li>
+                    <li class="volatile">Suivez-nous</li>
+                    <li data-icon><a href="#"><img src="@{'/public/images/icons/facebook.png'}" alt="facebook" title="facebook" /></a></li>
+                    <li data-icon><a href="#"><img src="@{'/public/images/icons/twitter.png'}" alt="facebook" title="facebook" /></a></li>
+                    <li class="volatile">Mobile</li>
+                    <li><a href="#" class="material-icons">smartphone</a></li>
+                </ul>
+                <a href="#" id="log-me-in" class="material-icons">account_circle</a>
+                <form id="credentials" name="credentials" method="get" action="index-connected.html">
+                    <div class="global-input">
+                        <input type="text" name="username" placeholder="Pseudo" />
+                        <a href="#">oublié ?</a>
+                    </div>
+                    <div class="row">
+                        <div class="global-input">
+                            <input type="password" name="password" placeholder="Mot de passe" />
+                            <a href="#">oublié ?</a>
+                        </div>
+                        <input type="submit" value="OK" />
+                    </div>
+                    <span id="register">Créer un nouveau compte ? <a href="inscription.html">Inscrivez-vous</a></span>
+                </form>
+            </div>
+        </header>
+        <div id="top-menu">
+            <ul class="container">
+                <li class="active">Sport</li>
+                <li>Live</li>
+                <li>Turf</li>
+                <li>Poker</li>
+            </ul>
+        </div>
+        <main id="content">
+            #{doLayout /}
+        </main>
+        <footer>
+            <div class="container">
+                <ul class="links">
+                    <li><a href="#">Aide</a></li>
+                    <li><a href="#">Ambassadeur &amp; Partenaire</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">&Agrave; propos de Betclic</a></li>
+                    <li><a href="#">Recrutement</a></li>
+                    <li><a href="#">Conditions générales d'utilisation</a></li>
+                    <li><a href="#">Respect de la Vie privée & Cookies</a></li>
+                    <li><a href="#">Jeu responsable</a></li>
+                    <li><a href="#">Bonnes pratiques</a></li>
+                    <li><a href="#">Presse</a></li>
+                    <li><a href="#">Affiliation</a></li>
+                </ul>
+                <div class="title">
+                    Betclic : le n°1 des paris sportifs
+                    <span class="material-icons">keyboard_arrow_down</span>
+                </div>
+                <div class="legal">
+                    Rejoindre Betclic c'est rejoindre le leader des <strong>paris sportifs</strong>. Légal et sécurisé, <strong>notre site de paris sportifs</strong> vous ravira par sa convivialité et sa simplicité d'utilisation. Nous vous proposons de parier avec nos meilleures cotes sur plus d'une trentaine de sports et sur l'ensemble des compétitions autorisées par l'ARJEL . Retrouvez, par exemple, la Ligue 1, la Ligue des Champions ou la Liga si vous souhaitez parier sur le football. Vous avez le choix parmi plus d'une cinquantaine de types de <strong>paris en ligne</strong> : trouvez le vainqueur d'un match, le résultat exact, le nombre total de buts ou la première équipe à marquer...Si le tennis vous intéresse, les matchs ATP, WTA ou les tournois du Grand Chelem (Open d'Australie, Roland Garros, Wimbledon, Us Open) seront pour vous une bonne occasion de placer des <strong>paris sportifs sur le tennis</strong>. La H-Cup, les 6 nations, le Top 14 ou encore la Coupe du monde de Rugby seront également des opportunités à ne pas manquer tout comme la NBA, les Pro A/B ou l'Euroligue, les <strong>paris basket</strong> du moment. Betclic met tout en oeuvre pour vous aiguiller vers le pari sportif qui vous convient avec des statistiques, des classements, les résultats en live et des paris en direct : n'attendez plus et faites vos pronostics !
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="@{'/public/javascripts/init.js'}" type="text/javascript"></script>
         #{get 'moreScripts' /}
     </body>
 </html>

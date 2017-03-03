@@ -17,41 +17,36 @@ import services.UserService;
 import javax.validation.Valid;
 import java.util.List;
 
-@With(SecureManager.class)
+@With(SecureManager.class) 
 public class UserManager extends LogManager {
 
-    private static final String PREFIX = "User";
+    private static final String PREFIX = "User |";
 
-    public static void display() {
-        List<Country> countries = Country.find("order by name").fetch();
+    public static void signIn(@Valid String email, String password){
+        Logger.info("%s register ---> email=[%s] | password=[%s]", PREFIX, email, password);
 
-        render(countries);
-    }
-
-    public static void createOrUpdate() {
-        display();
-    }
-
-    public static void updatePassword(@Required String apppassword, @Required @Equals("apprnpassword") String appnpassword, @Required String apprnpassword) {
-        Logger.info("[%s][updatePassword] [%s][%s][%s]", PREFIX, apppassword, appnpassword, apprnpassword);
-        User user = (User)renderArgs.get("user");
-        if (Validation.hasErrors()) {
-            for (Error error: Validation.errors()) {
-                Logger.info(error.message());
-            }
-            Validation.keep();
-        } else if (!BCrypt.checkpw(apppassword, user.password)) {
-            Logger.info("[%s][updatePassword] Password mismatch", PREFIX);
-            flash.put("badPassword", "Password mismatch.");
-        } else {
-            user.password = BCrypt.hashpw(appnpassword, BCrypt.gensalt());
-            user.save();
+        if(Validation.hasErrors()) {
+            //Message d'erreur
+            Logger.info("%s register ---> Validation errors", PREFIX);
         }
 
-        display();
+        //On vérifie si l'user existe
+        User user = UserService.getUserByMail(email);
+
+        //Si il existe on vérifie si son password est bon
+        if(user!= null){
+            if(password.equals(user.password)){
+                //THAT'S ALL RIGHT
+                Logger.info("%s register ---> Password correct", PREFIX);
+            }else{
+                //PASSWORD PAS BON
+                Logger.info("%s register ---> Password incorrect", PREFIX);
+            }
+        }
     }
 
     public static void signOut(@Valid User user){
+
         if(Validation.hasErrors()) {
             //Message d'erreur
             Logger.info("%s save ---> Validation errors", PREFIX);
@@ -72,11 +67,6 @@ public class UserManager extends LogManager {
 
     public static void user(String uniq){
         render(UserService.getUserById(uniq));
-    }
-
-    public static void users(){
-        List<User> users = User.findAll();
-        render(users);
     }
 
     public static void fillIn(@Valid User user, @Required Float amount){

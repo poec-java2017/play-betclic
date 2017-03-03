@@ -1,0 +1,482 @@
+#########
+#Country#
+#########
+
+Country(france) :
+  name : France
+  iso : fr
+
+Country(belgique) :
+  name : Belgique
+  iso : bg
+
+Country(espagne) :
+  name : Espagne
+  iso : sp
+
+Country(allemagne) :
+  name : Allemagne
+  iso : gr
+
+######
+#City#
+######
+
+#City France#
+
+City(paris):
+  name : Paris
+  country : france
+
+City(marseille):
+  name : Marseille
+  country : france
+
+City(lyon) :
+  name : Lyon
+  country : france
+
+#City Belgique#
+
+City(bruges):
+  name : Bruges
+  country : belgique
+
+City(anvers):
+  name : Anvers
+  country : belgique
+
+City(gand) :
+  name : Gand
+  country : belgique
+
+#City Espagne
+
+City(barcelone):
+  name : Barcelone
+  country : espagne
+
+City(madrid):
+  name : Madrid
+  country : espagne
+
+City(valence) :
+  name : Valence
+  country : espagne
+
+#City Allemagne
+
+City(berlin):
+  name : Berlin
+  country : allemagne
+
+City(hambourg):
+  name : Hambourg
+  country : allemagne
+
+City(munich) :
+  name : Munich
+  country : allemagne
+
+#########
+#Address#
+#########
+
+#Address France
+
+Address(addressUserFR1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : paris
+
+Address(addressUserFR2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : paris
+
+Address(addressUserFR3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : marseille
+
+Address(addressUserFR4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : marseille
+
+Address(addressUserFR5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : lyon
+
+Address(addressUserFR6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : lyon
+
+#Address Belgique
+
+Address(addressUserBG1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : bruges
+
+Address(addressUserBG2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : bruges
+
+Address(addressUserBG3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : anvers
+
+Address(addressUserBG4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : anvers
+
+Address(addressUserBG5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : gand
+
+Address(addressUserBG6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : gand
+
+#Address Espagne
+
+Address(addressUserSP1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : madrid
+
+Address(addressUserSP2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : madrid
+
+Address(addressUserSP3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : valence
+
+Address(addressUserSP4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : valence
+
+Address(addressUserSP5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : barcelone
+
+Address(addressUserSP6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : barcelone
+
+#Address Allemagne
+
+Address(addressUserGR1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : berlin
+
+Address(addressUserGR2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : berlin
+
+Address(addressUserGR3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : munich
+
+Address(addressUserGR4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : munich
+
+Address(addressUserGR5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : hambourg
+
+Address(addressUserGR6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : hambourg
+
+######
+#User#
+######
+
+#User France
+
+User(UserFR1) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserFR2) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserFR3) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserFR4) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserFR5) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserFR6) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+#User Belgique
+
+User(UserBG1) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserBG2) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserBG3) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserBG4) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserBG5) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserBG6) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+#User Espagne
+
+User(UserSP1) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserSP2) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserSP3) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserSP4) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserSP5) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserSP6) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+#User Allemagne
+
+User(UserGR1) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserGR2) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserGR3) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserGR4) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserGR5) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+User(UserGR6) :
+  lastname : Georges
+  firstname : Dupont
+  email : georges@dupont.com
+  password : password
+  dateNaissance : 22/01/1967
+
+######
+#Team#
+######
+
+#Team France
+
+Team(teamFR1) :
+  name : Paris FC
+  active : true
+
+Team(teamFR2) :
+  name : Lyon FC
+  active : true
+
+Team(teamFR3) :
+  name : Moulinot les bains FC
+  active : false
+
+#Team Belgique
+
+Team(teamBG1) :
+  name : Anver FC
+  active : true
+
+Team(teamBG2) :
+  name : Bruxelle FC
+  active : true
+
+Team(teamBG3) :
+  name : Moulinot les Van de Velde FC
+  active : false
+
+#Team Espagne
+
+Team(teamSP1) :
+  name : Madrid FC
+  active : true
+
+Team(teamSP2) :
+  name : Valence FC
+  active : true
+
+Team(teamSP3) :
+  name : Moulino los Bagnos FC
+  active : false
+
+#Team Allemagne
+
+Team(teamGR1) :
+  name : Hambourg FC
+  active : true
+
+Team(teamGR2) :
+  name : Munich FC
+  active : true
+
+Team(teamGR3) :
+  name : Mulinberg FC
+  active : false
+
+#############
+#Competition#
+#############
+
+Competition(competition1) :
+  name : ligue 1
+  active : true
+
+Competition(competition2) :
+  name : ligue 2
+  active : true
+
+Competition(competition3) :
+  name : ligue 3
+  active : true
+
+Competition(competition4) :
+  name : ligue bis
+  active : false
+
+#######
+#Event#
+#######
+
+Event(event1) :
+  date : 12/09/2016
+  costHote : 1
+  costTie : 1
+  costGuest : 1
+  result : 1

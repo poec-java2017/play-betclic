@@ -18,6 +18,8 @@ public class Bet extends Model {
     @Required
     @Min(0.01)
     public Float quotation;
+    @Required
+    public Short choice;
 
     @ManyToOne
     public User user;
@@ -34,10 +36,11 @@ public class Bet extends Model {
 
     public Bet() { uniq = UUID.randomUUID().toString(); }
 
-    public Bet(Date date, Float quotation, User user, Event event, Operation betOperation) {
+    public Bet(Date date, Float quotation, Short choice, User user, Event event, Operation betOperation) {
         uniq = UUID.randomUUID().toString();
         this.date = date;
         this.quotation = quotation;
+        this.choice = choice;
         this.user = user;
         this.event = event;
         this.betOperation = betOperation;

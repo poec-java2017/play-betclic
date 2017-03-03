@@ -33,7 +33,7 @@ public class User extends Model {
     @Required
     public Date birthday;
 
-    public String telephone;
+    public String phone;
 
     @ManyToOne
     public Address address;

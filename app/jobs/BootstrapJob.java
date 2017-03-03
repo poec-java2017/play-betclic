@@ -10,6 +10,7 @@ public class BootstrapJob extends Job {
     @Override
     public void doJob() throws Exception {
         Fixtures.deleteDatabase();
-        Fixtures.loadModels("data.yml");
+        Fixtures.loadModels("dataUser.yml");
+        Fixtures.loadModels("dataEvent.yml");
     }
 }

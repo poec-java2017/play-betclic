@@ -217,178 +217,202 @@ Address(addressUserGR6) :
 #User France
 
 User(UserFR1) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserFR1
 
 User(UserFR2) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserFR2
 
 User(UserFR3) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserFR3
 
 User(UserFR4) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserFR4
 
 User(UserFR5) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserFR5
 
 User(UserFR6) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserFR6
 
 #User Belgique
 
 User(UserBG1) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserBG1
 
 User(UserBG2) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserBG2
 
 User(UserBG3) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserBG3
 
 User(UserBG4) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserBG4
 
 User(UserBG5) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserBG5
 
 User(UserBG6) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserBG6
 
 #User Espagne
 
 User(UserSP1) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserSP1
 
 User(UserSP2) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserSP2
 
 User(UserSP3) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserSP3
 
 User(UserSP4) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserSP4
 
 User(UserSP5) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserSP5
 
 User(UserSP6) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserSP6
 
 #User Allemagne
 
 User(UserGR1) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserGR1
 
 User(UserGR2) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserGR2
 
 User(UserGR3) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserGR3
 
 User(UserGR4) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserGR4
 
 User(UserGR5) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserGR5
 
 User(UserGR6) :
-  lastname : Georges
-  firstname : Dupont
+  lastName : Georges
+  firstName : Dupont
   email : georges@dupont.com
   password : password
-  dateNaissance : 22/01/1967
+  birthday : 22/01/1967
+  address : addressUserGR6
 
 ######
 #Team#

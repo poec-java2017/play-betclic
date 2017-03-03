@@ -7,6 +7,7 @@
 # Directories
 tmp
 logs
+node_modules
 
 # Built css files
 public/stylesheets/*.css

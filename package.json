@@ -1,0 +1,17 @@
+{
+  "name": "Paris",
+  "title": "Paris",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  }
+}

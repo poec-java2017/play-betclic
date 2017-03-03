@@ -16,7 +16,6 @@ public class Country extends Model {
     public String name;
 
     @Required
-    @Pattern(regexp = "[0-9]{5}", message = "")
     public String iso;
 
     public Country() {

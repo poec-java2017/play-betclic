@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.Pattern;
 import java.util.UUID;
 
-@Entity(name="address")
+@Entity(name="addresses")
 public class Address extends Model{
 
     public String uniq;

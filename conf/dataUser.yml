@@ -221,7 +221,8 @@ User(UserFR1) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserFR1
 
 User(UserFR2) :
@@ -229,7 +230,8 @@ User(UserFR2) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserFR2
 
 User(UserFR3) :
@@ -237,7 +239,8 @@ User(UserFR3) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserFR3
 
 User(UserFR4) :
@@ -245,7 +248,8 @@ User(UserFR4) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserFR4
 
 User(UserFR5) :
@@ -253,7 +257,8 @@ User(UserFR5) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserFR5
 
 User(UserFR6) :
@@ -261,7 +266,8 @@ User(UserFR6) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserFR6
 
 #User Belgique
@@ -271,7 +277,8 @@ User(UserBG1) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserBG1
 
 User(UserBG2) :
@@ -279,7 +286,8 @@ User(UserBG2) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserBG2
 
 User(UserBG3) :
@@ -287,7 +295,8 @@ User(UserBG3) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserBG3
 
 User(UserBG4) :
@@ -295,7 +304,8 @@ User(UserBG4) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserBG4
 
 User(UserBG5) :
@@ -303,7 +313,8 @@ User(UserBG5) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserBG5
 
 User(UserBG6) :
@@ -311,7 +322,8 @@ User(UserBG6) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserBG6
 
 #User Espagne
@@ -321,7 +333,8 @@ User(UserSP1) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserSP1
 
 User(UserSP2) :
@@ -329,7 +342,8 @@ User(UserSP2) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserSP2
 
 User(UserSP3) :
@@ -337,7 +351,8 @@ User(UserSP3) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserSP3
 
 User(UserSP4) :
@@ -345,7 +360,8 @@ User(UserSP4) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserSP4
 
 User(UserSP5) :
@@ -353,7 +369,8 @@ User(UserSP5) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserSP5
 
 User(UserSP6) :
@@ -361,7 +378,8 @@ User(UserSP6) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserSP6
 
 #User Allemagne
@@ -371,7 +389,8 @@ User(UserGR1) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserGR1
 
 User(UserGR2) :
@@ -379,7 +398,8 @@ User(UserGR2) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserGR2
 
 User(UserGR3) :
@@ -387,7 +407,8 @@ User(UserGR3) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserGR3
 
 User(UserGR4) :
@@ -395,7 +416,8 @@ User(UserGR4) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserGR4
 
 User(UserGR5) :
@@ -403,7 +425,8 @@ User(UserGR5) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserGR5
 
 User(UserGR6) :
@@ -411,96 +434,6 @@ User(UserGR6) :
   firstName : Dupont
   email : georges@dupont.com
   password : password
-  birthday : 22/01/1967
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
   address : addressUserGR6
-
-######
-#Team#
-######
-
-#Team France
-
-Team(teamFR1) :
-  name : Paris FC
-  active : true
-
-Team(teamFR2) :
-  name : Lyon FC
-  active : true
-
-Team(teamFR3) :
-  name : Moulinot les bains FC
-  active : false
-
-#Team Belgique
-
-Team(teamBG1) :
-  name : Anver FC
-  active : true
-
-Team(teamBG2) :
-  name : Bruxelle FC
-  active : true
-
-Team(teamBG3) :
-  name : Moulinot les Van de Velde FC
-  active : false
-
-#Team Espagne
-
-Team(teamSP1) :
-  name : Madrid FC
-  active : true
-
-Team(teamSP2) :
-  name : Valence FC
-  active : true
-
-Team(teamSP3) :
-  name : Moulino los Bagnos FC
-  active : false
-
-#Team Allemagne
-
-Team(teamGR1) :
-  name : Hambourg FC
-  active : true
-
-Team(teamGR2) :
-  name : Munich FC
-  active : true
-
-Team(teamGR3) :
-  name : Mulinberg FC
-  active : false
-
-#############
-#Competition#
-#############
-
-Competition(competition1) :
-  name : ligue 1
-  active : true
-
-Competition(competition2) :
-  name : ligue 2
-  active : true
-
-Competition(competition3) :
-  name : ligue 3
-  active : true
-
-Competition(competition4) :
-  name : ligue bis
-  active : false
-
-#######
-#Event#
-#######
-
-Event(event1) :
-  date : 12/09/2016
-  costHote : 1
-  costTie : 1
-  costGuest : 1
-  result : 1

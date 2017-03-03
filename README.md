@@ -1,6 +1,8 @@
 # Betclic
 
+
 ## Grunt basics
+
 
 Grunt is used to generate css[ and js] files in develop mode but also in production mode.\
 To generate css[ and js] files while editing, execute the following command :

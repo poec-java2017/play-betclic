@@ -1,0 +1,47 @@
+/****************************
+* Account refill / payback
+****************************/
+.modalContent {
+    min-width:450px;
+}
+.modalContentRadio{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.modalContentRadio span{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:5px;
+}
+.modalContentInput{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top:10px;
+}.modalContentInput span{
+     display:flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     align-items: center;
+     margin-top:5px;
+ }
+.modalContentInput span input {
+    margin-left: 10px;
+}
+.row.bank {
+    justify-content: flex-start;
+    margin-top:5px;
+}
+.row.bank span {
+    display:flex;
+    flex:0 150px;
+}
+img.card-type {
+    max-width:25px;
+    max-height: 25px;
+    margin-left:10px;
+}

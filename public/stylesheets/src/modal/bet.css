@@ -1,0 +1,34 @@
+/****************************
+* Bet
+****************************/
+.bet-box{
+    border:solid 1px #AAAAAA;
+    border-radius:5px;
+    flex:1 auto;
+    margin-bottom:15px;
+    max-width:50%;
+    min-height:80px;
+    padding:15px;
+}
+.bet-box:not(:last-child) {
+    margin-right:5px;
+}
+.bet-box .submit {
+    margin:auto;
+    margin-bottom:0;
+}
+.betModalQuotation, .betModalBetOn{
+    display:flex;
+    justify-content:space-between;
+    padding-right:12px;
+}
+
+.betModalBet{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.betModalBet input{
+    max-width:60px;
+    height:20px;
+}

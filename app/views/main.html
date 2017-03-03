@@ -42,7 +42,6 @@
                     <li><a href="#" class="material-icons">smartphone</a></li>
                 </ul>
                 <a href="#" id="log-me-in" class="material-icons">account_circle</a>
-
                 #{if !controllers.SecureManager.Security.isConnected()}
                 <form id="credentials" name="credentials" method="post" action="@{SecureManager.authenticate}">
                     <div class="global-input">

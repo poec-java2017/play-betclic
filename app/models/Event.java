@@ -1,5 +1,6 @@
 package models;
 
+import play.data.validation.Min;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
@@ -18,10 +19,13 @@ public class Event extends Model {
     @Required
     public Date date;
     @Required
+    @Min(0.01)
     public Float coteHost;
     @Required
+    @Min(0.01)
     public Float coteTie;
     @Required
+    @Min(0.01)
     public Float coteGuest;
     public int resultHost;
     public int resultGuest;

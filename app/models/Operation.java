@@ -9,9 +9,6 @@ import javax.persistence.ManyToOne;
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * Created by formation04 on 03/03/17.
- */
 @Entity(name = "operation")
 public class Operation extends Model {
 

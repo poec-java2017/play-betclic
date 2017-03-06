@@ -267,7 +267,7 @@ input[id^=toggle-] + label.tab {
     z-index:2;
 }
 .modalWindow > .close {
-    background: url(../image/icons/close.png) no-repeat center center;
+    background: url(/public/images/icons/close.png) no-repeat center center;
     border:solid 2px #FFF;
     border-radius: 15px;
     height: 20px;

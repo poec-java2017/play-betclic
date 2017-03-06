@@ -220,7 +220,7 @@ User(UserFR1) :
   lastName : Georges
   firstName : Dupont
   email : georges@dupont.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR1
@@ -229,7 +229,7 @@ User(UserFR2) :
   lastName : Jean-Baptiste
   firstName : Soyez
   email : jb@soyez.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR2
@@ -238,7 +238,7 @@ User(UserFR3) :
   lastName : Christophe
   firstName : Pamart
   email : cricri@pamart.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR3
@@ -247,7 +247,7 @@ User(UserFR4) :
   lastName : Florian
   firstName : Fleuret
   email : flo@fleuret.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR4
@@ -256,7 +256,7 @@ User(UserFR5) :
   lastName : Anthony
   firstName : Periquet
   email : anthony@periquet.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR5
@@ -265,7 +265,7 @@ User(UserFR6) :
   lastName : Jérôme
   firstName : Delaunay
   email : geromino@delaunay.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR6
@@ -276,7 +276,7 @@ User(UserBG1) :
   lastName : Marc
   firstName : Dutrou
   email : georges@dutrou.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG1
@@ -285,7 +285,7 @@ User(UserBG2) :
   lastName : Jean-Philippe
   firstName : Smet
   email : johnny@halliday.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG2
@@ -294,7 +294,7 @@ User(UserBG3) :
   lastName : Benoit
   firstName : Poolvoerde
   email : benoit@poolvoerde.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG3
@@ -303,7 +303,7 @@ User(UserBG4) :
   lastName : Jacques
   firstName : Brel
   email : jasques@brel.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG4
@@ -312,7 +312,7 @@ User(UserBG5) :
   lastName : Georges
   firstName : Dupont
   email : georges@dupont.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG5
@@ -321,7 +321,7 @@ User(UserBG6) :
   lastName : Roi
   firstName : Baudoin
   email : roi@belgique.be
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG6
@@ -332,7 +332,7 @@ User(UserSP1) :
   lastName : Salvador
   firstName : Dali
   email : salvador@dali.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP1
@@ -341,7 +341,7 @@ User(UserSP2) :
   lastName : Pablo
   firstName : Picasso
   email : pablo@picasso.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP2
@@ -350,7 +350,7 @@ User(UserSP3) :
   lastName : Francisco
   firstName : Franco
   email : fransisco@franco.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP3
@@ -359,7 +359,7 @@ User(UserSP4) :
   lastName : Don
   firstName : Quijotte
   email : don@quijotte.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP4
@@ -368,7 +368,7 @@ User(UserSP5) :
   lastName : Hernàn
   firstName : Cortez
   email : hernan@cortez.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP5
@@ -377,7 +377,7 @@ User(UserSP6) :
   lastName : Con
   firstName : Quistador
   email : con@quistador.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP6
@@ -388,7 +388,7 @@ User(UserGR1) :
   lastName : Adolf
   firstName : Hitler
   email : furher@deutchland.de
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR1
@@ -397,7 +397,7 @@ User(UserGR2) :
   lastName : Angela
   firstName : Merkel
   email : angela@deuchland.de
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR2
@@ -406,7 +406,7 @@ User(UserGR3) :
   lastName : Ermann
   firstName : Meir
   email : ermann@meir.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR3
@@ -415,7 +415,7 @@ User(UserGR4) :
   lastName : Wurt
   firstName : Wonderbar
   email : wurt@wonderbar.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR4
@@ -424,7 +424,7 @@ User(UserGR5) :
   lastName : Sebastian
   firstName : Bach
   email : sebastian@bach.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR5
@@ -433,7 +433,7 @@ User(UserGR6) :
   lastName : Mickaël
   firstName : Schumacher
   email : mickael@schumacher.com
-  password : password
+  password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR6

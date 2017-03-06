@@ -1,0 +1,439 @@
+#########
+#Country#
+#########
+
+Country(france) :
+  name : France
+  iso : fr
+
+Country(belgique) :
+  name : Belgique
+  iso : bg
+
+Country(espagne) :
+  name : Espagne
+  iso : sp
+
+Country(allemagne) :
+  name : Allemagne
+  iso : gr
+
+######
+#City#
+######
+
+#City France#
+
+City(paris):
+  name : Paris
+  country : france
+
+City(marseille):
+  name : Marseille
+  country : france
+
+City(lyon) :
+  name : Lyon
+  country : france
+
+#City Belgique#
+
+City(bruges):
+  name : Bruges
+  country : belgique
+
+City(anvers):
+  name : Anvers
+  country : belgique
+
+City(gand) :
+  name : Gand
+  country : belgique
+
+#City Espagne
+
+City(barcelone):
+  name : Barcelone
+  country : espagne
+
+City(madrid):
+  name : Madrid
+  country : espagne
+
+City(valence) :
+  name : Valence
+  country : espagne
+
+#City Allemagne
+
+City(berlin):
+  name : Berlin
+  country : allemagne
+
+City(hambourg):
+  name : Hambourg
+  country : allemagne
+
+City(munich) :
+  name : Munich
+  country : allemagne
+
+#########
+#Address#
+#########
+
+#Address France
+
+Address(addressUserFR1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : paris
+
+Address(addressUserFR2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : paris
+
+Address(addressUserFR3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : marseille
+
+Address(addressUserFR4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : marseille
+
+Address(addressUserFR5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : lyon
+
+Address(addressUserFR6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : lyon
+
+#Address Belgique
+
+Address(addressUserBG1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : bruges
+
+Address(addressUserBG2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : bruges
+
+Address(addressUserBG3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : anvers
+
+Address(addressUserBG4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : anvers
+
+Address(addressUserBG5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : gand
+
+Address(addressUserBG6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : gand
+
+#Address Espagne
+
+Address(addressUserSP1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : madrid
+
+Address(addressUserSP2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : madrid
+
+Address(addressUserSP3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : valence
+
+Address(addressUserSP4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : valence
+
+Address(addressUserSP5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : barcelone
+
+Address(addressUserSP6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : barcelone
+
+#Address Allemagne
+
+Address(addressUserGR1) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : berlin
+
+Address(addressUserGR2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : berlin
+
+Address(addressUserGR3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : munich
+
+Address(addressUserGR4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : munich
+
+Address(addressUserGR5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : hambourg
+
+Address(addressUserGR6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : hambourg
+
+######
+#User#
+######
+
+#User France
+
+User(UserFR1) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR1
+
+User(UserFR2) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR2
+
+User(UserFR3) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR3
+
+User(UserFR4) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR4
+
+User(UserFR5) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR5
+
+User(UserFR6) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserFR6
+
+#User Belgique
+
+User(UserBG1) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG1
+
+User(UserBG2) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG2
+
+User(UserBG3) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG3
+
+User(UserBG4) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG4
+
+User(UserBG5) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG5
+
+User(UserBG6) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserBG6
+
+#User Espagne
+
+User(UserSP1) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP1
+
+User(UserSP2) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP2
+
+User(UserSP3) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP3
+
+User(UserSP4) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP4
+
+User(UserSP5) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP5
+
+User(UserSP6) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserSP6
+
+#User Allemagne
+
+User(UserGR1) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR1
+
+User(UserGR2) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR2
+
+User(UserGR3) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR3
+
+User(UserGR4) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR4
+
+User(UserGR5) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR5
+
+User(UserGR6) :
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+  birthday : 1975-08-06
+  telephone : XXX-32.56.87
+  address : addressUserGR6

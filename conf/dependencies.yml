@@ -2,3 +2,6 @@
 
 require:
     - play
+    - play -> secure
+    - org.mindrot -> jbcrypt 0.4
+    - com.google.guava -> guava 21.0

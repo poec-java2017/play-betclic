@@ -3,37 +3,16 @@ package controllers;
 import models.User;
 import play.Logger;
 import play.data.validation.Validation;
+import play.mvc.With;
 import services.UserService;
 
 import javax.validation.Valid;
 import java.util.List;
 
+@With(SecureManager.class)
 public class UserManager extends LogManager {
 
     private static final String PREFIX = "User |";
-
-    public static void signIn(@Valid String email, String password){
-        Logger.info("%s register ---> email=[%s] | password=[%s]", PREFIX, email, password);
-
-        if(Validation.hasErrors()) {
-            //Message d'erreur
-            Logger.info("%s register ---> Validation errors", PREFIX);
-        }
-
-        //On vérifie si l'user existe
-        User user = UserService.getUserByMail(email);
-
-        //Si il existe on vérifie si son password est bon
-        if(user!= null){
-            if(password.equals(user.password)){
-                //THAT'S ALL RIGHT
-                Logger.info("%s register ---> Password correct", PREFIX);
-            }else{
-                //PASSWORD PAS BON
-                Logger.info("%s register ---> Password incorrect", PREFIX);
-            }
-        }
-    }
 
     public static void signOut(@Valid User user){
 

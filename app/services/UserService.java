@@ -1,6 +1,11 @@
 package services;
 
+import models.Operation;
 import models.User;
+import play.db.jpa.JPA;
+
+import javax.persistence.Query;
+import java.util.List;
 
 public class UserService {
 
@@ -24,4 +29,10 @@ public class UserService {
         User user = getUserByMail(email);
         return(user.password);
     }*/
+
+   public static Float account(Long id) {
+       Query calculAccount = JPA.em().createQuery("select SUM(amount) from operation where id_user = :id");
+       return (Float) calculAccount.setParameter("id", id).getSingleResult();
+   }
+
 }

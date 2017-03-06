@@ -1,9 +1,6 @@
 package controllers;
 
-import jobs.BootstrapJob;
-import play.mvc.Controller;
-
-public class Application extends Controller {
+public class Application extends LogManager{
 
     public static void index() {
         render();

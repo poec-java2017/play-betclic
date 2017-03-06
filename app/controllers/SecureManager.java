@@ -1,17 +1,22 @@
 package controllers;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
-
 import models.User;
 import play.Logger;
 import play.Play;
-import play.mvc.*;
-import play.data.validation.*;
-import play.libs.*;
-import play.utils.*;
+import play.data.validation.Required;
+import play.libs.Crypto;
+import play.libs.Time;
+import play.mvc.Before;
+import play.mvc.Controller;
+import play.mvc.Http;
+import play.utils.Java;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
 
 public class SecureManager extends Controller {
+
+    public static final String PREFIX = "SecureManager";
 
     @Before(unless={"login", "authenticate", "logout"})
     static void checkAccess() throws Throwable {
@@ -81,7 +86,7 @@ public class SecureManager extends Controller {
             flash.keep("url");
             flash.error("secure.error");
             params.flash();
-            redirect( flash.get("url") );
+            redirectToOriginalURL();
         }
         // Mark user as connected
         session.put("username", username);
@@ -103,7 +108,7 @@ public class SecureManager extends Controller {
         response.removeCookie("rememberme");
         Security.invoke("onDisconnected");
         flash.success("secure.logout");
-        login();
+        Application.index();
     }
 
     // ~~~ Utils

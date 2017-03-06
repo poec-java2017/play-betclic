@@ -20,14 +20,14 @@
                         <label for="Name">Nom</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre nom" id="Name" maxlength="100"
-                               name="user.lastName" value="${user ? user.lastNam : flash["user.lastNam"]}" type="text" required>
+                               name="user.lastName" value="${user ? user.lastName : flash["user.lastName"]}" type="text" required>
                     </div>
 
                     <div class="form-item">
                         <label for="Surname">Prénom</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre prénom" id="Surname" maxlength="100"
-                               name="user.firstName" value="${user ? user.firstNam : flash["user.firstNam"]}" type="text" required>
+                               name="user.firstName" value="${user ? user.firstName : flash["user.firstName"]}" type="text" required>
                     </div>
 
 
@@ -212,7 +212,7 @@
                         <label for="RoadName">Nom de rue</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner le nom de votre rue" id="RoadName" maxlength="100"
-                               name="RoadName" value="" type="text" required>
+                               name="address.street" value="" type="text" required>
                     </div>
 
                     <div class="form-item">
@@ -220,20 +220,20 @@
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner le nom de votre ville" id="CityName"
                                maxlength="100"
-                               name="CityName" value="" type="text" required>
+                               name="city.name" value="" type="text" required>
                     </div>
 
                     <div class="form-item">
                         <label for="PostCode">Code postal</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre code postal" id="PostCode" maxlength="100"
-                               name="PostCode" value="" type="text" required>
+                               name="address.postCode" value="" type="text" required>
                     </div>
 
 
                     <div class="form-item">
                         <label for="Country"> Pays*: </label>
-                        <select id="Country" name="${}" class="short" required>
+                        <select id="Country" name="country.name" class="short" required>
                             <option value="AF">Afghanistan</option>
                             <option value="ZA">Afrique Du Sud</option>
                             <option value="AL">Albanie</option>

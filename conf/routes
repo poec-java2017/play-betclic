@@ -13,11 +13,8 @@ GET     /events                                 EventManager.events
 POST    /bet                                    BetManager.bet
 POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
-<<<<<<< eecbf08ba0cdad231e114ff5194f769037d68d50
 POST    /account/udpate                         UserManager.createOrUpdate
 POST    /account/password                       UserManager.updatePassword
-=======
->>>>>>> Add basic account feature
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

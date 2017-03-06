@@ -11,6 +11,8 @@ GET     /logout                                 SecureManager.logout
 GET     /                                       Application.index
 POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
+POST    /account/udpate                         UserManager.createOrUpdate
+POST    /account/password                       UserManager.updatePassword
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

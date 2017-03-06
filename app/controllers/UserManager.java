@@ -48,7 +48,8 @@ public class UserManager extends LogManager {
     }
 
     public static void register() {
-        render();
+        List<Country> countries = Country.find("order by name").fetch();
+        render(countries);
     }
 
 
@@ -86,6 +87,7 @@ public class UserManager extends LogManager {
             Logger.info("City register ---> Creation city : [%s]", city.name);
         } else {
             Logger.info("City register ---> City : [%s] already exist", city.name);
+            city = cityExisting;
         }
 
         //Vérification de l'addresse
@@ -96,6 +98,7 @@ public class UserManager extends LogManager {
             Logger.info("Address register ---> Creation address : [%s] [%s]", address.street, address.postCode);
         } else {
             Logger.info("Address register ---> Address : [%s] [%s] already exist", address.street, address.postCode);
+            address=addressExisting;
         }
 
         User userExisting = UserService.getUserByMail(user.email);

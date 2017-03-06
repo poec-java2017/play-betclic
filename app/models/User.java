@@ -1,6 +1,7 @@
 package models;
 
 
+import org.joda.time.DateTime;
 import play.data.validation.Email;
 import play.data.validation.Min;
 import play.data.validation.Required;
@@ -39,6 +40,6 @@ public class User extends Model {
     public Address address;
 
     public User() {
-        this.uniq = UUID.randomUUID().toString();
+        this.uniq = UUID.randomUUID().toString();;
     }
 }

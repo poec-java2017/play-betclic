@@ -1,11 +1,14 @@
 package controllers;
 
 import models.User;
+import org.joda.time.DateTime;
 import play.Logger;
 import play.data.validation.Validation;
 import services.UserService;
 
 import javax.validation.Valid;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class UserManager extends LogManager {
@@ -37,7 +40,9 @@ public class UserManager extends LogManager {
     public static void register(){
         render();
     }
-    public static void signUp(@Valid User user){
+    public static void signUp(@Valid User user, int day, int month, int year){
+        user.birthday = new DateTime(year, month, day, 0, 0).toDate();
+        Logger.info("Enregistremen date : %s / %s / %s :: %s ", day, month,  year, user.birthday);
         Logger.info("%s register ---> lastName=[%s] | firstName=[%s] | email=[%s] | password=[%s] | birthday=[%s] | phone=[%s]", PREFIX, user.lastName, user.firstName, user.email, user.password, user.birthday, user.phone);
 
         if(Validation.hasErrors()) {

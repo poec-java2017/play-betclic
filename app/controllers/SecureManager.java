@@ -70,7 +70,7 @@ public class SecureManager extends Controller {
             }
         }
         flash.keep("url");
-        render();
+        Application.index();
     }
 
     public static void authenticate(@Required String username, String password, boolean remember) throws Throwable {

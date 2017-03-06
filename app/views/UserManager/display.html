@@ -1,0 +1,303 @@
+#{extends 'main.html' /}
+#{set title:'Account' /}
+
+
+<div class="container">
+    <section class="tabs">
+        <h1>Tableau de bord</h1>
+        <div class="flex-tabs">
+            <!-- Toggle buttons and visual tabs-->
+            <input type="radio" name="toggle-state" id="toggle-overview" checked="checked" />
+            <label class="tab" id="toggle-overview-label" for="toggle-overview">Mes derniers mouvements</label>
+            <input type="radio" name="toggle-state" id="toggle-account" />
+            <label class="tab" id="toggle-account-label" for="toggle-account">Mon compte</label>
+            <!-- Uncomment to enable action tab
+            <input type="radio" name="toggle-state" id="toggle-actions" disabled />
+            <label class="tab" id="toggle-actions-label" for="toggle-actions">Mes actions</label>
+            -->
+
+            <!-- Tabs contents -->
+            <div class="tabs">
+                <div id="account-overview" class="col tab">
+                    <div class="row table header">
+                        <div class="operation-date">Date</div>
+                        <div class="operation-type">Type d'opération</div>
+                        <div class="operation-output">Débit</div>
+                        <div class="operation-input">Crédit</div>
+                    </div>
+                    <div class="row table">
+                        <div class="operation-date">01-01-2017</div>
+                        <div class="operation-type">Gain</div>
+                        <div class="operation-output"></div>
+                        <div class="operation-input">12,00 €</div>
+                    </div>
+                    <div class="row table">
+                        <div class="operation-date">01-01-2017</div>
+                        <div class="operation-type">Gain</div>
+                        <div class="operation-output"></div>
+                        <div class="operation-input">23,00 €</div>
+                    </div>
+                    <div class="row table">
+                        <div class="operation-date">01-01-2017</div>
+                        <div class="operation-type">Pari</div>
+                        <div class="operation-output">-3,00 €</div>
+                        <div class="operation-input"></div>
+                    </div>
+                    <div class="row table">
+                        <div class="operation-date">01-01-2017</div>
+                        <div class="operation-type">Pari</div>
+                        <div class="operation-output">-2,50 €</div>
+                        <div class="operation-input"></div>
+                    </div>
+                    <div class="row table">
+                        <div class="operation-date">01-01-2017</div>
+                        <div class="operation-type">Ajout de crédits</div>
+                        <div class="operation-output"></div>
+                        <div class="operation-input">150,00 €</div>
+                    </div>
+                    <div class="row table sum">
+                        <div class="total">179,50 €</div>
+                    </div>
+
+                    <div class="row account-operations">
+                        <a href="#modal-operation-input" id="operation-input">Ajouter des crédits</a>
+                        <a href="#modal-operation-output" id="operation-output">Retirer des crédits</a>
+                    </div>
+
+                    <!--------------------------------------------------------------------------->
+                    <!------------------------------MODAL 1-------------------------------------->
+                    <!--------------------------------------------------------------------------->
+                    <div id="modal-operation-input" class="modalWindow">
+                        <a href="#close" title="Close" class="close"></a>
+                        <div class="modalHeader">
+                            <!--<img src="@{'/public/images/betclic-logo.png'}" alt="Betclic" />-->
+                            <h2>Approvisionner mon compte.</h2>
+                        </div>
+
+                        <form role="form" class="col modalContent" action="account.html">
+                            <div class="modalContentRadio">
+                                <span><input name="carte" required type="radio" value="visa">Visa<img class="card-type" src="@{'/public/images/visa.png'}" alt="visa" /></span>
+                                <span><input name="carte" required type="radio" value="master">Mastercard<img class="card-type" src="@{'/public/images/master.png'}" alt="mastercard" /></span>
+                                <span><input name="carte" required type="radio" value="cb">Carte Bleue<img class="card-type" src="@{'/public/images/cb.png'}" alt="carte bleue" /></span>
+                            </div>
+
+                            <div class="modalContentInput">
+                                <div class="row bank">
+                                    <span>Titulaire de la carte</span>
+                                    <input type="text" name="fname" required size="30px">
+                                </div>
+                                <div class="row bank">
+                                    <span>Numéro carte bleue</span>
+                                    <input type="text" name="fname" required>
+                                </div>
+                                <div class="row bank">
+                                    <span>Cryptogramme</span>
+                                    <input type="text" name="fname" required size="5px" >
+                                </div>
+                                <div class="row bank">
+                                    <span>Date d'expiration</span>
+                                    <input type="text" name="fname" required size="8px" placeholder="MM/AAAA">
+                                </div>
+                                <div class="row bank">
+                                    <span>Montant</span>
+                                    <input type="number" step="0.01"  name="fname" required size="8px">
+                                </div>
+                            </div>
+
+                            <div class="modalFooter">
+                                <p>Mention d'alerte quelconque</p>
+                                <a href="#cancel" title="Cancel" class="cancel">Annuler</a>
+                                <input class="submit" type="submit" value="Valider" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="overlay"></div>
+
+                    <!--------------------------------------------------------------------------->
+                    <!------------------------------MODAL 2-------------------------------------->
+                    <!--------------------------------------------------------------------------->
+                    <div id="modal-operation-output" class="modalWindow">
+                        <a href="#close" title="Close" class="close">X</a>
+                        <div class="modalHeader">
+                            <!--<img src="@{'/public/images/betclic-logo.png'}" alt="Betclic" />-->
+                            <h2>Retirer de l'argent.</h2>
+                        </div>
+
+                        <form role="form" class="modalContent" action="account.html">
+                            <div class="modalContentRadio">
+                                <span><input name="carte" required type="radio" value="visa">Visa<img class="card-type" src="@{'/public/images/visa.png'}" alt="visa" /></span>
+                                <span><input name="carte" required type="radio" value="master">Mastercard<img class="card-type" src="@{'/public/images/master.png'}" alt="mastercard" /></span>
+                                <span><input name="carte" required type="radio" value="cb">Carte Bleue<img class="card-type" src="@{'/public/images/cb.png'}" alt="carte bleue" /></span>
+                            </div>
+
+                            <div class="modalContentInput">
+                                <div class="row bank">
+                                    <span>Titulaire de la carte</span>
+                                    <input type="text" name="fname" required size="30px">
+                                </div>
+                                <div class="row bank">
+                                    <span>Numéro carte bleue</span>
+                                    <input type="text" name="fname" required>
+                                </div>
+                                <div class="row bank">
+                                    <span>Cryptogramme</span>
+                                    <input type="text" name="fname" required size="5px" >
+                                </div>
+                                <div class="row bank">
+                                    <span>Date d'expiration</span>
+                                    <input type="text" name="fname" required size="8px" placeholder="MM/AAAA">
+                                </div>
+                                <div class="row bank">
+                                    <span>Montant</span>
+                                    <input type="number" step="0.01"  name="fname" required size="8px">
+                                </div>
+                            </div>
+
+                            <div class="modalFooter">
+                                <p>Mention d'alerte quelconque</p>
+                                <a href="#cancel" title="Cancel" class="cancel">Annuler</a>
+                                <input class="submit" type="submit" value="Valider">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+                <div id="account-settings" class="col tab">
+                    <div class="hidden-form row">
+                        <h2>Information personnelles</h2>
+                        <input type="checkbox" id="toggle-account-infos" name="toggle-account-infos" />
+                        <label for="toggle-account-infos">+</label>
+                        <form id="account-form" class="col">
+                            Date de naissance
+                            <input type="date" id="birthdate" name="birthdate" value="2017-02-16" disabled />
+                            Adresse
+                            <input type="text" id="address" name="address" value="${user.address.street}" required />
+                            Complément d'adresse
+                            <input type="text" id="address-cpl" name="address-cpl" />
+                            Code postal
+                            <input type="text" id="postcode" name="postcode" pattern="[0-9]+" value="${user.address.postCode}" required />
+                            Ville
+                            <input type="text" id="city" name="city" value="${user.address.city.name}" required />
+                            Pays
+                            <div class="row">
+                                <input type="text" id="country" name="country" value="France" required />
+                                <input type="submit" value="Sauvegarder" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="hidden-form row">
+                        <h2>Mot de passe</h2>
+                        <input type="checkbox" id="toggle-account-password" name="toggle-account-password" />
+                        <label for="toggle-account-password">+</label>
+                        <form id="password-form" class="col">
+                            Mot de passe actuel
+                            <input type="password" id="apppassword" name="apppassword" required />
+                            Nouveau mot de passe
+                            <input type="password" id="appnpassword" name="appnpassword" required />
+                            Nouveau mot de passe
+                            <div class="row">
+                                <input type="password" id="apprnpassword" name="apprnpassword" required />
+                                <input type="submit" value="Sauvegarder" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="account-actions" class="col tab">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dismissable content -->
+    <aside>
+        <!-- Search -->
+        <h2>Rechercher un pari sportif :</h2>
+        <form id="search" name="search">
+            <div class="global-input">
+                <input type="text" name="search" placeholder="Indiquer votre requête" />
+                <button class="material-icons">search</button>
+            </div>
+        </form>
+
+        <!-- Combined Bets -->
+        <h2 class="row">
+            Top 5 des paris combinés :
+            <a href="#" class="material-icons">help</a>
+        </h2>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/goldCup.png'}" alt="Médaille d'or" title="Médaille d'or" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Zeljko S.</a>
+                    <span class="profit">26290 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 10 €</div>
+                    <div class="quotation">Cote : 1753,01</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/silverCup.png'}" alt="Médaille d'argent" title="Médaille d'argent" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Yassin D.</a>
+                    <span class="profit">9081 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 50 €</div>
+                    <div class="quotation">Cote : 173,01</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/copperCup.png'}" alt="Médaille de bronze" title="Médaille de bronze" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Dimitri P.</a>
+                    <span class="profit">8508 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 20 €</div>
+                    <div class="quotation">Cote : 293,70</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/basicCup.png'}" alt="Médaille basique" title="Médaille basique" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Vadivelen M.</a>
+                    <span class="profit">7378 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 25 €</div>
+                    <div class="quotation">Cote : 285,88</div>
+                </div>
+            </div>
+        </div>
+        <div class="combined-list row">
+            <img src="@{'/public/images/icons/basicCup.png'}" alt="Médaille basique" title="Médaille basique" />
+            <div class="col">
+                <div class="row">
+                    <a href="#" class="name">Frédéric A.</a>
+                    <span class="profit">7338 &euro;</span>
+                </div>
+                <div class="row">
+                    <div class="bet">pari : 120 €</div>
+                    <div class="quotation">Cote : 55,68</div>
+                </div>
+            </div>
+        </div>
+        <div class="advertising">
+            <img src="@{'/public/images/colonne_big.jpg'}" alt="Publicité" />
+        </div>
+
+        <h2>Parier avec Betclic !</h2>
+        <div class="bet-wit-me">
+            Retrouvez le meilleur des paris sportifs à tout moment sur Betclic
+            <a href="#">En savoir plus sur les paris en ligne !</a>
+        </div>
+    </aside>
+</div>

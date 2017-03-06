@@ -12,10 +12,13 @@ import java.util.List;
 @With(SecureManager.class)
 public class UserManager extends LogManager {
 
-    private static final String PREFIX = "User |";
+    private static final String PREFIX = "User";
+
+    public static void display() {
+        render();
+    }
 
     public static void signOut(@Valid User user){
-
         if(Validation.hasErrors()) {
             //Message d'erreur
             Logger.info("%s save ---> Validation errors", PREFIX);

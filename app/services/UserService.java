@@ -7,6 +7,7 @@ import play.db.jpa.JPA;
 
 import javax.persistence.Query;
 import java.util.List;
+import models.User;
 
 public class UserService {
 

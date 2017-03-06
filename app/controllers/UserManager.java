@@ -3,11 +3,13 @@ package controllers;
 import models.User;
 import play.Logger;
 import play.data.validation.Validation;
+import play.mvc.With;
 import services.UserService;
 
 import javax.validation.Valid;
 import java.util.List;
 
+@With(SecureManager.class)
 public class UserManager extends LogManager {
 
     private static final String PREFIX = "User |";

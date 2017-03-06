@@ -6,7 +6,9 @@
 
 # Directories
 tmp
+lib
 logs
+modules
 node_modules
 
 # Built css files

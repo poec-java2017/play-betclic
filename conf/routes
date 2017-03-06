@@ -4,6 +4,8 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /events                                 BetManager.eventsToBet
+POST    /bet                                    BetManager.bet
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

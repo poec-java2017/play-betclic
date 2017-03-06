@@ -24,8 +24,8 @@ public class Event extends Model {
     @Required
     @Min(0.01)
     public Float coteGuest;
-    public int resultHost;
-    public int resultGuest;
+    public Integer resultHost;
+    public Integer resultGuest;
 
     @ManyToOne
     @Required

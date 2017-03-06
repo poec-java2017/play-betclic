@@ -1,6 +1,7 @@
 package controllers;
 
 import models.User;
+import org.mindrot.jbcrypt.BCrypt;
 import play.Logger;
 import play.Play;
 import play.data.validation.Required;
@@ -148,7 +149,7 @@ public class SecureManager extends Controller {
         static boolean authenticate(String username, String password) {
             Logger.info("[%s][authenticate] Try authenticate user", PREFIX);
             User user = User.find("byEmail", username).first();
-            return user != null && user.password.equals(password);
+            return user != null && BCrypt.checkpw(password, user.password);
         }
 
         /**

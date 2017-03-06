@@ -4,6 +4,7 @@ import models.Address;
 import models.City;
 import models.Country;
 import models.User;
+import net.sf.ehcache.search.aggregator.Count;
 import org.joda.time.DateTime;
 import play.Logger;
 import play.data.validation.Error;
@@ -22,30 +23,7 @@ public class UserManager extends LogManager {
 
     private static final String PREFIX = "User |";
 
-    public static void signIn(@Valid String email, String password) {
-        Logger.info("%s signIn ---> email=[%s] | password=[%s]", PREFIX, email, password);
 
-        if (Validation.hasErrors()) {
-            //Message d'erreur
-            for (Error error : Validation.errors()) {
-                Logger.info("[%s][%s]", error.getKey(), error.message());
-            }
-        }
-
-        //On vérifie si l'user existe
-        User user = UserService.getUserByMail(email);
-
-        //Si il existe on vérifie si son password est bon
-        if (user != null) {
-            if (password.equals(user.password)) {
-                //THAT'S ALL RIGHT
-                Logger.info("%s signIn ---> Password correct", PREFIX);
-            } else {
-                //PASSWORD PAS BON
-                Logger.info("%s signIn ---> Password incorrect", PREFIX);
-            }
-        }
-    }
 
     public static void register() {
         List<Country> countries = Country.find("order by name").fetch();
@@ -53,10 +31,11 @@ public class UserManager extends LogManager {
     }
 
 
-    public static void signUp(@Valid User user, int day, int month, int year,
+    public static void signUp(@Valid User user, int day, int month, int year, String roadNumber, String streetAddress,
                               @Valid Address address, @Valid City city, @Valid Country country) {
         country = CountryService.getCountryByName(country.name);
         user.birthday = new DateTime(year, month, day, 0, 0).toDate();
+        address.street = String.format("%s %s", roadNumber, streetAddress).trim();
         Logger.info("Enregistremen date : %s / %s / %s :: %s ", day, month, year, user.birthday);
         Logger.info("%s register ---> lastName=[%s] | firstName=[%s] | email=[%s] | password=[%s] | birthday=[%s] | phone=[%s]", PREFIX, user.lastName, user.firstName, user.email, user.password, user.birthday, user.phone);
         Logger.info("%s register ---> street=[%s] | postCode=[%s]", PREFIX, address.street, address.postCode);
@@ -71,8 +50,6 @@ public class UserManager extends LogManager {
             }
         }
 
-
-        //Vérification de la ville
         City cityExisting = CityService.getCityByName(city.name, country.id);
         if (cityExisting == null) {
             city.country = country;
@@ -107,24 +84,6 @@ public class UserManager extends LogManager {
         Application.index();
     }
 
-//    public static void signUp(@Valid Country country){
-//        Logger.info("%s register ---> name=[%s] | ", PREFIX, country.name);
-//
-//        if(Validation.hasErrors()) {
-//            //Message d'erreur
-//            Logger.info("%s register ---> Validation errors", PREFIX);
-//        }
-//        /*User userExisting = UserService.getUserByMail(user.email);*/
-//        /*if(userExisting==null){*/
-//            country.save();
-//            Logger.info("%s register ---> Validation OK", PREFIX);
-//        /*}else {
-//            //Message d'erreur
-//            Logger.info("%s register ---> User %s already exist", PREFIX, user.email);
-//        }*/
-//
-//        Application.index();
-//    }
 
     public static void delete(String uniq) {
         UserService.getUserById(uniq).delete();

@@ -205,14 +205,14 @@
                         <label for="RoadNumber">n° de rue</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre n° de rue" id="RoadNumber" maxlength="100"
-                               name="RoadNumber" value="" type="text">
+                               name="roadNumber" value="" type="text">
                     </div>
 
                     <div class="form-item">
                         <label for="RoadName">Nom de rue</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner le nom de votre rue" id="RoadName" maxlength="100"
-                               name="address.street" value="" type="text" required>
+                               name="streetAddress" value="" type="text" required>
                     </div>
 
                     <div class="form-item">
@@ -233,7 +233,7 @@
 
                     <div class="form-item">
                         <label for="Country"> Pays*: </label>
-                        <select id="Country" name="country.name" class="short" required>
+                        <select id="Country" name="country.uniq" class="short" required>
                         #{list items:countries, as:'country'}
                             <option value="${country.name}"#{if play.configuration.getProperty('application.country.default')==country.name} selected="selected"#{/if}>${country.name}</option>
                         #{/list}

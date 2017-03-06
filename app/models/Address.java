@@ -18,7 +18,7 @@ public class Address extends Model{
     public String street;
 
     @Required 
-    @Pattern(regexp = "[0-9]{5}", message="Invalid post code")
+    @Pattern(regexp = "[0-9]+", message="Invalid post code")
     public String postCode;
 
     @ManyToOne

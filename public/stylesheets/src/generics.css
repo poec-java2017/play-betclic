@@ -205,17 +205,27 @@ input[id^=toggle-] + label.tab {
      overflow:hidden;
      transition:all 500ms ease;
  }
-.hidden-form form input {
+.hidden-form form input,
+.hidden-form form select {
     border:solid 1px #999;
     border-radius:3px;
     margin:3px 0;
     padding:5px;
+}
+.hidden-form form select,
+.hidden-form form input:not([type=submit]) {
+    flex:1 1 auto;
 }
 .hidden-form form input[type=submit] {
     border:none;
     background:#2AB27B;
     color:#FFF;
     font-weight:bold;
+    margin-left:10px;
+}
+.hidden-form form input.error {
+    background-color:#F2DEDE;
+    border-color:#CA7B7B;
 }
 
 /****************************
@@ -267,7 +277,7 @@ input[id^=toggle-] + label.tab {
     z-index:2;
 }
 .modalWindow > .close {
-    background: url(../image/icons/close.png) no-repeat center center;
+    background: url(/public/images/icons/close.png) no-repeat center center;
     border:solid 2px #FFF;
     border-radius: 15px;
     height: 20px;

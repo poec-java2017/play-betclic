@@ -23,7 +23,7 @@ public class SecureManager extends Controller {
         // Authentication
         if(!session.contains("username")) {
             flash.put("url", "GET".equals(request.method) ? request.url : Play.ctxPath + "/"); // seems a good default
-            login();
+            Application.index();
         }
         // Checks
         Check check = getActionAnnotation(Check.class);

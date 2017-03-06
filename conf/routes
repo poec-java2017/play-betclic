@@ -13,6 +13,8 @@ POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
 POST    /account/udpate                         UserManager.createOrUpdate
 POST    /account/password                       UserManager.updatePassword
+GET     /events                                 BetManager.eventsToBet
+POST    /bet                                    BetManager.bet
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

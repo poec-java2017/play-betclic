@@ -1,7 +1,12 @@
 package controllers;
 
+import models.Country;
 import models.User;
+import org.mindrot.jbcrypt.BCrypt;
 import play.Logger;
+import play.data.validation.Equals;
+import play.data.validation.Error;
+import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.mvc.With;
 import services.UserService;
@@ -15,7 +20,32 @@ public class UserManager extends LogManager {
     private static final String PREFIX = "User";
 
     public static void display() {
-        render();
+        List<Country> countries = Country.find("order by name").fetch();
+
+        render(countries);
+    }
+
+    public static void createOrUpdate() {
+        display();
+    }
+
+    public static void updatePassword(@Required String apppassword, @Required @Equals("apprnpassword") String appnpassword, @Required String apprnpassword) {
+        Logger.info("[%s][updatePassword] [%s][%s][%s]", PREFIX, apppassword, appnpassword, apprnpassword);
+        User user = (User)renderArgs.get("user");
+        if (Validation.hasErrors()) {
+            for (Error error: Validation.errors()) {
+                Logger.info(error.message());
+            }
+            Validation.keep();
+        } else if (!BCrypt.checkpw(apppassword, user.password)) {
+            Logger.info("[%s][updatePassword] Password mismatch", PREFIX);
+            flash.put("badPassword", "Password mismatch.");
+        } else {
+            user.password = BCrypt.hashpw(appnpassword, BCrypt.gensalt());
+            user.save();
+        }
+
+        display();
     }
 
     public static void signOut(@Valid User user){

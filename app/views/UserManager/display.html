@@ -180,7 +180,12 @@
                             <input type="text" id="city" name="city" value="${user.address.city.name}" required />
                             Pays
                             <div class="row">
-                                <input type="text" id="country" name="country" value="France" required />
+                                *{<input type="text" id="country" name="country" value="France" required />}*
+                                <select name="country" required>
+                                    #{list countries, as:"country"}
+                                    <option value="${country.uniq}"#{if country.id == user.address.city.country.id} selected="selected"#{/if}>${country.name}</option>
+                                    #{/list}
+                                </select>
                                 <input type="submit" value="Sauvegarder" />
                             </div>
                         </form>
@@ -189,9 +194,9 @@
                         <h2>Mot de passe</h2>
                         <input type="checkbox" id="toggle-account-password" name="toggle-account-password" />
                         <label for="toggle-account-password">+</label>
-                        <form id="password-form" class="col">
+                        <form id="password-form" method="POST" action="@{UserManager.updatePassword}" class="col">
                             Mot de passe actuel
-                            <input type="password" id="apppassword" name="apppassword" required />
+                            <input type="password" id="apppassword" name="apppassword" required#{if flash.contains("badPassword")} class="error"#{/if} />
                             Nouveau mot de passe
                             <input type="password" id="appnpassword" name="appnpassword" required />
                             Nouveau mot de passe

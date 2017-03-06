@@ -41,4 +41,8 @@ public class User extends Model {
     public User() {
         this.uniq = UUID.randomUUID().toString();
     }
+
+    public static User authenticate(String email, String password) {
+        return User.find("email = ?1 and password = ?2", email, password).first();
+    }
 }

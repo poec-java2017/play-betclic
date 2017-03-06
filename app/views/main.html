@@ -42,9 +42,11 @@
                     <li><a href="#" class="material-icons">smartphone</a></li>
                 </ul>
                 <a href="#" id="log-me-in" class="material-icons">account_circle</a>
-                <form id="credentials" name="credentials" method="get" action="index-connected.html">
+
+                #{if !controllers.SecureManager.Security.isConnected()}
+                <form id="credentials" name="credentials" method="post" action="@{SecureManager.authenticate}">
                     <div class="global-input">
-                        <input type="text" name="username" placeholder="Pseudo" />
+                        <input type="text" name="username" placeholder="Email" />
                         <a href="#">oublié ?</a>
                     </div>
                     <div class="row">
@@ -56,6 +58,16 @@
                     </div>
                     <span id="register">Créer un nouveau compte ? <a href="inscription.html">Inscrivez-vous</a></span>
                 </form>
+                #{/if}
+                #{else}
+                <div id="avatarBox" class="row">
+                    <div class="col">
+                        <a href="account.html">Romain T.</a>
+                        <a href="account.html">179,50 €</a>
+                    </div>
+                    <a href="account.html" class="material-icons">account_circle</a>
+                </div>
+                #{/else}
             </div>
         </header>
         <div id="top-menu">

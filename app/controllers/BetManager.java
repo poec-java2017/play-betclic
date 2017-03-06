@@ -4,17 +4,19 @@ import models.*;
 import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.mvc.Controller;
+import play.mvc.With;
 import services.UserService;
 
 import java.util.Date;
 import java.util.List;
 
+@With(SecureManager.class)
 public class BetManager extends Controller {
 
     public static void eventsToBet() {
         List<Event> events = Event.find("resultHost is null").fetch();
-//        List<Event> events = Event.find("date > now()").fetch();
-        renderJSON(events);
+//        List<Event> events = Event.find@With(SecureManager.class)("date > now()").fetch();
+        render(events);
     }
 
     public static void bet(@Required String idEvent,

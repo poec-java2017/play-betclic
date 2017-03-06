@@ -55,6 +55,7 @@ public class UserManager extends LogManager {
 
     public static void signUp(@Valid User user, int day, int month, int year,
                               @Valid Address address, @Valid City city, @Valid Country country) {
+        country = CountryService.getCountryByName(country.name);
         user.birthday = new DateTime(year, month, day, 0, 0).toDate();
         Logger.info("Enregistremen date : %s / %s / %s :: %s ", day, month, year, user.birthday);
         Logger.info("%s register ---> lastName=[%s] | firstName=[%s] | email=[%s] | password=[%s] | birthday=[%s] | phone=[%s]", PREFIX, user.lastName, user.firstName, user.email, user.password, user.birthday, user.phone);
@@ -70,17 +71,9 @@ public class UserManager extends LogManager {
             }
         }
 
-        //Vérification du pays
-        Country countryExisting = CountryService.getCountryByName(country.name);
-        if (countryExisting == null) {
-            country.save();
-            Logger.info("Country register ---> Creation country : [%s]", country.name);
-        } else {
-            Logger.info("Country register ---> Country : [%s] already exist", country.name);
-        }
 
         //Vérification de la ville
-        City cityExisting = CityService.getCityByName(city.name);
+        City cityExisting = CityService.getCityByName(city.name, country.id);
         if (cityExisting == null) {
             city.country = country;
             city.save();

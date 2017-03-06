@@ -235,7 +235,7 @@
                         <label for="Country"> Pays*: </label>
                         <select id="Country" name="country.name" class="short" required>
                         #{list items:countries, as:'country'}
-                            <option value="${country.uniq}"#{if play.configuration.getProperty('application.country.default')==country.name} selected="selected"#{/if}>${country.name}</option>
+                            <option value="${country.name}"#{if play.configuration.getProperty('application.country.default')==country.name} selected="selected"#{/if}>${country.name}</option>
                         #{/list}
 
                         </select>

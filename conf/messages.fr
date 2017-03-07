@@ -1,0 +1,4 @@
+operation.type=&{%s}
+operation.type.bet=Pari
+operation.type.refill=Dépôt
+operation.type.withdraw=Retrait

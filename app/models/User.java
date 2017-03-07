@@ -1,13 +1,14 @@
 package models;
 
 
-import org.joda.time.DateTime;
-import play.data.validation.*;
+import play.data.validation.Email;
+import play.data.validation.MinSize;
+import play.data.validation.Phone;
+import play.data.validation.Required;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.UUID;
 
@@ -47,4 +48,5 @@ public class User extends Model {
     public static User authenticate(String email, String password) {
         return User.find("email = ?1 and password = ?2", email, password).first();
     }
+
 }

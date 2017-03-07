@@ -20,12 +20,12 @@ public class UserService {
     public static User getUserByMail(String email){
         User user = null;
         if(email != null) {
-            user = User.findById(email);
+            user = User.find("email = ?1", email).first();
         }
         return(user);
     }
 
-   public static BigDecimal account(Long id) {
+    public static BigDecimal account(Long id) {
        Query calculAccount = JPA.em().createQuery("select SUM(amount) from operation where user_id = :id");
        try{
            BigDecimal result = (BigDecimal)calculAccount.setParameter("id", id).getSingleResult();
@@ -35,5 +35,14 @@ public class UserService {
            Logger.info(e.getMessage());
            return BigDecimal.valueOf(0);
        }
-   }
+    }
+
+    public static boolean verifPassword(String pwd1, String pwd2){
+        boolean check=false;
+        if(pwd1.equals(pwd2)){
+            check=true;
+        }
+        return check;
+    }
+
 }

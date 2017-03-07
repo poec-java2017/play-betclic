@@ -14,15 +14,12 @@ import java.util.List;
 
 @With(SecureManager.class)
 public class BetManager extends LogManager {
-<<<<<<< HEAD
-=======
 
     public static void eventsToBet() {
         List<Event> events = Event.find("resultHost is null").fetch();
 //        List<Event> events = Event.find@With(SecureManager.class)("date > now()").fetch();
         render(events);
     }
->>>>>>> feature/account-resume
 
     public static void bet(@Required String idEvent,
                            @Required Short betChoice,
@@ -39,13 +36,8 @@ public class BetManager extends LogManager {
         operation.save();
         // TODO fin
 
-<<<<<<< HEAD
-        Float solde = UserService.account(user.id);
-        if ((betAmount != null) && (betAmount > solde)){
-=======
         BigDecimal solde = UserService.account(25L);
         if (betAmount.compareTo(solde) >= 0) {
->>>>>>> feature/account-resume
             Validation.addError("amount", "Votre solde n'est pas suffisant.");
         }
 

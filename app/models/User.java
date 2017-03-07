@@ -1,13 +1,13 @@
 package models;
 
 
-import play.data.validation.Email;
-import play.data.validation.Min;
-import play.data.validation.Required;
+import org.joda.time.DateTime;
+import play.data.validation.*;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.UUID;
 
@@ -27,19 +27,21 @@ public class User extends Model {
     public String email;
 
     @Required
-    @Min(8)
+    @MinSize(8)
     public String password;
 
     @Required
     public Date birthday;
 
-    public String telephone;
+    @Required
+    @Phone
+    public String phone;
 
     @ManyToOne
     public Address address;
 
     public User() {
-        this.uniq = UUID.randomUUID().toString();
+        this.uniq = UUID.randomUUID().toString();;
     }
 
     public static User authenticate(String email, String password) {

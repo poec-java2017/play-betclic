@@ -12,78 +12,32 @@
             <li class="active">Le TOP des paris sportifs</li>
             <li>Les paris de dernière minute</li>
         </ul>
-        <div class="betline title row">
-            <div class="countdown"></div>
-            <div class="info"></div>
-            <div class="win-host">1</div>
-            <div class="tie-game">Nul</div>
-            <div class="win-guest">2</div>
-            <!--<div class="bet-types"></div>-->
-            <div class="bet-stats"></div>
-        </div>
-        <div class="betline row">
-            <div class="countdown">11 h</div>
+      <div class="betline title row">
+        <div class="countdown"></div>
+        <div class="info"></div>
+        <div class="win-host">1</div>
+        <div class="tie-game">Nul</div>
+        <div class="win-guest">2</div>
+        <div class="bet-types"></div>
+        <div class="bet-stats"></div>
+      </div>
+    #{list items:events, as:'event'}
+          <div class="betline row">
+            <div class="countdown">7 j</div>
             <div class="info">
-                <div class="competition">Football, Ligue 2</div>
-                <div class="display">Brest - Red Star 93</div>
+              <div class="competition">Football, ${event.competition.name}</div>
+              <div class="display">${event.teamHost.name} - ${event.teamGuest.name}</div>
             </div>
-            <div class="win-host">1,55</div>
-            <div class="tie-game">3,60</div>
-            <div class="win-guest">5,50</div>
-            <!--<div class="bet-types">+59</div>-->
+            <a class="win-host betButton" data-bet="Paris SG" href="#openBetModal">${event.coteHost}</a>
+            <a class="tie-game betButton" data-bet="Nul" href="#openBetModal">${event.coteTie}</a>
+            <a class="win-guest betButton" data-bet="FC Barcelone" href="#openBetModal">${event.coteGuest}</a>
+            <div class="bet-types">+59</div>
             <div class="bet-stats">
-                <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
-                <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+              <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+              <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
             </div>
-        </div>
-        <div class="betline row">
-            <div class="countdown">11 h</div>
-            <div class="info">
-                <div class="competition">Football, Ligue 2</div>
-                <div class="display">Brest - Red Star 93</div>
-            </div>
-            <div class="win-host">1,55</div>
-            <div class="tie-game">3,60</div>
-            <div class="win-guest">5,50</div>
-            <!--<div class="bet-types">+59</div>-->
-            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
-        </div>
-        <div class="betline row">
-            <div class="countdown">11 h</div>
-            <div class="info">
-                <div class="competition">Football, Ligue 2</div>
-                <div class="display">Brest - Red Star 93</div>
-            </div>
-            <div class="win-host">1,55</div>
-            <div class="tie-game">3,60</div>
-            <div class="win-guest">5,50</div>
-            <!--<div class="bet-types">+59</div>-->
-            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
-        </div>
-        <div class="betline row">
-            <div class="countdown">11 h</div>
-            <div class="info">
-                <div class="competition">Football, Ligue 2</div>
-                <div class="display">Brest - Red Star 93</div>
-            </div>
-            <div class="win-host">1,55</div>
-            <div class="tie-game">3,60</div>
-            <div class="win-guest">5,50</div>
-            <!--<div class="bet-types">+59</div>-->
-            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
-        </div>
-        <div class="betline row">
-            <div class="countdown">11 h</div>
-            <div class="info">
-                <div class="competition">Football, Ligue 2</div>
-                <div class="display">Brest - Red Star 93</div>
-            </div>
-            <div class="win-host">1,55</div>
-            <div class="tie-game">3,60</div>
-            <div class="win-guest">5,50</div>
-            <!--<div class="bet-types">+59</div>-->
-            <div class="bet-stats"><img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" /></div>
-        </div>
+          </div>
+    #{/list}
         <!-- On going -->
         <h1>En ce moment sud Betclic</h1>
         <div id="on-going" class="row">
@@ -183,4 +137,38 @@
             <a href="#">En savoir plus sur les paris en ligne !</a>
         </div>
     </aside>
+</div>
+
+<div id="openBetModal" class="modalWindow">
+  <a href="#close" title="Close" class="close"></a>
+  <div class="modalContent">
+    <h2>Votre sélection</h2>
+    <div class="betModalContainer row">
+      <div class="bet-box col">
+        <strong class="betModalTitle"></strong>
+        <p class="betModalBetOn">
+          <span>Pari sur :</span>
+          <span></span>
+        </p>
+        <p class="betModalQuotation">
+          <span>Cote :</span>
+          <span></span>
+        </p>
+        <div class="betModalBet">
+          <label for="betInput">Mise :</label>
+          <div>
+            <input id="betInput" type="number" min="0" step="0.01">
+            €
+          </div>
+        </div>
+      </div>
+      <div class="bet-box col">
+        <div>
+          <span>Gain possible :</span>
+          <span class="betModalSum">120€</span>
+        </div>
+        <button class="submit betModalSubmit">Valider mon pari</button>
+      </div>
+    </div>
+  </div>
 </div>

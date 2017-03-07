@@ -9,7 +9,7 @@ $(document).ready(function() {
 
             // Click toggle "buttons"
             $('#toggle-' + innerTab.attr("id")).click();
-            $(formId).siblings("input").click();
+            $(anchor + "-form").siblings("input").click();
         }
     });
 });

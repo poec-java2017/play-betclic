@@ -12,13 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 @With(SecureManager.class)
-public class BetManager extends Controller {
-
-    public static void eventsToBet() {
-        List<Event> events = Event.find("resultHost is null").fetch();
-//        List<Event> events = Event.find@With(SecureManager.class)("date > now()").fetch();
-        render(events);
-    }
+public class BetManager extends LogManager {
 
     public static void bet(@Required String idEvent,
                            @Required Short betChoice,
@@ -35,15 +29,15 @@ public class BetManager extends Controller {
         operation.save();
         // TODO fin
 
-        Float solde = UserService.account(25L);
-        if (betAmount > solde){
+        Float solde = UserService.account(user.id);
+        if ((betAmount != null) && (betAmount > solde)){
             Validation.addError("amount", "Votre solde n'est pas suffisant.");
         }
 
         if(Validation.hasErrors()){
             params.flash();
             Validation.keep();
-            eventsToBet();
+            EventManager.events();
         }
 
         //Logger.info("Solde suffisant");
@@ -56,7 +50,7 @@ public class BetManager extends Controller {
         operationType.save();
         betOperation.save();
         bet.save();
-        eventsToBet();
+        EventManager.events();
     }
 
 }

@@ -1,6 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Account' /}
 
+#{set 'moreScripts'}
+    #{script 'account.js'/}}
+#{/set}
+
 
 <div class="container">
     <section class="tabs">
@@ -9,8 +13,8 @@
             <!-- Toggle buttons and visual tabs-->
             <input type="radio" name="toggle-state" id="toggle-overview" checked="checked" />
             <label class="tab" id="toggle-overview-label" for="toggle-overview">Mes derniers mouvements</label>
-            <input type="radio" name="toggle-state" id="toggle-account" />
-            <label class="tab" id="toggle-account-label" for="toggle-account">Mon compte</label>
+            <input type="radio" name="toggle-state" id="toggle-settings" />
+            <label class="tab" id="toggle-account-label" for="toggle-settings">Mon compte</label>
             <!-- Uncomment to enable action tab
             <input type="radio" name="toggle-state" id="toggle-actions" disabled />
             <label class="tab" id="toggle-actions-label" for="toggle-actions">Mes actions</label>
@@ -18,7 +22,7 @@
 
             <!-- Tabs contents -->
             <div class="tabs">
-                <div id="account-overview" class="col tab">
+                <div id="overview" class="col tab">
                     <div class="row table header">
                         <div class="operation-date">Date</div>
                         <div class="operation-type">Type d'opération</div>
@@ -162,12 +166,12 @@
                     </div>
                     <div class="overlay"></div>
                 </div>
-                <div id="account-settings" class="col tab">
+                <div id="settings" class="col tab">
                     <div class="hidden-form row">
                         <h2>Information personnelles</h2>
                         <input type="checkbox" id="toggle-account-infos" name="toggle-account-infos" />
                         <label for="toggle-account-infos">+</label>
-                        <form id="account-form" class="col">
+                        <form id="address-form" class="col">
                             Date de naissance
                             <input type="date" id="birthdate" name="birthdate" value="2017-02-16" disabled />
                             Adresse
@@ -207,7 +211,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="account-actions" class="col tab">
+                <div class="actions" class="col tab">
 
                 </div>
             </div>

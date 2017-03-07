@@ -2,6 +2,8 @@ package controllers.api;
 
 import controllers.api.exception.BadCredentials;
 import controllers.api.exception.Business;
+import controllers.api.exception.NoContent;
+import controllers.service.OperationTypeService;
 import models.Operation;
 import models.User;
 import play.Logger;

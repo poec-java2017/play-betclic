@@ -1,6 +1,7 @@
 package controllers;
 
 import models.*;
+import play.data.validation.Min;
 import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.mvc.Controller;
@@ -21,20 +22,25 @@ public class BetManager extends Controller {
 
     public static void bet(@Required String idEvent,
                            @Required Short betChoice,
-                           @Required Float betAmount,
+                           @Required @Min(0.01) Float betAmount,
                            @Required Float betQuotation) {
+        // TODO Affiner la validation du betChoice
 
-        // TODO : récupérer Utilisateur connecté
-        User user = User.find("id = 25").first();
+        User user = getConnectedUser();
+        // L'opération suivante permet de tester avant d'avoir le formulaire de créditation du compte, wesh
+        // TODO Virer cette opération
         OperationType operationType1 = new OperationType("BET");
         Operation operation = new Operation((float) 50, new Date(), operationType1, user);
         operationType1.save();
         operation.save();
-        // TODO : pas encore fait
+        // TODO fin
+
         Float solde = UserService.account(25L);
         if (betAmount > solde){
-            //Logger.info("Solde insuffisant");
             Validation.addError("amount", "Votre solde n'est pas suffisant.");
+        }
+
+        if(Validation.hasErrors()){
             params.flash();
             Validation.keep();
             eventsToBet();

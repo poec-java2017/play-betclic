@@ -87,10 +87,17 @@ public class UserManager extends LogManager {
         render(UserService.getUserById(uniq));
     }
 
-    public static void fillIn(@Valid User user, @Required Float amount){
+
+    public static void users(){
+        List<User> users = User.findAll();
+        render(users);
+    }
+
+    public static void fillIn(@Required String email, @Required Float amount){
+
         Operation operation = new Operation();
         operation.amount = amount;
-        operation.user = user;
+        operation.user = UserService.getUserByMail(email);
         operation.date = DateTime.now().toDate();
         operation.operationType = OperationType.getCredit();
         operation.save();

@@ -12,5 +12,6 @@ public class BootstrapJob extends Job {
         Fixtures.deleteDatabase();
         Fixtures.loadModels("dataUser.yml");
         Fixtures.loadModels("dataEvent.yml");
+        Fixtures.loadModels("dataMoney.yml");
     }
 }

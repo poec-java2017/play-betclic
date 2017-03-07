@@ -1,7 +1,10 @@
 package controllers;
 
 import models.Country;
+import models.Operation;
+import models.OperationType;
 import models.User;
+import org.joda.time.DateTime;
 import org.mindrot.jbcrypt.BCrypt;
 import play.Logger;
 import play.data.validation.Equals;
@@ -74,5 +77,14 @@ public class UserManager extends LogManager {
     public static void users(){
         List<User> users = User.findAll();
         render(users);
+    }
+
+    public static void fillIn(@Valid User user, @Required Float amount){
+        Operation operation = new Operation();
+        operation.amount = amount;
+        operation.user = user;
+        operation.date = DateTime.now().toDate();
+        operation.operationType = OperationType.getCredit();
+        operation.save();
     }
 }

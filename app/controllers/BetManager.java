@@ -14,12 +14,6 @@ import java.util.List;
 @With(SecureManager.class)
 public class BetManager extends LogManager {
 
-    public static void eventsToBet() {
-        List<Event> events = Event.find("resultHost is null").fetch();
-//        List<Event> events = Event.find@With(SecureManager.class)("date > now()").fetch();
-        render(events);
-    }
-
     public static void bet(@Required String idEvent,
                            @Required Short betChoice,
                            @Required @Min(0.01) Float betAmount,

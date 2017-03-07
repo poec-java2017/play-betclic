@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'Events' /}
+
+<div class="container">
+  <section>
+  <!-- Bet-list -->
+  <ul class="betlist-menu">
+    <li class="active">Le TOP des paris sportifs</li>
+    <li>Les paris de dernière minute</li>
+  </ul>
+  <div class="betline title row">
+    <div class="countdown"></div>
+    <div class="info"></div>
+    <div class="win-host">1</div>
+    <div class="tie-game">Nul</div>
+    <div class="win-guest">2</div>
+    <!--<div class="bet-types"></div>-->
+    <div class="bet-stats"></div>
+  </div>
+
+#{list items:events, as:'event'}
+  <div class="betline row">
+    <div class="countdown">11 h</div>
+    <div class="info">
+      <div class="competition">Football, ${event.competition.name}</div>
+      <div class="display">${event.teamHost.name} - ${event.teamGuest.name}</div>
+    </div>
+    <div class="win-host">${event.coteHost}</div>
+    <div class="tie-game">${event.coteTie}</div>
+    <div class="win-guest">${event.coteGuest}</div>
+    <!--<div class="bet-types">+59</div>-->
+    <div class="bet-stats">
+      <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+      <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+    </div>
+  </div>
+#{/list}
+  </section>
+</div>

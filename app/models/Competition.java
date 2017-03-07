@@ -9,9 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Created by formation04 on 03/03/17.
- */
 @Entity(name = "competition")
 public class Competition extends Model {
 

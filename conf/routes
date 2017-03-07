@@ -9,6 +9,8 @@ GET     /logout                                 SecureManager.logout
 
 # Home page
 GET     /                                       Application.index
+GET     /events                                 BetManager.eventsToBet
+POST    /bet                                    BetManager.bet
 POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
 POST    /account/udpate                         UserManager.createOrUpdate

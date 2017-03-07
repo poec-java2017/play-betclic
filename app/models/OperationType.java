@@ -6,9 +6,6 @@ import play.db.jpa.Model;
 import javax.persistence.Entity;
 import java.util.UUID;
 
-/**
- * Created by formation04 on 03/03/17.
- */
 @Entity(name = "operation_type")
 public class OperationType extends Model {
 

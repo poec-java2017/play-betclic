@@ -1,5 +1,12 @@
 package services;
 
+import models.Operation;
+import models.User;
+import play.Logger;
+import play.db.jpa.JPA;
+
+import javax.persistence.Query;
+import java.util.List;
 import models.User;
 
 public class UserService {
@@ -24,4 +31,16 @@ public class UserService {
         User user = getUserByMail(email);
         return(user.password);
     }*/
+
+   public static Float account(Long id) {
+       Query calculAccount = JPA.em().createQuery("select SUM(amount) from operation where user_id = :id");
+       try{
+           Number result = (Number) calculAccount.setParameter("id", id).getSingleResult();
+           //Logger.info("result = " + String.valueOf(result));
+           return result == null ? 0F : result.floatValue();
+       }catch (Exception e){
+           Logger.info(e.getMessage());
+           return 0F;
+       }
+   }
 }

@@ -9,9 +9,6 @@ import javax.persistence.ManyToOne;
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * Created by formation04 on 03/03/17.
- */
 @Entity(name = "event")
 public class Event extends Model {
 
@@ -27,8 +24,8 @@ public class Event extends Model {
     @Required
     @Min(0.01)
     public Float coteGuest;
-    public int resultHost;
-    public int resultGuest;
+    public Integer resultHost;
+    public Integer resultGuest;
 
     @ManyToOne
     @Required

@@ -8,8 +8,8 @@ OperationType(credit) :
 OperationType(withdraw) :
   name : WITHDRAW
 
-OperationType(credit) :
+OperationType(bet) :
   name : BET
 
-OperationType(credit) :
+OperationType(gain) :
   name : GAIN

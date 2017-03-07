@@ -78,7 +78,7 @@
                             <h2>Approvisionner mon compte.</h2>
                         </div>
 
-                        <form role="form" class="col modalContent" action="account.html"  >
+                        <form role="form" class="col modalContent" action="@{UserManager.fillIn(user.email,amount)}">
                             <div class="modalContentRadio">
                                 <span><input name="carte" required type="radio" value="visa">Visa<img class="card-type" src="@{'/public/images/visa.png'}" alt="visa" /></span>
                                 <span><input name="carte" required type="radio" value="master">Mastercard<img class="card-type" src="@{'/public/images/master.png'}" alt="mastercard" /></span>

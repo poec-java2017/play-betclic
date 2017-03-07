@@ -1,18 +1,26 @@
 package controllers;
 
+import controllers.api.OperationManager;
 import models.Country;
+import models.Operation;
+import models.OperationType;
 import models.User;
+import org.apache.commons.collections.map.HashedMap;
 import org.mindrot.jbcrypt.BCrypt;
 import play.Logger;
 import play.data.validation.Equals;
 import play.data.validation.Error;
 import play.data.validation.Required;
 import play.data.validation.Validation;
+import play.libs.WS;
 import play.mvc.Router;
 import play.mvc.With;
 import services.UserService;
 
 import javax.validation.Valid;
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 @With(SecureManager.class)
@@ -24,7 +32,14 @@ public class UserManager extends LogManager {
         Logger.info("[%s][display]", PREFIX);
         List<Country> countries = Country.find("order by name").fetch();
 
-        render(countries);
+        User user = getConnectedUser();
+        Logger.info("[%s][display] User id : %d", PREFIX, user.id);
+
+        List<Operation> operations = Operation.find("user_id = ?1 order by date desc", user.id).fetch(10);
+        Logger.info("[%s][display] Operations : %d", PREFIX, operations.size());
+        BigDecimal accountAmount = UserService.account(user.id);
+
+        render(operations, accountAmount, countries);
     }
 
     public static void createOrUpdate() {

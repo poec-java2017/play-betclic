@@ -28,38 +28,16 @@
                         <div class="operation-output">Débit</div>
                         <div class="operation-input">Crédit</div>
                     </div>
-                    <div class="row table">
-                        <div class="operation-date">01-01-2017</div>
-                        <div class="operation-type">Gain</div>
-                        <div class="operation-output"></div>
-                        <div class="operation-input">12,00 €</div>
-                    </div>
-                    <div class="row table">
-                        <div class="operation-date">01-01-2017</div>
-                        <div class="operation-type">Gain</div>
-                        <div class="operation-output"></div>
-                        <div class="operation-input">23,00 €</div>
-                    </div>
-                    <div class="row table">
-                        <div class="operation-date">01-01-2017</div>
-                        <div class="operation-type">Pari</div>
-                        <div class="operation-output">-3,00 €</div>
-                        <div class="operation-input"></div>
-                    </div>
-                    <div class="row table">
-                        <div class="operation-date">01-01-2017</div>
-                        <div class="operation-type">Pari</div>
-                        <div class="operation-output">-2,50 €</div>
-                        <div class="operation-input"></div>
-                    </div>
-                    <div class="row table">
-                        <div class="operation-date">01-01-2017</div>
-                        <div class="operation-type">Ajout de crédits</div>
-                        <div class="operation-output"></div>
-                        <div class="operation-input">150,00 €</div>
-                    </div>
+                    #{list operations, as:"operation"}
+                        <div class="row table">
+                            <div class="operation-date">${operation?.date?.format('dd-MM-yyyy')}</div>
+                            <div class="operation-type">${operation?.operationType?.name}</div>
+                            <div class="operation-output">#{if operation.amount < 0}${operation.amount} €#{/if}</div>
+                            <div class="operation-input">#{if operation.amount > 0}${operation.amount} €#{/if}</div>
+                        </div>
+                    #{/list}
                     <div class="row table sum">
-                        <div class="total">179,50 €</div>
+                        <div class="total">${accountAmount} €</div>
                     </div>
 
                     <div class="row account-operations">

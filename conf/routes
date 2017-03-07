@@ -16,6 +16,10 @@ GET     /account                                UserManager.display
 POST    /account/udpate                         UserManager.createOrUpdate
 POST    /account/password                       UserManager.updatePassword
 
+# Api routes
+POST    /api/operation/refill                   api.OperationManager.refill
+POST    /api/operation/bet                      api.OperationManager.bet
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

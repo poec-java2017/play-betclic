@@ -1,13 +1,11 @@
 package services;
 
-import models.Operation;
 import models.User;
 import play.Logger;
 import play.db.jpa.JPA;
 
 import javax.persistence.Query;
-import java.util.List;
-import models.User;
+import java.math.BigDecimal;
 
 public class UserService {
 
@@ -27,20 +25,15 @@ public class UserService {
         return(user);
     }
 
-   /*public static String getPassword(String email){
-        User user = getUserByMail(email);
-        return(user.password);
-    }*/
-
-   public static Float account(Long id) {
+   public static BigDecimal account(Long id) {
        Query calculAccount = JPA.em().createQuery("select SUM(amount) from operation where user_id = :id");
        try{
-           Number result = (Number) calculAccount.setParameter("id", id).getSingleResult();
+           BigDecimal result = (BigDecimal)calculAccount.setParameter("id", id).getSingleResult();
            //Logger.info("result = " + String.valueOf(result));
-           return result == null ? 0F : result.floatValue();
+           return result == null ? BigDecimal.valueOf(0) : result;
        }catch (Exception e){
            Logger.info(e.getMessage());
-           return 0F;
+           return BigDecimal.valueOf(0);
        }
    }
 }

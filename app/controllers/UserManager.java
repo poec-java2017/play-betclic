@@ -96,11 +96,11 @@ public class UserManager extends LogManager {
 
 
     public static void fillIn(@Required Float amount){
-        UserManager userManager = new UserManager();
-        Logger.info("%s fill ---> Fill %s In an amount of  %s €", PREFIX, email, amount);
+        User user = LogManager.getConnectedUser();
+        Logger.info("%s fill ---> Fill %s In an amount of  %s €", PREFIX, user.email, amount);
         Operation operation = new Operation();
         operation.amount = amount;
-        operation.user = User.find("email = ?1", email).first();
+        operation.user = user;
         operation.date = DateTime.now().toDate();
         operation.operationType = OperationTypeService.getCredit();
         operation.save();

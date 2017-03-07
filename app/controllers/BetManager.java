@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 @With(SecureManager.class)
-public class BetManager extends Controller {
+public class BetManager extends LogManager {
 
     public static void eventsToBet() {
         List<Event> events = Event.find("resultHost is null").fetch();

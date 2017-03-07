@@ -20,8 +20,13 @@ public class UserService {
         return(user);
     }
 
-   /*public static String getPassword(String email){
-        User user = getUserByMail(email);
-        return(user.password);
-    }*/
+    public static boolean verifPassword(String pwd1, String pwd2){
+        boolean check=false;
+        if(pwd1.equals(pwd2)){
+            check=true;
+        }
+        return check;
+    }
+
+    
 }

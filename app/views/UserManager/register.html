@@ -6,6 +6,8 @@
 
 
 
+
+
     <div class="container">
         <section>
             <h1>Inscription</h1>
@@ -21,6 +23,7 @@
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre nom" id="Name" maxlength="100"
                                name="user.lastName" value="${user ? user.lastName : flash["user.lastName"]}" type="text" required>
+                    #{ifError 'user.lastName'} #{error 'user.lastName' /} #{/ifError}
                     </div>
 
                     <div class="form-item">
@@ -28,6 +31,7 @@
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre prénom" id="Surname" maxlength="100"
                                name="user.firstName" value="${user ? user.firstName : flash["user.firstName"]}" type="text" required>
+                    #{ifError 'user.lastName'} #{error 'user.lastName' /} #{/ifError}
                     </div>
 
 
@@ -35,7 +39,7 @@
                         <label for="CustBirthDate_Day">Date de naissance</label>
                         <select class="day" data-val="true"
                                 data-val-required="Veuillez renseigner votre jour de naissance"
-                                id="CustBirthDate_Day" onchange="ValideDateOfBirth()"
+                                id="CustBirthDate_Day"
                                 name = "day">
                             <option selected="selected" value="">Jour</option>
                             <option value="01">01</option>
@@ -72,8 +76,7 @@
                         </select>
                         <select class="month" data-val="true"
                                 data-val-required="Veuillez renseigner votre mois de naissance"
-                                id="CustBirthDate_Month" name="month" onchange="ValideDateOfBirth()"
-                                >
+                                id="CustBirthDate_Month" name="month">
                             <option selected="selected" value="">Mois</option>
                             <option value="01">Janvier</option>
                             <option value="02">Février</option>
@@ -90,8 +93,7 @@
                         </select>
                         <select class="year" data-val="true"
                                 data-val-required="Veuillez renseigner votre année de naissance"
-                                id="CustBirthDate_Year" name="year" onchange="ValideDateOfBirth()"
-                               >
+                                id="CustBirthDate_Year" name="year">
                             <option selected="selected" value="">Année</option>
                             <option value="1999">1999</option>
                             <option value="1998">1998</option>
@@ -201,18 +203,18 @@
                     </div>
 
 
-                    <div class="form-item">
-                        <label for="RoadNumber">n° de rue</label>
-                        <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
-                               data-val-required="Veuillez renseigner votre n° de rue" id="RoadNumber" maxlength="100"
-                               name="roadNumber" value="" type="text">
-                    </div>
+                    *{<div class="form-item">}*
+                        *{<label for="RoadNumber">n° de rue</label>}*
+                        *{<input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"}*
+                               *{data-val-required="Veuillez renseigner votre n° de rue" id="RoadNumber" maxlength="100"}*
+                               *{name="roadNumber" value="" type="text">}*
+                    *{</div>}*
 
                     <div class="form-item">
-                        <label for="RoadName">Nom de rue</label>
+                        <label for="RoadName">Adresse</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner le nom de votre rue" id="RoadName" maxlength="100"
-                               name="streetAddress" value="" type="text" required>
+                               name="address.street" value="${address ? address.street : flash["address.street"]}" type="text" required>
                     </div>
 
                     <div class="form-item">
@@ -220,20 +222,20 @@
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner le nom de votre ville" id="CityName"
                                maxlength="100"
-                               name="city.name" value="" type="text" required>
+                               name="city.name" value="${city ? city.name : flash["city.name"]}" type="text" required>
                     </div>
 
                     <div class="form-item">
                         <label for="PostCode">Code postal</label>
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre code postal" id="PostCode" maxlength="100"
-                               name="address.postCode" value="" type="text" required>
+                               name="address.postCode" value="${address ? address.postCode : flash["address.postCode"]}" type="text" required>
                     </div>
 
 
                     <div class="form-item">
                         <label for="Country"> Pays*: </label>
-                        <select id="Country" name="country.uniq" class="short" required>
+                        <select id="Country" name="country.name" class="short" required>
                         #{list items:countries, as:'country'}
                             <option value="${country.name}"#{if play.configuration.getProperty('application.country.default')==country.name} selected="selected"#{/if}>${country.name}</option>
                         #{/list}
@@ -247,7 +249,7 @@
                         <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                data-val-required="Veuillez renseigner votre numéro de téléphone" id="PhoneNumber"
                                maxlength="20"
-                               name="user.phone" value="" type="tel" required>
+                               name="user.phone" value="${user ? user.phone : flash["user.phone"]}" type="tel" required>
                     </div>
                 </div>
                 <div class="col">
@@ -259,7 +261,7 @@
                             <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                    data-val-required="Veuillez renseigner votre adresse e-mail" id="Email"
                                    maxlength="100"
-                                   name="user.email" value="" type="text" required>
+                                   name="user.email" value="${user ? user.email : flash["user.email"]}" type="text" required>
                         </div>
 
                         <div class="form-item">
@@ -267,7 +269,7 @@
                             <input title="" autocomplete="off" class="textinput  input-validation-error" data-val="true"
                                    data-val-required="Veuillez renseigner votre mot de passe" id="Password"
                                    maxlength="100"
-                                   name="password" type="password" value="" required>
+                                   name="password1" type="password" value="" required>
                         </div>
 
                         <div class="form-item">
@@ -292,8 +294,7 @@
                                        <a href=&quot;javascript:OuvrePopupRules(%urlcg%)&quot; &quot;>Conditions Générales</a>
                                        et la <a href=&quot;javascript:OuvrePopupRules(%urlrv%)&quot; &quot;>Charte sur
                                        le Respect de la Vie Privée</a> field is required."
-                                       id="Conditions" name="Conditions" value="true" type="checkbox"><input
-                                    name="Conditions" value="false" type="hidden" required>
+                                       id="Conditions" name="checkBox" value="true" type="checkbox">
                                 <p>
                                     Je certifie avoir plus de 18 ans. J'ai lu et j'accepte les <a target="_blanc" href="/content/tandc">Conditions Générales</a>
                                     et la <a target="_blanc" href="/content/privacypolicy">Charte sur le Respect de la Vie Privée</a> *.
@@ -315,5 +316,12 @@
                     </div>
                 </div>
             </form>
+
+        #{errors} <li class="error-inscription">${error}</li>#{/errors}
+        #{if flash.contains("passwordMismatch")}<p class="error-inscription">Les mots de passes ne sont pas identiques.</p> #{/if}
+        #{if flash.contains("emailExisting")}<p class="error-inscription">L'email est déja utilisé.</p> #{/if}
+        #{if flash.contains("invalidDate")}<p class="error-inscription">Veuillez renter une date de naissance.</p> #{/if}
+        #{if flash.contains("checkbox")}<p class="error-inscription">Veuillez accepter les conditions générales.</p> #{/if}
+        #{if flash.contains("postCodeFalse")}<p class="error-inscription">Le code postal n'est pas valide.</p> #{/if}
         </section>
     </div>

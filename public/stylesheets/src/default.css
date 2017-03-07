@@ -556,22 +556,22 @@ footer .legal {
 * Account tab menu
 ****************************/
 #toggle-overview:checked + label.tab,
-#toggle-account:checked + label.tab,
+#toggle-settings:checked + label.tab,
 #toggle-actions:checked + label.tab {
     background:#999;
     color:#EEE;
 }
 
-#toggle-overview:checked ~ .tabs #account-overview,
-#toggle-account:checked ~ .tabs #account-settings,
-#toggle-actions:checked ~ .tabs #account-actions {
+#toggle-overview:checked ~ .tabs #overview,
+#toggle-settings:checked ~ .tabs #settings,
+#toggle-actions:checked ~ .tabs #actions {
     display:flex;
 }
 
 /****************************
 * Hidden form
 ****************************/
-#toggle-account-infos:checked ~ #account-form,
+#toggle-account-infos:checked ~ #address-form,
 #toggle-account-password:checked ~ #password-form {
     height:auto;
     opacity:1;

@@ -22,11 +22,12 @@ public class UserService {
     public static User getUserByMail(String email){
         User user = null;
         if(email != null) {
-            user = User.findById(email);
+            user = User.find("email = ?1", email).first();
         }
         return(user);
     }
 
+<<<<<<< HEAD
    /*public static String getPassword(String email){
         User user = getUserByMail(email);
         return(user.password);
@@ -43,4 +44,15 @@ public class UserService {
            return 0F;
        }
    }
+=======
+    public static boolean verifPassword(String pwd1, String pwd2){
+        boolean check=false;
+        if(pwd1.equals(pwd2)){
+            check=true;
+        }
+        return check;
+    }
+
+    
+>>>>>>> feature/sign-up
 }

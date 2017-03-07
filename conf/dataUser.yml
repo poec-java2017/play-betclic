@@ -2,6 +2,7 @@
 #Country#
 #########
 
+<<<<<<< HEAD
 Country(France) :
   name : France
   iso : fr_FR
@@ -17,6 +18,23 @@ Country(Espagne) :
 Country(Allemagne) :
   name : Allemagne
   iso : de_DE
+=======
+Country(france) :
+  name : France
+  iso : fr
+
+Country(belgique) :
+  name : Belgique
+  iso : bg
+
+Country(espagne) :
+  name : Espagne
+  iso : sp
+
+Country(allemagne) :
+  name : Allemagne
+  iso : gr
+>>>>>>> feature/sign-up
 
 ######
 #City#
@@ -24,6 +42,7 @@ Country(Allemagne) :
 
 #City France#
 
+<<<<<<< HEAD
 City(Paris):
   name : Paris
   country : France
@@ -49,11 +68,39 @@ City(Namur):
 City(Gand) :
   name : Gand
   country : Belgique
+=======
+City(paris):
+  name : Paris
+  country : france
+
+City(marseille):
+  name : Marseille
+  country : france
+
+City(lyon) :
+  name : Lyon
+  country : france
+
+#City Belgique#
+
+City(bruges):
+  name : Bruges
+  country : belgique
+
+City(anvers):
+  name : Anvers
+  country : belgique
+
+City(gand) :
+  name : Gand
+  country : belgique
+>>>>>>> feature/sign-up
 
 #City Espagne
 
 City(barcelone):
   name : Barcelone
+<<<<<<< HEAD
   country : Espagne
 
 City(madrid):
@@ -63,11 +110,23 @@ City(madrid):
 City(valence) :
   name : Valence
   country : Espagne
+=======
+  country : espagne
+
+City(madrid):
+  name : Madrid
+  country : espagne
+
+City(valence) :
+  name : Valence
+  country : espagne
+>>>>>>> feature/sign-up
 
 #City Allemagne
 
 City(berlin):
   name : Berlin
+<<<<<<< HEAD
   country : Allemagne
 
 City(hambourg):
@@ -77,6 +136,17 @@ City(hambourg):
 City(munich) :
   name : Munich
   country : Allemagne
+=======
+  country : allemagne
+
+City(hambourg):
+  name : Hambourg
+  country : allemagne
+
+City(munich) :
+  name : Munich
+  country : allemagne
+>>>>>>> feature/sign-up
 
 #########
 #Address#
@@ -85,6 +155,7 @@ City(munich) :
 #Address France
 
 Address(addressUserFR1) :
+<<<<<<< HEAD
   street : 14 rue monge
   postCode : 75005
   city : Paris
@@ -113,11 +184,42 @@ Address(addressUserFR6) :
   street : 3 place Pardieu
   postCode : 69002
   city : Lyon
+=======
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : paris
+
+Address(addressUserFR2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : paris
+
+Address(addressUserFR3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : marseille
+
+Address(addressUserFR4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : marseille
+
+Address(addressUserFR5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : lyon
+
+Address(addressUserFR6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : lyon
+>>>>>>> feature/sign-up
 
 #Address Belgique
 
 Address(addressUserBG1) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 8000
   city : Bruges
 
@@ -145,75 +247,155 @@ Address(addressUserBG6) :
   street : 14 rue de la martinière
   postCode : 7540
   city : Gand
+=======
+  postcode : 75090
+  city : bruges
+
+Address(addressUserBG2) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : bruges
+
+Address(addressUserBG3) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : anvers
+
+Address(addressUserBG4) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : anvers
+
+Address(addressUserBG5) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : gand
+
+Address(addressUserBG6) :
+  street : 14 rue de la martinière
+  postcode : 75090
+  city : gand
+>>>>>>> feature/sign-up
 
 #Address Espagne
 
 Address(addressUserSP1) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : madrid
 
 Address(addressUserSP2) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : madrid
 
 Address(addressUserSP3) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : valence
 
 Address(addressUserSP4) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : valence
 
 Address(addressUserSP5) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : barcelone
 
 Address(addressUserSP6) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : barcelone
 
 #Address Allemagne
 
 Address(addressUserGR1) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : berlin
 
 Address(addressUserGR2) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : berlin
 
 Address(addressUserGR3) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : munich
 
 Address(addressUserGR4) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : munich
 
 Address(addressUserGR5) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : hambourg
 
 Address(addressUserGR6) :
   street : 14 rue de la martinière
+<<<<<<< HEAD
   postCode : 75090
+=======
+  postcode : 75090
+>>>>>>> feature/sign-up
   city : hambourg
 
 ######
 #User#
 ######
+<<<<<<< HEAD
 # Default password id [password]
+=======
+>>>>>>> feature/sign-up
 
 #User France
 
@@ -221,52 +403,91 @@ User(UserFR1) :
   lastName : Georges
   firstName : Dupont
   email : georges@dupont.com
+<<<<<<< HEAD
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR1
 
 User(UserFR2) :
+<<<<<<< HEAD
   lastName : Jean-Baptiste
   firstName : Soyez
   email : jb@soyez.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR2
 
 User(UserFR3) :
+<<<<<<< HEAD
   lastName : Christophe
   firstName : Pamart
   email : cricri@pamart.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR3
 
 User(UserFR4) :
+<<<<<<< HEAD
   lastName : Florian
   firstName : Fleuret
   email : flo@fleuret.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR4
 
 User(UserFR5) :
+<<<<<<< HEAD
   lastName : Anthony
   firstName : Periquet
   email : anthony@periquet.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR5
 
 User(UserFR6) :
+<<<<<<< HEAD
   lastName : Jérôme
   firstName : Delaunay
   email : geromino@delaunay.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserFR6
@@ -274,37 +495,65 @@ User(UserFR6) :
 #User Belgique
 
 User(UserBG1) :
+<<<<<<< HEAD
   lastName : Marc
   firstName : Dutrou
   email : georges@dutrou.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG1
 
 User(UserBG2) :
+<<<<<<< HEAD
   lastName : Jean-Philippe
   firstName : Smet
   email : johnny@halliday.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG2
 
 User(UserBG3) :
+<<<<<<< HEAD
   lastName : Benoit
   firstName : Poolvoerde
   email : benoit@poolvoerde.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG3
 
 User(UserBG4) :
+<<<<<<< HEAD
   lastName : Jacques
   firstName : Brel
   email : jasques@brel.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG4
@@ -313,16 +562,27 @@ User(UserBG5) :
   lastName : Georges
   firstName : Dupont
   email : georges@dupont.com
+<<<<<<< HEAD
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG5
 
 User(UserBG6) :
+<<<<<<< HEAD
   lastName : Roi
   firstName : Baudoin
   email : roi@belgique.be
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserBG6
@@ -330,55 +590,97 @@ User(UserBG6) :
 #User Espagne
 
 User(UserSP1) :
+<<<<<<< HEAD
   lastName : Salvador
   firstName : Dali
   email : salvador@dali.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP1
 
 User(UserSP2) :
+<<<<<<< HEAD
   lastName : Pablo
   firstName : Picasso
   email : pablo@picasso.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP2
 
 User(UserSP3) :
+<<<<<<< HEAD
   lastName : Francisco
   firstName : Franco
   email : fransisco@franco.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP3
 
 User(UserSP4) :
+<<<<<<< HEAD
   lastName : Don
   firstName : Quijotte
   email : don@quijotte.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP4
 
 User(UserSP5) :
+<<<<<<< HEAD
   lastName : Hernàn
   firstName : Cortez
   email : hernan@cortez.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP5
 
 User(UserSP6) :
+<<<<<<< HEAD
   lastName : Con
   firstName : Quistador
   email : con@quistador.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserSP6
@@ -386,55 +688,97 @@ User(UserSP6) :
 #User Allemagne
 
 User(UserGR1) :
+<<<<<<< HEAD
   lastName : Adolf
   firstName : Hitler
   email : furher@deutchland.de
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR1
 
 User(UserGR2) :
+<<<<<<< HEAD
   lastName : Angela
   firstName : Merkel
   email : angela@deuchland.de
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR2
 
 User(UserGR3) :
+<<<<<<< HEAD
   lastName : Ermann
   firstName : Meir
   email : ermann@meir.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR3
 
 User(UserGR4) :
+<<<<<<< HEAD
   lastName : Wurt
   firstName : Wonderbar
   email : wurt@wonderbar.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR4
 
 User(UserGR5) :
+<<<<<<< HEAD
   lastName : Sebastian
   firstName : Bach
   email : sebastian@bach.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR5
 
 User(UserGR6) :
+<<<<<<< HEAD
   lastName : Mickaël
   firstName : Schumacher
   email : mickael@schumacher.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
+=======
+  lastName : Georges
+  firstName : Dupont
+  email : georges@dupont.com
+  password : password
+>>>>>>> feature/sign-up
   birthday : 1975-08-06
   telephone : XXX-32.56.87
   address : addressUserGR6

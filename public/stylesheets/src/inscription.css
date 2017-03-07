@@ -141,6 +141,10 @@ input[type="checkbox"], input[type="radio"] {
     overflow: hidden;
 }
 
+.error-inscription{
+    color:red;
+}
+
 @media only screen and (max-width:960px) {
     .registerBoxes + div.col {
         margin-left:0;

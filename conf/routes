@@ -9,12 +9,17 @@ GET     /logout                                 SecureManager.logout
 
 # Home page
 GET     /                                       Application.index
+<<<<<<< HEAD
 GET     /events                                 EventManager.events
 POST    /bet                                    BetManager.bet
 POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
 POST    /account/udpate                         UserManager.createOrUpdate
 POST    /account/password                       UserManager.updatePassword
+=======
+GET     /sign-up                                UserManager.register
+POST    /sign-up                                UserManager.signUp
+>>>>>>> feature/sign-up
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

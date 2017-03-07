@@ -29,7 +29,7 @@
         <header id="global">
             <div class="container">
                 <a href="#" class="material-icons">menu</a>
-                <a href="index.html"><img src="@{'/public/images/betclic-logo.png'}" alt="Betclic" /></a>
+                <a href="@{Application.index}"><img src="@{'/public/images/betclic-logo.png'}" alt="Betclic" /></a>
                 <ul id="top-links" class="row">
                     <li class="volatile">Contactez-nous</li>
                     <li><a href="#" class="material-icons">email</a></li>
@@ -62,8 +62,8 @@
                 #{else}
                 <div id="avatarBox" class="row">
                     <div class="col">
-                        <a href="@{UserManager.display}">${user.lastName} ${user.firstName}</a>
-                        <a href="account.html">179,50 €</a>
+                        <a href="@{UserManager.display}#address">${user.lastName} ${user.firstName}</a>
+                        <a href="@{UserManager.display}">${services.UserService.account(user.id)} €</a>
                     </div>
                     <a href="account.html" class="material-icons">account_circle</a>
                 </div>

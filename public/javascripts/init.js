@@ -34,10 +34,18 @@ $('.betButton').click(function(){
     // Cote du match
     var quotation = $(this).text();
     $('.betModalQuotation > span:last-child').text(quotation);
+    $('#betQuotation').val(quotation);
 
     // Choix du pari
     var betOn = $(this).attr('data-bet');
     $('.betModalBetOn > span:last-child').text(betOn);
+
+    // Remplissage du formulaire
+    var idEvent = $(this).attr('data-id-event');
+    $('#idEvent').val(idEvent);
+
+    var choice = $(this).attr('data-choice');
+    $('#betChoice').val(choice);
 
     betChange();
 })

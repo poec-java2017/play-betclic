@@ -22,21 +22,21 @@
         <div class="bet-stats"></div>
       </div>
     #{list items:events, as:'event'}
-          <div class="betline row">
-            <div class="countdown">7 j</div>
-            <div class="info">
-              <div class="competition">Football, ${event.competition.name}</div>
-              <div class="display">${event.teamHost.name} - ${event.teamGuest.name}</div>
-            </div>
-            <a class="win-host betButton" data-bet="Paris SG" href="#openBetModal">${event.coteHost}</a>
-            <a class="tie-game betButton" data-bet="Nul" href="#openBetModal">${event.coteTie}</a>
-            <a class="win-guest betButton" data-bet="FC Barcelone" href="#openBetModal">${event.coteGuest}</a>
-            <div class="bet-types">+59</div>
-            <div class="bet-stats">
-              <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
-              <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
-            </div>
-          </div>
+      <div class="betline row">
+        <div class="countdown">7 j</div>
+        <div class="info">
+          <div class="competition">Football, ${event.competition.name}</div>
+          <div class="display">${event.teamHost.name} - ${event.teamGuest.name}</div>
+        </div>
+        <a id="event1${event.uniq}" class="win-host betButton" data-id-event="${event.uniq}" data-choice="1" data-bet="${event.teamHost.name}" href="${href}">${event.coteHost}</a>
+        <a id="event2${event.uniq}" class="tie-game betButton" data-id-event="${event.uniq}" data-choice="2" data-bet="Nul" href="${href}">${event.coteTie}</a>
+        <a id="event3${event.uniq}" class="win-guest betButton" data-id-event="${event.uniq}" data-choice="3" data-bet="${event.teamGuest.name}" href="${href}">${event.coteGuest}</a>
+        <div class="bet-types">+59</div>
+        <div class="bet-stats">
+          <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+          <img src="@{'/public/images/stats.png'}" alt="Statistiques" title="Statistiques" />
+        </div>
+      </div>
     #{/list}
         <!-- On going -->
         <h1>En ce moment sud Betclic</h1>
@@ -143,7 +143,8 @@
   <a href="#close" title="Close" class="close"></a>
   <div class="modalContent">
     <h2>Votre sélection</h2>
-    <div class="betModalContainer row">
+  #{errors} <li>${error}</li> #{/errors}
+    <form class="betModalContainer row" action="@{BetManager.bet}" method="post">
       <div class="bet-box col">
         <strong class="betModalTitle"></strong>
         <p class="betModalBetOn">
@@ -157,7 +158,7 @@
         <div class="betModalBet">
           <label for="betInput">Mise :</label>
           <div>
-            <input id="betInput" type="number" min="0" step="0.01">
+            <input id="betInput" name="betAmount" type="number" min="0" step="0.01" value="${flash["betAmount"]}">
             €
           </div>
         </div>
@@ -167,8 +168,30 @@
           <span>Gain possible :</span>
           <span class="betModalSum">120€</span>
         </div>
-        <button class="submit betModalSubmit">Valider mon pari</button>
+        <input type="submit" class="submit betModalSubmit" value="Valider mon pari">
       </div>
+      <input id="idEvent" name="idEvent" type="hidden" value="">
+      <input id="betChoice" name="betChoice" type="hidden" value="">
+      <input id="betQuotation" name="betQuotation" type="hidden" value="">
+    </form>
+  </div>
+</div>
+
+<div id="openErrorBetModal" class="modalWindow">
+  <a href="#close" title="Close" class="close"></a>
+  <div class="modalContent">
+    <h2>Erreur:</h2>
+    <div class="betModalContainer row">
+      Connectez-vous pour parier
     </div>
   </div>
 </div>
+
+<script>
+    #{errors}
+    document.addEventListener( 'DOMContentLoaded', function () {
+      $("#event${flash["betChoice"]}${flash["idEvent"]}").click();
+      window.location.href= window.location.href + "#openBetModal";
+    }, false );
+    #{/errors}
+</script>

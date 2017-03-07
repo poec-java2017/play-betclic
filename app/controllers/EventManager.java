@@ -11,15 +11,14 @@ import services.UserService;
 import java.util.Date;
 import java.util.List;
 
-public class EventManager extends Controller {
+public class EventManager extends LogManager {
 
     public static void events() {
-        if(controllers.SecureManager.Security.isConnected()){
-            // Connecté : Formulaire de pari
-        } else {
-            // Pas connecté : messagederreurisationement
+        String href = "#openBetModal";
+        if(!controllers.SecureManager.Security.isConnected()){
+            href = "#openErrorBetModal";
         }
-        List<Event> events = Event.find("resultHost is null limit 10").fetch();
-        render(events);
+        List<Event> events = Event.find("resultHost is null").fetch(15);
+        render(events, href);
     }
 }

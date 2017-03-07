@@ -44,7 +44,7 @@ public class UserManager extends LogManager {
 
     public static void updatePassword(@Required String apppassword, @Required @Equals("apprnpassword") String appnpassword, @Required String apprnpassword) {
         Logger.info("[%s][updatePassword] [%s][%s][%s]", PREFIX, apppassword, appnpassword, apprnpassword);
-        User user = (User)renderArgs.get("user");
+        User user = getConnectedUser();
         if (Validation.hasErrors()) {
             for (Error error: Validation.errors()) {
                 Logger.info("[%s][updatePassword][ValidationError] %s : %s", PREFIX, error.getKey(), error.message());

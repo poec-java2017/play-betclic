@@ -23,6 +23,14 @@ public class LogManager extends Controller {
         }
     }
 
+    /**
+     * Return connected user
+     * @return User
+     */
+    public static User getConnectedUser() {
+        return (User)renderArgs.get("user");
+    }
+
     @After
     private void after() {
     }

@@ -13,6 +13,7 @@ import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.mvc.Router;
 import play.mvc.With;
+import services.OperationTypeService;
 import services.UserService;
 
 import javax.validation.Valid;
@@ -93,13 +94,15 @@ public class UserManager extends LogManager {
         render(users);
     }
 
-    public static void fillIn(@Required String email, @Required Float amount){
 
+    public static void fillIn(@Required Float amount){
+        UserManager userManager = new UserManager();
+        Logger.info("%s fill ---> Fill %s In an amount of  %s €", PREFIX, email, amount);
         Operation operation = new Operation();
         operation.amount = amount;
-        operation.user = UserService.getUserByMail(email);
+        operation.user = User.find("email = ?1", email).first();
         operation.date = DateTime.now().toDate();
-        operation.operationType = OperationType.getCredit();
+        operation.operationType = OperationTypeService.getCredit();
         operation.save();
     }
 }

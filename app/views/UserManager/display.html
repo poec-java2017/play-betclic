@@ -78,7 +78,7 @@
                             <h2>Approvisionner mon compte.</h2>
                         </div>
 
-                        <form role="form" class="col modalContent" action="@{UserManager.fillIn(user.email,amount)}">
+                        <form role="form" class="col modalContent" action="@{UserManager.fillIn()}">
                             <div class="modalContentRadio">
                                 <span><input name="carte" required type="radio" value="visa">Visa<img class="card-type" src="@{'/public/images/visa.png'}" alt="visa" /></span>
                                 <span><input name="carte" required type="radio" value="master">Mastercard<img class="card-type" src="@{'/public/images/master.png'}" alt="mastercard" /></span>
@@ -88,7 +88,7 @@
                             <div class="modalContentInput">
                                 <div class="row bank">
                                     <span>Titulaire de la carte</span>
-                                    <input type="text" name="fname" value="${user.email}" required size="30px">
+                                    <input type="text" name="email" value="${user.email}" required size="30px">
                                 </div>
                                 <div class="row bank">
                                     <span>Numéro carte bleue</span>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="row bank">
                                     <span>Montant</span>
-                                    <input type="number" step="0.01"  name="fill-in-account" required size="8px">
+                                    <input type="number" step="0.01"  name="amount" required size="8px">
                                 </div>
                             </div>
 

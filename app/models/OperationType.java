@@ -9,7 +9,6 @@ import java.util.UUID;
 @Entity(name = "operation_type")
 public class OperationType extends Model {
 
-    static private OperationType credit, withdraw, bet, gain;
 
     public String uniq;
     @Required
@@ -21,34 +20,6 @@ public class OperationType extends Model {
     public OperationType(String name) {
         uniq = UUID.randomUUID().toString();
         this.name = name;
-    }
-
-    static  public OperationType getCredit(){
-        if (credit == null){
-            credit = OperationType.find("name = CREDIT").first();
-        }
-        return credit;
-    }
-
-    static  public OperationType getWithdraw(){
-        if (withdraw == null){
-            withdraw = OperationType.find("name = WITHDRAW").first();
-        }
-        return credit;
-    }
-
-    static  public OperationType getBet(){
-        if (bet == null){
-            bet = OperationType.find("name = BET").first();
-        }
-        return credit;
-    }
-
-    static  public OperationType getGain(){
-        if (gain == null){
-            gain = OperationType.find("name = GAIN").first();
-        }
-        return credit;
     }
 
 }

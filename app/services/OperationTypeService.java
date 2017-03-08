@@ -46,4 +46,5 @@ public class OperationTypeService {
         }
         return gain;
     }
+
 }

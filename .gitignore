@@ -5,6 +5,7 @@
 .idea
 
 # Directories
+.sonar
 tmp
 lib
 logs

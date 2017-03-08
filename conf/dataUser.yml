@@ -223,7 +223,7 @@ User(UserFR1) :
   email : georges@dupont.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserFR1
 
 User(UserFR2) :
@@ -232,7 +232,7 @@ User(UserFR2) :
   email : jb@soyez.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserFR2
 
 User(UserFR3) :
@@ -241,7 +241,7 @@ User(UserFR3) :
   email : cricri@pamart.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserFR3
 
 User(UserFR4) :
@@ -250,7 +250,7 @@ User(UserFR4) :
   email : flo@fleuret.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserFR4
 
 User(UserFR5) :
@@ -259,7 +259,7 @@ User(UserFR5) :
   email : anthony@periquet.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserFR5
 
 User(UserFR6) :
@@ -268,7 +268,7 @@ User(UserFR6) :
   email : geromino@delaunay.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserFR6
 
 #User Belgique
@@ -279,7 +279,7 @@ User(UserBG1) :
   email : georges@dutrou.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserBG1
 
 User(UserBG2) :
@@ -288,7 +288,7 @@ User(UserBG2) :
   email : johnny@halliday.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserBG2
 
 User(UserBG3) :
@@ -297,7 +297,7 @@ User(UserBG3) :
   email : benoit@poolvoerde.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserBG3
 
 User(UserBG4) :
@@ -306,7 +306,7 @@ User(UserBG4) :
   email : jasques@brel.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserBG4
 
 User(UserBG5) :
@@ -315,7 +315,7 @@ User(UserBG5) :
   email : georges@dupont.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserBG5
 
 User(UserBG6) :
@@ -324,7 +324,7 @@ User(UserBG6) :
   email : roi@belgique.be
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserBG6
 
 #User Espagne
@@ -335,7 +335,7 @@ User(UserSP1) :
   email : salvador@dali.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserSP1
 
 User(UserSP2) :
@@ -344,7 +344,7 @@ User(UserSP2) :
   email : pablo@picasso.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserSP2
 
 User(UserSP3) :
@@ -353,7 +353,7 @@ User(UserSP3) :
   email : fransisco@franco.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserSP3
 
 User(UserSP4) :
@@ -362,7 +362,7 @@ User(UserSP4) :
   email : don@quijotte.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserSP4
 
 User(UserSP5) :
@@ -371,7 +371,7 @@ User(UserSP5) :
   email : hernan@cortez.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserSP5
 
 User(UserSP6) :
@@ -380,7 +380,7 @@ User(UserSP6) :
   email : con@quistador.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserSP6
 
 #User Allemagne
@@ -391,7 +391,7 @@ User(UserGR1) :
   email : furher@deutchland.de
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserGR1
 
 User(UserGR2) :
@@ -400,7 +400,7 @@ User(UserGR2) :
   email : angela@deuchland.de
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserGR2
 
 User(UserGR3) :
@@ -409,7 +409,7 @@ User(UserGR3) :
   email : ermann@meir.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserGR3
 
 User(UserGR4) :
@@ -418,7 +418,7 @@ User(UserGR4) :
   email : wurt@wonderbar.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserGR4
 
 User(UserGR5) :
@@ -427,7 +427,7 @@ User(UserGR5) :
   email : sebastian@bach.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserGR5
 
 User(UserGR6) :
@@ -436,5 +436,5 @@ User(UserGR6) :
   email : mickael@schumacher.com
   password : $2a$10$cJgMElWzWCM63mhMKKyjZexNXJ39CHQ7/FCVQMkDt7zS0CAdfQUwO
   birthday : 1975-08-06
-  telephone : XXX-32.56.87
+  phone : XXX-32.56.87
   address : addressUserGR6

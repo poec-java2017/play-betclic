@@ -8,10 +8,7 @@ import play.data.validation.*;
 import play.data.validation.Error;
 import play.mvc.Router;
 import play.mvc.With;
-import services.AddressService;
-import services.CityService;
-import services.CountryService;
-import services.UserService;
+import services.*;
 
 import javax.validation.Valid;
 import java.math.BigDecimal;
@@ -207,5 +204,17 @@ public class UserManager extends LogManager {
     public static void users() {
         List<User> users = User.findAll();
         render(users);
+    }
+
+    public static void fillIn(@Required BigDecimal amount){
+        User user = getConnectedUser();
+        Logger.info("%s fill ---> Fill %s In an amount of  %s €", PREFIX, user.email, amount);
+        Operation operation = new Operation();
+        operation.amount = amount;
+        operation.user = user;
+        operation.date = DateTime.now().toDate();
+        operation.operationType = OperationTypeService.getCredit();
+        operation.save();
+        display();
     }
 }

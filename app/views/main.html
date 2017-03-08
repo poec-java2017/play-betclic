@@ -63,7 +63,7 @@
                 <div id="avatarBox" class="row">
                     <div class="col">
                         <a href="@{UserManager.display}#address">${user.lastName} ${user.firstName}</a>
-                        <a href="@{UserManager.display}">${services.UserService.account(user.id)} €</a>
+                        <a href="@{UserManager.display}">${services.UserService.account(user.id).format("0.0#")} €</a>
                     </div>
                     <a href="account.html" class="material-icons">account_circle</a>
                 </div>

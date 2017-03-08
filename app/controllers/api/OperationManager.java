@@ -1,9 +1,6 @@
 package controllers.api;
 
-import controllers.api.exception.BadCredentials;
 import controllers.api.exception.Business;
-import controllers.api.exception.NoContent;
-import controllers.service.OperationTypeService;
 import models.Operation;
 import models.User;
 import play.Logger;
@@ -21,7 +18,6 @@ public class OperationManager extends ApiSecureManager {
 
     /**
      * Refill user account
-     * @param userToken User uniq id
      * @param amount Refill amount
      */
     public static void refill(@Required @Min(0.01) BigDecimal amount) {

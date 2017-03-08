@@ -21,6 +21,7 @@ POST    /sign-up                                UserManager.signUp
 # Api routes
 POST    /api/operation/refill                   api.OperationManager.refill
 POST    /api/operation/bet                      api.OperationManager.bet
+POST    /api/operation/withdraw                 api.OperationManager.withdraw
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

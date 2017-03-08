@@ -6,10 +6,7 @@ import controllers.api.exception.BadInput;
 import controllers.api.exception.Business;
 import controllers.api.exception.NoContent;
 import controllers.api.exception.NotFound;
-import controllers.api.serializer.AddressSerializer;
-import controllers.api.serializer.CitySerializer;
-import controllers.api.serializer.CountrySerializer;
-import controllers.api.serializer.UserSerializer;
+import controllers.api.serializer.*;
 import models.Country;
 import play.data.validation.Error;
 import play.mvc.results.RenderJson;
@@ -24,7 +21,7 @@ public class ApiManager extends LogManager {
 
     protected static void apiContentCreated(Object object) {
         response.status = 201;
-        throw new RenderJson(object, CountrySerializer.getInstance(), CitySerializer.getInstance(), AddressSerializer.getInstance(), UserSerializer.getInstance());
+        throw new RenderJson(object, CountrySerializer.getInstance(), CitySerializer.getInstance(), AddressSerializer.getInstance(), UserSerializer.getInstance(), OperationSerializer.getInstance(), OperationTypeSerializer.getInstance());
     }
 
     protected static void apiNotFound(){

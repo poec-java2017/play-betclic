@@ -1,0 +1,4 @@
+operation.type=&{%s}
+operation.type.bet=Bet
+operation.type.refill=Deposit
+operation.type.withdraw=Widthdraw

@@ -1,0 +1,15 @@
+###########
+#Operation#
+###########
+
+OperationType(credit) :
+  name : CREDIT
+
+OperationType(withdraw) :
+  name : WITHDRAW
+
+OperationType(bet) :
+  name : BET
+
+OperationType(gain) :
+  name : GAIN

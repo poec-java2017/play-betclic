@@ -92,13 +92,26 @@ public class UserManager extends LogManager {
     }
 
     public static void fillIn(@Required BigDecimal amount){
+        createOperation(amount, "credit");
+    }
+
+    public static void withdraw(@Required BigDecimal amount){
+        createOperation(amount, "withdraw");
+    }
+
+    public static void createOperation(BigDecimal amount, String typeOperation){
         User user = getConnectedUser();
-        Logger.info("%s fill ---> Fill %s In an amount of  %s €", PREFIX, user.email, amount);
+        Logger.info("%s CreateOperation ---> %s in %s  an amount of  %s €", PREFIX, typeOperation, user.email, amount);
         Operation operation = new Operation();
         operation.amount = amount;
         operation.user = user;
         operation.date = DateTime.now().toDate();
-        operation.operationType = OperationTypeService.getCredit();
+        if(typeOperation.equals("credit")){
+            operation.operationType = OperationTypeService.getCredit();
+        }else{
+            operation.operationType = OperationTypeService.getWithdraw();
+            operation.amount = amount.negate();
+        }
         operation.save();
         display();
     }

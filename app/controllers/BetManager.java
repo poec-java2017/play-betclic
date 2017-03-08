@@ -1,17 +1,18 @@
 package controllers;
 
-import models.*;
+import models.Bet;
+import models.Event;
+import models.Operation;
+import models.User;
 import play.Logger;
 import play.data.validation.Min;
 import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.mvc.With;
 import services.OperationService;
-import services.OperationTypeService;
 import services.UserService;
 
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
 
 @With(SecureManager.class)

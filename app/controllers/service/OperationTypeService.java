@@ -10,7 +10,7 @@ public class OperationTypeService {
     public static OperationType findOrCreate(String name) {
         OperationType type = OperationType.find("name = ?1", name).first();
         if (type == null) {
-            Logger.info("[%s][findOrCreate] Create new operation type []", PREFIX, name);
+            Logger.info("[%s][findOrCreate] Create new operation type [%s]", PREFIX, name);
             type = new OperationType(name);
             type.save();
         }

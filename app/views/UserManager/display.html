@@ -31,7 +31,7 @@
                     #{list operations, as:"operation"}
                         <div class="row table">
                             <div class="operation-date">${operation?.date?.format('dd-MM-yyyy')}</div>
-                            <div class="operation-type">&{'operation.type', operation?.operationType?.name}</div>
+                            <div class="operation-type">&{'operation.type', operation?.type?.name}</div>
                             <div class="operation-output">#{if operation.amount < 0}${operation?.amount * (-1)} €#{/if}</div>
                             <div class="operation-input">#{if operation.amount > 0}${operation?.amount} €#{/if}</div>
                         </div>

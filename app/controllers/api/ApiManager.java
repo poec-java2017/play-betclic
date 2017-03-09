@@ -35,6 +35,7 @@ public class ApiManager extends LogManager {
     }
 
     protected static void apiBadInput(List<Error> errors) {
+        response.status = 406;
         throw new BadInput(errors);
     }
 

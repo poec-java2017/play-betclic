@@ -2,7 +2,6 @@ package controllers.api;
 
 import controllers.api.exception.BadCredentials;
 import controllers.api.exception.Business;
-import controllers.api.exception.NoContent;
 import controllers.service.OperationTypeService;
 import models.Operation;
 import models.OperationType;
@@ -21,10 +20,10 @@ public class OperationManager extends ApiManager {
     public static final String PREFIX = "api.OperationManager";
 
     public static void refill(@Required String userToken, @Required @Min(0.01) BigDecimal amount) {
-        amount = amount.abs();
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());
         }
+        amount = amount.abs();
 
         // Check user
         User user = User.find("uniq = ?1", userToken).first();
@@ -37,7 +36,7 @@ public class OperationManager extends ApiManager {
 
         Operation operation = new Operation();
         operation.user = user;
-        operation.operationType = type;
+        operation.type = type;
         operation.date = new Date();
         operation.amount = amount;
         operation.save();
@@ -46,10 +45,10 @@ public class OperationManager extends ApiManager {
     }
 
     public static void bet(@Required String userToken, @Required @Min(0.01) BigDecimal amount) {
-        amount = amount.abs();
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());
         }
+        amount = amount.abs();
 
         // Check user
         User user = User.find("uniq = ?1", userToken).first();
@@ -66,7 +65,7 @@ public class OperationManager extends ApiManager {
 
         Operation operation = new Operation();
         operation.user = user;
-        operation.operationType = type;
+        operation.type = type;
         operation.date = new Date();
         operation.amount = amount.negate();
         operation.save();
@@ -75,10 +74,10 @@ public class OperationManager extends ApiManager {
     }
 
     public static void withdraw(@Required String userToken, @Required @Min(0.01) BigDecimal amount) {
-        amount = amount.abs();
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());
         }
+        amount = amount.abs();
 
         // Check user
         User user = User.find("uniq = ?1", userToken).first();
@@ -95,7 +94,7 @@ public class OperationManager extends ApiManager {
 
         Operation operation = new Operation();
         operation.user = user;
-        operation.operationType = type;
+        operation.type = type;
         operation.date = new Date();
         operation.amount = amount.negate();
         operation.save();

@@ -20,7 +20,7 @@ public class BadInput extends Result {
 
     @Override
     public void apply(Http.Request request, Http.Response response) {
-        response.status = 401; // 401 - Unauthorized
+        response.status = 406; // 406 - Not acceptable
         try {
             String encoding = getEncoding();
             setContentTypeIfNotSet(response, "application/json, charset=" + encoding);

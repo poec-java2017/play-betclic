@@ -11,6 +11,7 @@ lib
 logs
 modules
 node_modules
+test-result
 
 # Built css files
 public/stylesheets/*.css

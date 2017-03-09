@@ -30,3 +30,23 @@ With [SonarQube](https://hub.docker.com/_/sonarqube/) running on a docker contai
 ```bash
 sonar-scanner
 ```
+
+## Docker
+
+### Prerequisites
+
+* **[Optional]** Traefik container loaded with [docker-compose.yml](/documentation/docker/traefik/docker-compose.yml)
+* Play container [Dokerfile](/documentation/docker/play/Dockerfile) in `/opt/docker/play/`
+
+### Starting the application
+
+To package a complete application with play and mysql-server run the following command :
+```bash
+docker-compose up [-d]
+```
+
+### Stopping the application
+
+```bash
+docker-compose down
+```

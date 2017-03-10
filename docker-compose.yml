@@ -3,7 +3,7 @@ services:
   # Play application
   betclic:
     # Redefine play Dockerfile basedir if needed
-    build: /opt/docker/play/
+    build: ./documentation/docker/play/
     networks:
       - betclic
       - database

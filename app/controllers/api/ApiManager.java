@@ -7,30 +7,50 @@ import controllers.api.exception.Business;
 import controllers.api.exception.NoContent;
 import controllers.api.exception.NotFound;
 import controllers.api.serializer.*;
+import models.ApiClient;
 import models.Country;
+import org.apache.commons.lang.StringUtils;
+import org.joda.time.DateTime;
+import play.Logger;
+import play.Play;
 import play.data.validation.Error;
+import play.mvc.Before;
 import play.mvc.results.RenderJson;
 
 import java.util.List;
 
 public class ApiManager extends LogManager {
 
+    public static final String PREFIX = "ApiManager";
+
+    protected static void apiContentCreated(Object object) {
+        response.status = 201;
+        throw new RenderJson(object,
+                AddressSerializer.getInstance(),
+                ApiClientSerializer.getInstance(),
+                CountrySerializer.getInstance(),
+                CitySerializer.getInstance(),
+                OperationSerializer.getInstance(),
+                OperationTypeSerializer.getInstance(),
+                UserSerializer.getInstance()
+        );
+    }
+
     protected static void apiNoContent(){
         throw new NoContent();
     }
 
-    protected static void apiContentCreated(Object object) {
-        response.status = 201;
-        throw new RenderJson(object, CountrySerializer.getInstance(), CitySerializer.getInstance(), AddressSerializer.getInstance(), UserSerializer.getInstance(), OperationSerializer.getInstance(), OperationTypeSerializer.getInstance());
-    }
-
-    protected static void apiNotFound(){
-        throw new NotFound();
+    protected static void apiNotFound(String message){
+        throw new NotFound(message);
     }
 
     protected static void apiNotFoundIfNull(Object object) {
+        apiNotFoundIfNull(object, "Item does not exists");
+    }
+
+    protected static void apiNotFoundIfNull(Object object, String message) {
         if(object == null) {
-            apiNotFound();
+            apiNotFound(message);
         }
     }
 

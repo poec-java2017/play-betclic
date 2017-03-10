@@ -222,9 +222,9 @@ public class UserManager extends LogManager {
         operation.user = user;
         operation.date = DateTime.now().toDate();
         if(typeOperation.equals("credit")){
-            operation.operationType = OperationTypeService.getCredit();
+            operation.type = OperationTypeService.getCredit();
         }else{
-            operation.operationType = OperationTypeService.getWithdraw();
+            operation.type = OperationTypeService.getWithdraw();
             operation.amount = amount.negate();
         }
         operation.save();

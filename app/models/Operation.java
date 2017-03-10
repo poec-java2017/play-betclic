@@ -14,6 +14,7 @@ import java.util.UUID;
 public class Operation extends Model {
 
     public String uniq;
+
     @Required
     @Min(0.01)
     public BigDecimal amount;
@@ -23,7 +24,7 @@ public class Operation extends Model {
 
     @ManyToOne
     @Required
-    public OperationType operationType;
+    public OperationType type;
 
     @Required
     @ManyToOne
@@ -31,11 +32,11 @@ public class Operation extends Model {
 
     public Operation() { uniq = UUID.randomUUID().toString(); }
 
-    public Operation(BigDecimal amount, Date date, OperationType operationType, User user) {
+    public Operation(BigDecimal amount, Date date, OperationType type, User user) {
         uniq = UUID.randomUUID().toString();
         this.amount = amount;
         this.date = date;
-        this.operationType = operationType;
+        this.type = type;
         this.user = user;
     }
 

@@ -19,6 +19,8 @@ GET     /sign-up                                UserManager.register
 POST    /sign-up                                UserManager.signUp
 
 # Api routes
+POST    /api/application/register               api.ApiClientManager.register
+POST    /api/authenticate                       api.AuthenticationManager.authenticate
 POST    /api/operation/refill                   api.OperationManager.refill
 POST    /api/operation/bet                      api.OperationManager.bet
 POST    /api/operation/withdraw                 api.OperationManager.withdraw

@@ -6,7 +6,6 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import models.ApiClient;
 import models.ApiCompany;
-import services.CompanyService;
 
 import java.lang.reflect.Type;
 

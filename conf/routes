@@ -15,13 +15,14 @@ POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
 POST    /account/udpate                         UserManager.createOrUpdate
 POST    /account/password                       UserManager.updatePassword
-GET     /sign-up                                UserManager.register
-POST    /sign-up                                UserManager.signUp
+GET     /sign-up                                RegisterManager.register
+POST    /sign-up                                RegisterManager.signUp
 
 # Api routes
 POST    /api/operation/refill                   api.OperationManager.refill
 POST    /api/operation/bet                      api.OperationManager.bet
 POST    /api/operation/withdraw                 api.OperationManager.withdraw
+POST    /api/user/signin                        api.UserManager.signIn
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

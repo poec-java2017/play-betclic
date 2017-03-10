@@ -5,7 +5,7 @@ import models.OperationType;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Operation {
+public class OperationResult {
     public String uniq;
     public Date date;
     public BigDecimal amount;

@@ -9,20 +9,21 @@ GET     /logout                                 SecureManager.logout
 
 # Home page
 GET     /                                       Application.index
-GET     /events                                 EventManager.events
-POST    /bet                                    BetManager.bet
+GET     /sign-up                                RegisterManager.register
+POST    /sign-up                                RegisterManager.signUp
 POST    /sign-in                                UserManager.login
 GET     /account                                UserManager.display
 POST    /account/udpate                         UserManager.createOrUpdate
 POST    /account/password                       UserManager.updatePassword
 POST    /account/refill                         UserManager.accountRefill
 POST    /account/withdraw                       UserManager.accountWithdraw
-GET     /sign-up                                UserManager.register
-POST    /sign-up                                UserManager.signUp
+GET     /events                                 EventManager.events
+POST    /bet                                    BetManager.bet
 
 # Api routes
 POST    /api/application/register               api.ApiClientManager.register
 POST    /api/authenticate                       api.AuthenticationManager.authenticate
+POST    /api/user/signin                        api.UserManager.signIn
 
 # Testing purpose only : begin
 POST    /api/operation/refill                   api.OperationManager.refill

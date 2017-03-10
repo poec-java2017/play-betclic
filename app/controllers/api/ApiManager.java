@@ -1,17 +1,9 @@
 package controllers.api;
 
 import controllers.LogManager;
-import controllers.UserManager;
 import controllers.api.exception.*;
 import controllers.api.serializer.*;
-import models.ApiClient;
-import models.Country;
-import org.apache.commons.lang.StringUtils;
-import org.joda.time.DateTime;
-import play.Logger;
-import play.Play;
 import play.data.validation.Error;
-import play.mvc.Before;
 import play.mvc.results.RenderJson;
 
 import java.util.List;
@@ -58,6 +50,11 @@ public class ApiManager extends LogManager {
     protected static void apiBadInput(List<Error> errors) {
         response.status = 406;
         throw new BadInput(errors);
+    }
+
+    protected static void apiBadParam(String message) {
+        response.status = 406;
+        throw new BadParam(message);
     }
 
     protected static void apiBusinessError(String s) {

@@ -4,18 +4,19 @@ import com.google.gson.JsonObject;
 import play.mvc.Http;
 import play.mvc.results.Result;
 
-/**
- * Created by xylphid on 01/03/17.
- */
-public class BadCredentials extends JsonResult {
+public class AlreadyExists extends JsonResult {
 
-    public BadCredentials() {
-        super("Wrong credentials");
+    public AlreadyExists() {
+        super( "This item already exists" );
+    }
+
+    public AlreadyExists(String message) {
+        super(message);
     }
 
     @Override
     public void apply(Http.Request request, Http.Response response) {
-        response.status = 401; // 401 - Unauthorized
+        response.status = 409; // 409 - Conflict
         renderJson(request, response);
     }
 }

@@ -19,6 +19,11 @@ public class OperationManager extends ApiManager {
 
     public static final String PREFIX = "api.OperationManager";
 
+    /**
+     * Refill user account
+     * @param userToken User uniq id
+     * @param amount Refill amount
+     */
     public static void refill(@Required String userToken, @Required @Min(0.01) BigDecimal amount) {
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());
@@ -44,6 +49,11 @@ public class OperationManager extends ApiManager {
         apiContentCreated(operation);
     }
 
+    /**
+     * Execute bet operation
+     * @param userToken User uniq id
+     * @param amount Bet amount
+     */
     public static void bet(@Required String userToken, @Required @Min(0.01) BigDecimal amount) {
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());
@@ -73,6 +83,11 @@ public class OperationManager extends ApiManager {
         apiContentCreated(operation);
     }
 
+    /**
+     * Withdraw to user bank account
+     * @param userToken User uniq id
+     * @param amount Withdrawal amount
+     */
     public static void withdraw(@Required String userToken, @Required @Min(0.01) BigDecimal amount) {
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());

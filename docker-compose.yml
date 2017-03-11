@@ -2,6 +2,7 @@ version: '3'
 services:
   # Play application
   betclic:
+    restart: always
     # Redefine play Dockerfile basedir if needed
     build: ./documentation/docker/play/
     networks:
@@ -17,6 +18,7 @@ services:
 
   # Database Server
   betclic-database:
+    restart: always
     image: "mysql:latest"
     networks:
       - database

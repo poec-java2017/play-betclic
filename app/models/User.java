@@ -41,6 +41,8 @@ public class User extends Model {
     @ManyToOne
     public Address address;
 
+    public Date lastConnection;
+
     public User() {
         this.uniq = UUID.randomUUID().toString();;
     }

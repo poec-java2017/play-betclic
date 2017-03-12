@@ -198,7 +198,7 @@ public class UserManager extends LogManager {
     }
 
     public static void accountRefill(@Required BigDecimal amount){
-        Logger.info("[%s] ");
+        Logger.info("[%s][accountRefill]", PREFIX);
         if (Validation.hasErrors()) {
             for (Error error : Validation.errors()) {
                 Logger.info("[%s][updatePassword][ValidationError] %s : %s", PREFIX, error.getKey(), error.message());
@@ -217,7 +217,8 @@ public class UserManager extends LogManager {
         display();
     }
 
-    public static void withdraw(@Required BigDecimal amount){
+    public static void accountWithdraw(@Required BigDecimal amount){
+        Logger.info("[%s][accountWithdraw]", PREFIX);
         if (Validation.hasErrors()) {
             for (Error error : Validation.errors()) {
                 Logger.info("[%s][updatePassword][ValidationError] %s : %s", PREFIX, error.getKey(), error.message());

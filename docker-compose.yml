@@ -8,13 +8,11 @@ services:
     networks:
       - betclic
       - database
-    ports:
-      - "9090:9000"
     volumes:
       - $PWD:/app
     labels:
       - "traefik.backend=betclic"
-      - "traefik.fontend.rule=Host:betclic.docker"
+      - "traefik.frontend.rule=Host:betclic.docker"
 
   # Database Server
   betclic-database:

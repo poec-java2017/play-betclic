@@ -1,4 +1,5 @@
 operation.type=&{%s}
+operation.type.benefit=Bénéfice
 operation.type.bet=Pari
 operation.type.refill=Dépôt
 operation.type.withdraw=Retrait

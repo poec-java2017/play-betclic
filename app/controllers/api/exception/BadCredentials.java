@@ -1,26 +1,25 @@
 package controllers.api.exception;
 
+import com.google.gson.JsonObject;
 import play.mvc.Http;
 import play.mvc.results.Result;
 
 /**
  * Created by xylphid on 01/03/17.
  */
-public class BadCredentials extends Result {
+public class BadCredentials extends JsonResult {
 
     public BadCredentials() {
-        super("Bad credentials");
+        super("Wrong credentials");
+    }
+
+    public BadCredentials(String message) {
+        super(message);
     }
 
     @Override
     public void apply(Http.Request request, Http.Response response) {
         response.status = 401; // 401 - Unauthorized
-        try {
-            String encoding = getEncoding();
-            setContentTypeIfNotSet(response, "application/json, charset=" + encoding);
-            response.out.write("{\"code\":401, \"message\":\"Wrong credentials\"}".getBytes("utf-8"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        renderJson(request, response);
     }
 }

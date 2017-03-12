@@ -13,5 +13,6 @@ public class BootstrapJob extends Job {
         Fixtures.loadModels("dataUser.yml");
         Fixtures.loadModels("dataEvent.yml");
         Fixtures.loadModels("dataMoney.yml");
+        Fixtures.loadModels("ApiClients.yml");
     }
 }

@@ -10,23 +10,41 @@ import java.util.List;
 
 public class ApiManager extends LogManager {
 
+    public static final String PREFIX = "ApiManager";
+
+    protected static void apiContentCreated(Object object) {
+        response.status = 201;
+        throw new RenderJson(object,
+                AddressSerializer.getInstance(),
+                ApiClientSerializer.getInstance(),
+                CountrySerializer.getInstance(),
+                CitySerializer.getInstance(),
+                OperationSerializer.getInstance(),
+                OperationTypeSerializer.getInstance(),
+                UserSerializer.getInstance()
+        );
+    }
+
     protected static void apiNoContent(){
         throw new NoContent();
     }
 
-    protected static void apiContentCreated(Object object) {
-        response.status = 201;
-        throw new RenderJson(object, CountrySerializer.getInstance(), CitySerializer.getInstance(), AddressSerializer.getInstance(), UserSerializer.getInstance(), OperationSerializer.getInstance(), OperationTypeSerializer.getInstance());
-    }
-
-    protected static void apiNotFound(){
-        throw new NotFound();
+    protected static void apiNotFound(String message){
+        throw new NotFound(message);
     }
 
     protected static void apiNotFoundIfNull(Object object) {
+        apiNotFoundIfNull(object, "Item does not exists");
+    }
+
+    protected static void apiNotFoundIfNull(Object object, String message) {
         if(object == null) {
-            apiNotFound();
+            apiNotFound(message);
         }
+    }
+
+    protected static void apiBadCredentials(String message) {
+        throw new BadCredentials(message);
     }
 
     protected static void apiBadInput(List<Error> errors) {

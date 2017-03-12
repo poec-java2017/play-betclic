@@ -1,10 +1,7 @@
 package models;
 
 
-import play.data.validation.Email;
-import play.data.validation.MinSize;
-import play.data.validation.Phone;
-import play.data.validation.Required;
+import play.data.validation.*;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
@@ -25,6 +22,7 @@ public class User extends Model {
 
     @Required
     @Email
+    @Unique
     public String email;
 
     @Required
@@ -40,6 +38,14 @@ public class User extends Model {
 
     @ManyToOne
     public Address address;
+
+    public Date lastConnection;
+
+    // To be confirmed
+    public String publicKey;
+
+    // To be confirmed
+    public String privateKey;
 
     public User() {
         this.uniq = UUID.randomUUID().toString();;

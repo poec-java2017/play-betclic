@@ -1,10 +1,16 @@
 package controllers.api.exception;
 
+import com.google.gson.JsonObject;
 import play.mvc.Http;
+import play.mvc.results.Result;
 
-public class Business extends JsonResult {
+public class AlreadyExists extends JsonResult {
 
-    public Business(String message) {
+    public AlreadyExists() {
+        super( "This item already exists" );
+    }
+
+    public AlreadyExists(String message) {
         super(message);
     }
 

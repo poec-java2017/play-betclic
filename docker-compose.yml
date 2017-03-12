@@ -1,28 +1,27 @@
 version: '3'
 services:
-  # Play application
-  betclic:
-    # Redefine play Dockerfile basedir if needed
-    build: ./documentation/docker/play/
-    networks:
-      - betclic
-      - database
-    ports:
-      - "9090:9000"
-    volumes:
-      - $PWD:/app
-    labels:
-      - "traefik.backend=betclic"
-      - "traefik.fontend.rule=Host:betclic.docker"
-
   # Database Server
   betclic-database:
     image: "mysql:latest"
-    networks:
-      - database
     environment:
       - MYSQL_ROOT_PASSWORD=formation
       - MYSQL_DATABASE=betclic
+    networks:
+      - database
+    restart: always
+
+  # Play application
+  betclic:
+    build: ./documentation/docker/play/
+    labels:
+      - "traefik.backend=betclic"
+      - "traefik.frontend.rule=Host:betclic.docker"
+    networks:
+      - betclic
+      - database
+    restart: always
+    volumes:
+      - $PWD:/app
 
 networks:
   betclic:

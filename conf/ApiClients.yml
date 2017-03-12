@@ -1,0 +1,10 @@
+# Api Companies
+ApiCompany(Com1):
+  name: Xylphid Net
+
+# Api Clients
+ApiClient(Cli1):
+  name: Xy-Betclic
+  apiKey: K2ZaSYczA13ppgXetAofyBFk0oJKB7o5
+  apiPrivateKey: POXTy7dit0WFQ5YtHMEqocsS9xagfoYbFgvFGRXWy3QY1diohZCFu4S1Th8vGbl3rtLB8874t1E5NI27QucZm3MeZS73RmCwv9dH3rS0af63DU2LOzBxxviUDEbeHjTi
+  company: Com1

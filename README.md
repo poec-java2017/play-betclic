@@ -45,6 +45,13 @@ To package a complete application with play and mysql-server run the following c
 docker-compose up [-d]
 ```
 
+### Scaling the application
+
+To scale the application, run the following command :
+```bash
+docker-compose scale betclic=3
+```
+
 ### Stopping the application
 
 ```bash

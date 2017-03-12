@@ -25,7 +25,7 @@ public class UserService {
         return(user);
     }
 
-    public static BigDecimal account(Long id) {
+    public static BigDecimal getAccountBalance(Long id) {
        Query calculAccount = JPA.em().createQuery("select SUM(amount) from operation where user_id = :id");
        try{
            BigDecimal result = (BigDecimal)calculAccount.setParameter("id", id).getSingleResult();

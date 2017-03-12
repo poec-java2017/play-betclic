@@ -2,10 +2,7 @@ package controllers.api;
 
 import controllers.LogManager;
 import controllers.UserManager;
-import controllers.api.exception.BadInput;
-import controllers.api.exception.Business;
-import controllers.api.exception.NoContent;
-import controllers.api.exception.NotFound;
+import controllers.api.exception.*;
 import controllers.api.serializer.*;
 import models.ApiClient;
 import models.Country;
@@ -52,6 +49,10 @@ public class ApiManager extends LogManager {
         if(object == null) {
             apiNotFound(message);
         }
+    }
+
+    protected static void apiBadCredentials(String message) {
+        throw new BadCredentials(message);
     }
 
     protected static void apiBadInput(List<Error> errors) {

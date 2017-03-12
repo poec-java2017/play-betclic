@@ -28,4 +28,5 @@ public abstract class JsonResult extends Result {
             e.printStackTrace();
         }
     }
+
 }

@@ -9,6 +9,7 @@ import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.libs.Codec;
 import play.mvc.results.RenderJson;
+import services.ApiService;
 
 import java.util.Date;
 
@@ -34,6 +35,8 @@ public class AuthenticationManager extends ApiSecureManager {
         }
 
         // Update last connection date
+        user.publicKey = ApiService.INSTANCE.generateApiKey();
+        user.privateKey = ApiService.INSTANCE.generatePrivateApiKey();
         user.lastConnection = new Date();
         user.save();
 
@@ -41,9 +44,9 @@ public class AuthenticationManager extends ApiSecureManager {
         response.status = 202;
         JsonObject json = new JsonObject();
         json.addProperty("status", 202);
+        json.addProperty("publicKey", user.publicKey);
+        json.addProperty("privateKey", user.privateKey);
         json.addProperty("token", Codec.hexSHA1(user.uniq + user.lastConnection));
-        // Check token with
-        // token.equals(Codec.hexSHA1(user.uniq + user.lastConnection))
 
         renderJSON(json);
     }

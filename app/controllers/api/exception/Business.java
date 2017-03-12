@@ -1,11 +1,7 @@
 package controllers.api.exception;
 
 import play.mvc.Http;
-import play.mvc.results.Result;
 
-/**
- * Created by xylphid on 01/03/17.
- */
 public class Business extends JsonResult {
 
     public Business(String message) {

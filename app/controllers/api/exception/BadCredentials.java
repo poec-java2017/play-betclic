@@ -13,6 +13,10 @@ public class BadCredentials extends JsonResult {
         super("Wrong credentials");
     }
 
+    public BadCredentials(String message) {
+        super(message);
+    }
+
     @Override
     public void apply(Http.Request request, Http.Response response) {
         response.status = 401; // 401 - Unauthorized

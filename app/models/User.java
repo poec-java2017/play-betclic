@@ -41,6 +41,12 @@ public class User extends Model {
 
     public Date lastConnection;
 
+    // To be confirmed
+    public String publicKey;
+
+    // To be confirmed
+    public String privateKey;
+
     public User() {
         this.uniq = UUID.randomUUID().toString();;
     }

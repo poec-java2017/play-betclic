@@ -40,7 +40,7 @@
                         <div class="total">${accountAmount.format("0.00#")} €</div>
                     </div>
 
-                    <div class="row account-operations">
+                    <div class="row getAccountBalance-operations">
                         <a href="#modal-operation-input" id="operation-input">Ajouter des crédits</a>
                         <a href="#modal-operation-output" id="operation-output">Retirer des crédits</a>
                     </div>
@@ -146,8 +146,8 @@
                 <div id="settings" class="col tab">
                     <div class="hidden-form row">
                         <h2>Information personnelles</h2>
-                        <input type="checkbox" id="toggle-account-infos" name="toggle-account-infos" />
-                        <label for="toggle-account-infos">+</label>
+                        <input type="checkbox" id="toggle-getAccountBalance-infos" name="toggle-getAccountBalance-infos" />
+                        <label for="toggle-getAccountBalance-infos">+</label>
                         <form id="address-form" class="col">
                             Date de naissance
                             <input type="date" id="birthdate" name="birthdate" value="2017-02-16" disabled />
@@ -173,8 +173,8 @@
                     </div>
                     <div class="hidden-form row">
                         <h2>Mot de passe</h2>
-                        <input type="checkbox" id="toggle-account-password" name="toggle-account-password" />
-                        <label for="toggle-account-password">+</label>
+                        <input type="checkbox" id="toggle-getAccountBalance-password" name="toggle-getAccountBalance-password" />
+                        <label for="toggle-getAccountBalance-password">+</label>
                         <form id="password-form" method="POST" action="@{UserManager.updatePassword}" class="col">
                             Mot de passe actuel
                             <input type="password" id="apppassword" name="apppassword" required#{if flash.contains("badPassword")} class="error"#{/if} />

@@ -81,7 +81,7 @@ public class ApiSecureManager extends ApiManager {
             User user = User.find("publicKey = ?1", userKey).first();
             if (user == null) {
                 Logger.info("[%s][validateUser][error] No match for publicKey [%s]", PREFIX, userKey);
-                apiBusinessError("validateUser debug");
+                apiBusinessError("User authentication failed");
             }
             Logger.info("[%s][validateUser] Authenticated user : %s %s", PREFIX, user.firstName, user.lastName);
             request.args.put("authUser", user);

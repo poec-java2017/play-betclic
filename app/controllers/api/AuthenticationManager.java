@@ -46,7 +46,6 @@ public class AuthenticationManager extends ApiSecureManager {
         json.addProperty("status", 202);
         json.addProperty("publicKey", user.publicKey);
         json.addProperty("privateKey", user.privateKey);
-        json.addProperty("token", Codec.hexSHA1(user.uniq + user.lastConnection));
 
         renderJSON(json);
     }

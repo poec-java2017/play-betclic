@@ -22,10 +22,12 @@ public class AuthenticationManager extends ApiSecureManager {
      * @param password user password
      */
     public static void authenticate(@Required @Email String email, @Required String password) {
+        // Validate params
         if (Validation.hasErrors()) {
             apiBadInput(Validation.errors());
         }
 
+        // Check user
         User user = User.find("email = ?1", email).first();
         if (user == null || !BCrypt.checkpw(password, user.password)) {
             apiBusinessError("Wrong credentials.");
@@ -35,6 +37,8 @@ public class AuthenticationManager extends ApiSecureManager {
         user.lastConnection = new Date();
         user.save();
 
+        // Build response and return json
+        response.status = 202;
         JsonObject json = new JsonObject();
         json.addProperty("status", 202);
         json.addProperty("token", Codec.hexSHA1(user.uniq + user.lastConnection));

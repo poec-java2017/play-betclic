@@ -29,7 +29,7 @@ public class UserManager extends LogManager {
 
         List<Operation> operations = Operation.find("user_id = ?1 order by date desc", user.id).fetch(10);
         Logger.info("[%s][display] Operations : %d", PREFIX, operations.size());
-        BigDecimal accountAmount = UserService.account(user.id);
+        BigDecimal accountAmount = UserService.getAccountBalance(user.id);
 
         render(operations, accountAmount, countries);
     }
@@ -193,41 +193,47 @@ public class UserManager extends LogManager {
         }
     }
 
-    public static void delete(String uniq) {
-        UserService.getUserById(uniq).delete();
-    }
-
     public static void user(String uniq) {
         render(UserService.getUserById(uniq));
     }
 
-    public static void users() {
-        List<User> users = User.findAll();
-        render(users);
-    }
+    public static void accountRefill(@Required BigDecimal amount){
+        Logger.info("[%s] ");
+        if (Validation.hasErrors()) {
+            for (Error error : Validation.errors()) {
+                Logger.info("[%s][updatePassword][ValidationError] %s : %s", PREFIX, error.getKey(), error.message());
+            }
+            Validation.keep();
+        } else {
+            // Absolute value of the amount
+            amount = amount.abs();
 
-    public static void fillIn(@Required BigDecimal amount){
-        createOperation(amount, "credit");
+            // Get connected user
+            User user = getConnectedUser();
+
+            // Create operation
+            Operation operation = OperationService.createOperation(user, "operation.type.refill", amount);
+        }
+        display();
     }
 
     public static void withdraw(@Required BigDecimal amount){
-        createOperation(amount, "withdraw");
-    }
+        if (Validation.hasErrors()) {
+            for (Error error : Validation.errors()) {
+                Logger.info("[%s][updatePassword][ValidationError] %s : %s", PREFIX, error.getKey(), error.message());
+            }
+            Validation.keep();
+        } else {
+            // Absolute value of the amount and then negate it
+            amount = amount.abs().negate();
 
-    public static void createOperation(BigDecimal amount, String typeOperation){
-        User user = getConnectedUser();
-        Logger.info("%s CreateOperation ---> %s in %s  an amount of  %s €", PREFIX, typeOperation, user.email, amount);
-        Operation operation = new Operation();
-        operation.amount = amount;
-        operation.user = user;
-        operation.date = DateTime.now().toDate();
-        if(typeOperation.equals("credit")){
-            operation.type = OperationTypeService.getCredit();
-        }else{
-            operation.type = OperationTypeService.getWithdraw();
-            operation.amount = amount.negate();
+            // Get connected user
+            User user = getConnectedUser();
+
+            // Create operation
+            Operation operation = OperationService.createOperation(user, "operation.type.withdraw", amount);
         }
-        operation.save();
         display();
     }
+
 }

@@ -1,11 +1,12 @@
 package controllers;
 
 import models.*;
+import play.Logger;
 import play.data.validation.Min;
 import play.data.validation.Required;
 import play.data.validation.Validation;
-import play.mvc.Controller;
 import play.mvc.With;
+import services.OperationService;
 import services.OperationTypeService;
 import services.UserService;
 
@@ -15,6 +16,8 @@ import java.util.List;
 
 @With(SecureManager.class)
 public class BetManager extends LogManager {
+
+    public static final String PREFIX = "BetManager";
 
     public static void eventsToBet() {
         List<Event> events = Event.find("resultHost is null").fetch();
@@ -26,32 +29,34 @@ public class BetManager extends LogManager {
                            @Required Short betChoice,
                            @Required @Min(0.01) BigDecimal betAmount,
                            @Required Float betQuotation) {
-        // TODO Affiner la validation du betChoice
-
-        User user = getConnectedUser();
-        // L'opération suivante permet de tester avant d'avoir le formulaire de créditation du compte, wesh
-        // TODO fin
-
-        BigDecimal solde = UserService.account(user.id);
-        if (betAmount.compareTo(solde) >= 0) {
-            Validation.addError("amount", "Votre solde n'est pas suffisant.");
-        }
-
         if(Validation.hasErrors()){
             params.flash();
             Validation.keep();
             EventManager.events();
         }
+        // TODO Affiner la validation du betChoice
 
-        //Logger.info("Solde suffisant");
-        Date actionDate = new Date();
-        OperationType operationType = OperationTypeService.getBet();
-        Operation betOperation = new Operation(betAmount.negate(), actionDate, operationType, user);
+        // Get connected user
+        User user = getConnectedUser();
+
+        // Compare getAccountBalance balance to bet amount
+        if (betAmount.compareTo(UserService.getAccountBalance(user.id)) >= 0) {
+            Logger.info("[%s][bet][error] Account balance is lower than bet amount", PREFIX);
+            Validation.addError("amount", "Votre solde n'est pas suffisant.");
+        }
+
+        // Get event
         Event event = Event.find("uniq = ?1", idEvent).first();
         notFoundIfNull(event);
-        Bet bet = new Bet(actionDate, betQuotation, betChoice, user, event, betOperation);
-        betOperation.save();
+
+        // Create operation and bet
+        Operation operation = OperationService.createOperation(user, "operation.type.bet", betAmount.negate());
+        Bet bet = new Bet(operation.date, betQuotation, betChoice, user, event, operation);
         bet.save();
+        // TODO : confirm payment suceeded
+        // TODO : send mail
+
+        // Redirect
         EventManager.events();
     }
 

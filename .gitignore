@@ -14,4 +14,4 @@ node_modules
 test-result
 
 # Built css files
-public/stylesheets/*.css
+#public/stylesheets/*.css

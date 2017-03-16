@@ -35,8 +35,11 @@ public class AuthenticationManager extends ApiSecureManager {
         }
 
         // Update last connection date
-        user.publicKey = ApiService.INSTANCE.generateApiKey();
-        user.privateKey = ApiService.INSTANCE.generatePrivateApiKey();
+        if (user.publicKey == null) {
+            user.publicKey = ApiService.INSTANCE.generateApiKey();
+            user.privateKey = ApiService.INSTANCE.generatePrivateApiKey();
+        }
+
         user.lastConnection = new Date();
         user.save();
 

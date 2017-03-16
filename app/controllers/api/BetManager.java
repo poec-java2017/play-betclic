@@ -1,14 +1,13 @@
 package controllers.api;
 
-import controllers.EventManager;
 import controllers.api.exception.BadCredentials;
 import controllers.api.exception.Business;
-import controllers.service.OperationTypeService;
 import models.*;
 import play.Logger;
 import play.data.validation.Min;
 import play.data.validation.Required;
 import play.data.validation.Validation;
+import services.OperationTypeService;
 import services.UserService;
 
 import java.math.BigDecimal;
@@ -32,7 +31,7 @@ public class BetManager extends ApiManager {
             Logger.info("[%s][bet] Bad credentials with token [%s]", PREFIX, userToken);
             throw new BadCredentials();
         }
-        if (amount.compareTo(UserService.account(user.id)) > 0) {
+        if (amount.compareTo(UserService.getAccountBalance(user.id)) > 0) {
             Logger.info("[%s][bet] Tried to bet [%s] but not enougth credits.", PREFIX, amount);
             throw new Business("Not enougth credits.");
         }
@@ -62,7 +61,7 @@ public class BetManager extends ApiManager {
         // Create operation
         Operation operation = new Operation();
         operation.user = user;
-        operation.operationType = type;
+        operation.type = type;
         operation.date = new Date();
         operation.amount = amount.negate();
         operation.save();

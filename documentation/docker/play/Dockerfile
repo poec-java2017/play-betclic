@@ -23,4 +23,4 @@ EXPOSE 9000
 
 ENTRYPOINT ["/opt/play/play-1.4.4/play"]
 
-CMD ["run", "/app"]
+CMD ["run", "/app", "--deps"]

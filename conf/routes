@@ -29,6 +29,7 @@ POST    /api/user/signin                        api.UserManager.signIn
 POST    /api/operation/refill                   api.OperationManager.refill
 POST    /api/operation/bet                      api.OperationManager.bet
 POST    /api/operation/withdraw                 api.OperationManager.withdraw
+POST    /api/bet                                api.BetManager.bet
 # Testing purpose only : end
 
 # Ignore favicon requests

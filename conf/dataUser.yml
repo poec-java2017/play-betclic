@@ -225,6 +225,7 @@ User(UserFR1) :
   birthday : 1975-08-06
   phone : XXX-32.56.87
   address : addressUserFR1
+  uniq : 1
 
 User(UserFR2) :
   lastName : Jean-Baptiste

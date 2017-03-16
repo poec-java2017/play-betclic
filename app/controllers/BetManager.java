@@ -30,7 +30,6 @@ public class BetManager extends LogManager {
 
         User user = getConnectedUser();
         // L'opération suivante permet de tester avant d'avoir le formulaire de créditation du compte, wesh
-        // TODO fin
 
         BigDecimal solde = UserService.account(user.id);
         if (betAmount.compareTo(solde) >= 0) {

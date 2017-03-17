@@ -20,7 +20,7 @@ public class OperationService {
             // Create a new operation
             Operation operation = new Operation();
             operation.user = user;
-            operation.operationType = oType;
+            operation.type = oType;
             operation.date = new Date();
             operation.amount = amount;
             operation.save();

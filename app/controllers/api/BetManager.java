@@ -1,14 +1,13 @@
 package controllers.api;
 
-import controllers.EventManager;
 import controllers.api.exception.BadCredentials;
 import controllers.api.exception.Business;
-import services.OperationTypeService;
 import models.*;
 import play.Logger;
 import play.data.validation.Min;
 import play.data.validation.Required;
 import play.data.validation.Validation;
+import services.OperationTypeService;
 import services.UserService;
 
 import java.math.BigDecimal;
@@ -62,7 +61,7 @@ public class BetManager extends ApiManager {
         // Create operation
         Operation operation = new Operation();
         operation.user = user;
-        operation.operationType = type;
+        operation.type = type;
         operation.date = new Date();
         operation.amount = amount.negate();
         operation.save();

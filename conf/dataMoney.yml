@@ -3,29 +3,29 @@
 ###########
 
 OperationType(credit) :
-  name : CREDIT
+  name : operation.type.refill
 
 OperationType(withdraw) :
-  name : WITHDRAW
+  name : operation.type.withdraw
 
 OperationType(bet) :
-  name : BET
+  name : operation.type.bet
 
 OperationType(gain) :
-  name : GAIN
+  name : operation.type.benefit
 
 
 Operation(op1) :
   amount : 250
   date : 2017-03-19
-  operationType : credit
+  type : credit
   user : UserFR6
 
 
 Operation(op2) :
   amount : -22.25
   date : 2017-03-22
-  operationType : bet
+  type : bet
   user : UserFR6
 
 
@@ -41,7 +41,7 @@ Bet(bet1) :
 Operation(op3) :
   amount : -22.25
   date : 2017-03-22
-  operationType : bet
+  type : bet
   user : UserFR6
 
 
@@ -57,7 +57,7 @@ Bet(bet2) :
 Operation(op4) :
   amount : -12.33
   date : 2017-03-12
-  operationType : bet
+  type : bet
   user : UserFR2
 
 

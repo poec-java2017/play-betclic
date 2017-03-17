@@ -24,6 +24,7 @@ POST    /bet                                    BetManager.bet
 POST    /api/application/register               api.ApiClientManager.register
 POST    /api/authenticate                       api.AuthenticationManager.authenticate
 POST    /api/user/signin                        api.UserManager.signIn
+GET     /api/event/bets                         api.EventManager.bet
 
 # Testing purpose only : begin
 POST    /api/operation/refill                   api.OperationManager.refill

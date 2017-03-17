@@ -24,7 +24,7 @@ public class Operation extends Model {
 
     @ManyToOne
     @Required
-    public OperationType type;
+    public OperationType operationType;
 
     @Required
     @ManyToOne
@@ -36,7 +36,7 @@ public class Operation extends Model {
         uniq = UUID.randomUUID().toString();
         this.amount = amount;
         this.date = date;
-        this.type = type;
+        this.operationType = type;
         this.user = user;
     }
 

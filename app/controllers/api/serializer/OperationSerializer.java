@@ -29,7 +29,7 @@ public class OperationSerializer implements JsonSerializer<Operation> {
         json.addProperty("uniq", item.uniq);
         json.addProperty("date", new DateTime(item.date).toString());
         json.addProperty("amount", item.amount);
-        json.add("type", OperationTypeSerializer.getInstance().serialize(item.type, OperationType.class, jsonSerializationContext));
+        json.add("type", OperationTypeSerializer.getInstance().serialize(item.operationType, OperationType.class, jsonSerializationContext));
         json.addProperty("user", item.user.uniq);
         return json;
     }

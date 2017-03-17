@@ -13,3 +13,58 @@ OperationType(bet) :
 
 OperationType(gain) :
   name : GAIN
+
+
+Operation(op1) :
+  amount : 250
+  date : 2017-03-19
+  operationType : credit
+  user : UserFR6
+
+
+Operation(op2) :
+  amount : -22.25
+  date : 2017-03-22
+  operationType : bet
+  user : UserFR6
+
+
+Bet(bet1) :
+  date : 2017-03-22
+  choice : 1
+  quotation : 8
+  user : UserFR6
+  event : event11
+  betOperation : op2
+
+
+Operation(op3) :
+  amount : -22.25
+  date : 2017-03-22
+  operationType : bet
+  user : UserFR6
+
+
+Bet(bet2) :
+  date : 2017-03-22
+  choice : 1
+  quotation : 2
+  user : UserFR6
+  event : event12
+  betOperation : op3
+
+
+Operation(op4) :
+  amount : -12.33
+  date : 2017-03-12
+  operationType : bet
+  user : UserFR2
+
+
+Bet(bet3) :
+  date : 2017-03-12
+  choice : 1
+  quotation : 1
+  user : UserFR2
+  event : event11
+  betOperation : op4
